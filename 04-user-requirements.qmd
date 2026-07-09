@@ -1,0 +1,141 @@
+# 1. User Requirements for Ecosystem Indicator Workflows
+
+## Overview
+
+Requirements gathering activities were undertaken through stakeholder workshops involving ecosystem scientists, data analysts, government practitioners, research software engineers, data managers, and platform providers. Participants explored a series of realistic workflow development scenarios and identified user needs, technical challenges, and priorities for future Ecosystem Indicator Workflows (EIWs). 
+
+Workshop participants consistently emphasised that the value of Ecosystem Indicator Workflows extends beyond indicator calculation. Users require workflows that are adaptable, reproducible, transparent, well-documented, and capable of integrating diverse ecosystem datasets while remaining accessible to users with varying technical capabilities. 
+
+The following requirements represent the common needs identified across stakeholder groups.
+
+---
+
+## 1. Workflow Adaptability
+
+Users require workflows that can be adapted to different ecosystem types, geographic regions, and assessment purposes without requiring complete redevelopment. Stakeholders identified adaptability as one of the most important requirements for the initiative. 
+
+Key requirements include:
+
+- Modular workflow designs that clearly separate ecosystem-specific components from generic analytical components.
+- Clearly documented points within workflows where ecosystem definitions, data sources, indicator variables, and assessment purposes can be substituted.
+- The ability to apply a common workflow structure across multiple ecosystem types.
+- The ability to support alternative assessment frameworks, including ecosystem risk, ecosystem condition, recovery, and ecosystem accounting applications.
+- Guidance for reconciling global datasets with local and jurisdictional data sources.
+
+Participants repeatedly highlighted that existing workflows are often difficult to repurpose because ecosystem-specific assumptions and methods are embedded throughout the workflow rather than isolated in configurable components. 
+
+---
+
+## 2. Reproducibility and Transparency
+
+Users require workflows that can be independently reproduced, verified, and maintained over time. Reproducibility was identified as a core requirement underpinning scientific credibility and long-term adoption. 
+
+Key requirements include:
+
+- Fully documented workflow processes from data acquisition through to final outputs.
+- Clear provenance records for all input datasets.
+- Version-controlled workflow code and analytical methods.
+- Documented software dependencies and computational environments.
+- Long-term maintainability as software platforms and packages evolve.
+- Repeatable execution across multiple computing environments.
+
+Users highlighted challenges associated with legacy workflows, undocumented dependencies, restricted data access, and software version incompatibilities. Participants identified containerisation and explicit environment management as important mechanisms for maintaining reproducibility. 
+
+---
+
+## 3. Data Discovery, Access and Integration
+
+Users require workflows that simplify the process of locating, understanding, accessing, and combining ecosystem and indicator datasets from multiple sources. Data preparation was consistently identified as the most time-consuming component of indicator development. 
+
+Key requirements include:
+
+- Guidance on identifying authoritative ecosystem and indicator datasets.
+- Clear documentation of data provenance, quality, currency, and fitness-for-purpose.
+- Consistent approaches for harmonising heterogeneous datasets.
+- Mechanisms to support integration of biological surveys, monitoring data, remote sensing products, and spatial datasets.
+- Support for workflows operating across local, cloud, and high-performance computing environments.
+- Explicit documentation of data limitations and known biases.
+
+Participants highlighted common challenges including fragmented datasets, inconsistent survey methodologies, varying spatial resolutions, uneven geographic coverage, and difficulties obtaining access to restricted datasets. 
+
+---
+
+## 4. Classification and Vocabulary Alignment
+
+Users require ecosystem workflows that support alignment between national ecosystem classifications and international standards.
+
+Key requirements include:
+
+- Alignment with the IUCN Global Ecosystem Typology.
+- Clear mapping between local ecosystem classifications and global typologies.
+- Use of authoritative identifiers where possible.
+- Machine-readable classification mappings and metadata.
+- Transparent documentation of classification decisions and assumptions.
+
+Stakeholders identified ecosystem classification mapping as one of the largest barriers to workflow development and noted that a substantial proportion of effort is currently spent reconciling classification systems across jurisdictions and assessment frameworks. 
+
+---
+
+## 5. Documentation, Training and Knowledge Transfer
+
+Users require documentation and training resources that accommodate varying levels of technical expertise.
+
+Key requirements include:
+
+- Plain-language workflow documentation.
+- Worked examples using real ecosystem assessments.
+- Step-by-step implementation guidance.
+- Technical documentation describing workflow functions and analytical methods.
+- Guidance on interpretation of outputs, assumptions, limitations, and uncertainty.
+- Training resources suitable for beginner, intermediate, and advanced users.
+
+Participants consistently identified documentation and training as critical enablers of workflow adoption. Requirements varied across user groups, but all groups emphasised the need for high-quality documentation and practical examples. 
+
+---
+
+## 6. Accessibility and Usability
+
+Users require workflows that minimise technical barriers to adoption while supporting a diverse user community.
+
+Key requirements include:
+
+- Support for commonly used open-source tools and platforms.
+- Use of technologies already familiar to the target user community where possible.
+- Clear installation and setup instructions.
+- Support for users operating within institutional security and software restrictions.
+- Outputs that can be interpreted by both technical and non-technical users.
+
+Workshop participants demonstrated strong familiarity with R, Python, RStudio, QGIS, and Jupyter-based environments, while familiarity with specialised platforms and workflow technologies varied considerably. As a result, workflow design should prioritise accessibility and user experience over technical complexity where practical. 
+
+---
+
+## 7. Validation, Uncertainty and Scientific Confidence
+
+Users require workflows that support the transparent evaluation of indicator quality and reliability.
+
+Key requirements include:
+
+- Explicit validation procedures.
+- Documentation of assumptions and methodological limitations.
+- Quantification and communication of uncertainty.
+- Support for expert judgement where empirical validation data are unavailable.
+- Consistent reporting of confidence in indicator outputs.
+
+Participants noted that uncertainty information is frequently omitted from final products despite being critical for interpretation and decision-making. Validation approaches and integration of expert judgement were identified as areas requiring greater consistency across workflows. 
+
+---
+
+## Priority User Requirements
+
+Across all workshops, the following requirements emerged as the highest priorities for the Ecosystem Indicator Workflow program:
+
+1. Adaptable and modular workflow architecture.
+2. Reproducible workflows supported by version-controlled computational environments.
+3. Alignment with the IUCN Global Ecosystem Typology and other recognised standards.
+4. Transparent data provenance and metadata.
+5. Guidance for integrating heterogeneous ecosystem datasets.
+6. Comprehensive documentation and tiered training materials.
+7. Explicit treatment of validation, uncertainty, and expert judgement.
+8. FAIR-compliant workflows, tools, metadata, and outputs.
+
+These requirements provide the foundation for prioritising workflow functionality and defining the staged delivery roadmap described in subsequent sections of this document. 

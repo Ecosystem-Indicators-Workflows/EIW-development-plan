@@ -1,0 +1,222 @@
+# 2. High-Level Workflow Requirements and Constraints
+
+## Purpose
+
+Ecosystem Indicator Workflows (EIWs) are documented, transparent, and reproducible computational workflows developed to generate ecosystem-specific and fit-for-purpose indicators. The workflows are intended to support consistent indicator development across ecosystem types while providing sufficient flexibility to address different management, monitoring, assessment and reporting needs.
+
+All workflows are designed to align with FAIR principles (Findable, Accessible, Interoperable and Reusable) and support reproducible research practices.
+
+---
+
+## High-Level Workflow Requirements
+
+### Scope Definition Requirements
+
+The development of an Ecosystem Indicator Workflow must begin with a clearly defined scope. The scope establishes the context, purpose and intended application of the workflow and provides the basis for all subsequent workflow development activities.
+
+Each workflow must define the following four attributes:
+
+#### 1. Target Ecosystem Definition
+
+The workflow must identify the ecosystem or ecosystem group that will be assessed.
+
+Requirements include:
+
+- Ecosystem definitions must align with the **IUCN Global Ecosystem Typology**.
+- The ecosystem classification level must be appropriate to the intended application of the indicator.
+- The ecosystem definition must be documented and traceable throughout the workflow.
+
+#### 2. Intended Purpose
+
+The workflow must clearly state the purpose of the indicator and the decision-making context in which it will be used.
+
+Examples may include:
+
+- Environmental reporting
+- Natural capital accounting
+- Ecosystem risk assessment
+- Ecosystem recovery and integrity assessment
+- Conservation planning
+
+The intended purpose must guide data selection, methodology and validation requirements.
+
+#### 3. Diagnostic Mechanism
+
+The workflow must describe the ecological mechanism through which the selected indicator provides information about ecosystem status, condition or change.
+
+The diagnostic mechanism should document:
+
+- The ecological process being assessed
+- The relationship between the indicator and ecosystem characteristics
+- Key assumptions underpinning indicator interpretation
+
+#### 4. Indicator Variable Selection
+
+The workflow must identify one or more measurable variables that can be used to quantify the selected ecosystem characteristic.
+
+Indicator variables should:
+
+- Be scientifically defensible
+- Be measurable using available data sources
+- Be appropriate to the intended purpose
+- Support repeatable assessment through time
+
+---
+
+## Workflow Structure Requirements
+
+All Ecosystem Indicator Workflows will follow a common modular structure consisting of four core workflow components.
+
+### 1. Ecosystem Data Preparation
+
+This module prepares ecosystem spatial data and associated ecosystem information required for indicator calculation.
+
+Requirements include:
+
+- Identification and acquisition of ecosystem datasets.
+- Documentation of ecosystem classification systems and mapping methods.
+- Standardisation and preprocessing of ecosystem spatial data.
+- Recording of all assumptions and transformations applied to source data.
+
+Where available, ecosystem datasets should utilise the best available information from State and Territory jurisdictions.
+
+Federal spatial datasets or global datasets may be used when:
+
+- They provide a better fit for the intended purpose.
+- Regional or jurisdictional datasets are unavailable.
+- Regional datasets lack sufficient coverage, consistency or quality.
+
+Dataset selection decisions must be documented and justified.
+
+---
+
+### 2. Indicator Data Preparation
+
+This module prepares the data required to quantify the selected indicator variable.
+
+Requirements include:
+
+- Identification and acquisition of indicator datasets.
+- Assessment of data quality and suitability.
+- Documentation of data provenance.
+- Data cleaning, transformation and standardisation.
+- Management of temporal and spatial alignment between ecosystem and indicator datasets.
+
+All processing steps must be transparent and reproducible.
+
+---
+
+### 3. Indicator Calculation
+
+This module implements the analytical methods required to generate the ecosystem indicator.
+
+Requirements include:
+
+- Documentation of all mathematical and analytical methods.
+- Explicit parameter definitions.
+- Recording of assumptions and methodological choices.
+- Repeatable execution using documented computational procedures.
+- Generation of standard outputs suitable for interpretation and reporting.
+
+Calculation methods should be designed to allow consistent application across assessment periods where appropriate.
+
+---
+
+### 4. Validation and Uncertainty Assessment
+
+This module assesses the performance, reliability and limitations of the indicator.
+
+Requirements include:
+
+- Validation against independent datasets where available.
+- Documentation of methodological limitations.
+- Identification of data quality issues and potential biases.
+- Quantification of uncertainty where feasible.
+- Transparent communication of confidence and limitations associated with outputs.
+
+Validation outcomes must be documented alongside indicator results.
+
+---
+
+## Software and Technical Requirements
+
+The Ecosystem Indicator Workflow framework must be supported by software tools and computational environments that promote transparency, accessibility and reproducibility.
+
+Requirements include:
+
+- Use of open-access or widely accessible software where feasible.
+- Use of documented and version-controlled analytical processes.
+- Support for workflow portability across organisations and jurisdictions.
+- Ability to adapt workflows for alternative ecosystems and use cases.
+- Transparent documentation of software dependencies, packages and computational environments.
+
+Workflow implementation should minimise barriers to adoption and facilitate long-term maintenance.
+
+---
+
+## FAIR and Reproducibility Requirements
+
+All workflows, tools and outputs must align with FAIR principles and reproducible research practices.
+
+### Findable
+
+Workflow documentation, code, metadata and outputs should be discoverable through appropriate repositories and documentation systems.
+
+### Accessible
+
+Workflow components and outputs should be accessible to authorised users through documented and sustainable access mechanisms.
+
+### Interoperable
+
+Data, metadata and outputs should use recognised standards, formats and classification systems to support integration with other workflows, platforms and reporting systems.
+
+### Reusable
+
+Workflow documentation must provide sufficient detail to enable independent application, review, adaptation and reuse by other practitioners.
+
+---
+
+## Constraints
+
+The development and implementation of Ecosystem Indicator Workflows will be subject to several constraints.
+
+### Data Availability
+
+- Indicator development is dependent on the availability, quality and coverage of ecosystem and indicator datasets.
+- Data availability will vary across ecosystem types, jurisdictions and time periods.
+- Some workflows may require the use of proxy variables where direct measurements are unavailable.
+
+### Data Consistency
+
+- Differences in spatial scale, classification systems, temporal coverage and collection methodologies may affect comparability across datasets.
+- Additional data harmonisation may be required to support national-scale assessments.
+
+### Computational Constraints
+
+- Computational methods should balance scientific rigour with practical implementation requirements.
+- Workflows should remain maintainable by future users and project teams.
+
+### Resource Constraints
+
+- Workflow development priorities must reflect available funding, staff capacity and stakeholder demand.
+- Not all desired functionality may be delivered within the initial development period.
+
+### Scientific Constraints
+
+- Ecological processes are inherently complex and may not be fully represented by individual indicators.
+- All indicators should clearly communicate assumptions, limitations and uncertainty associated with interpretation.
+
+---
+
+## Design Principles
+
+The Ecosystem Indicator Workflow program will be guided by the following principles:
+
+1. **Scientific credibility** – indicators are based on sound ecological understanding and defensible methods.
+2. **Fitness for purpose** – indicators are developed to address clearly defined user needs and decision contexts.
+3. **Transparency** – methods, assumptions and data sources are fully documented.
+4. **Reproducibility** – workflows can be repeated and independently verified.
+5. **Interoperability** – workflows align with recognised standards and classification frameworks.
+6. **Scalability** – workflows can be adapted to additional ecosystems and indicator types over time.
+7. **Accessibility** – tools and outputs are usable by a broad community of researchers, practitioners and decision makers.
+8. **Continuous improvement** – workflows can be updated as new data, methods and user requirements emerge.

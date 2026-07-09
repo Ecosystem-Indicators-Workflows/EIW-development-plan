@@ -1,0 +1,186 @@
+Undertake requirements gathering activities to
+
+•	Identify the workflow functionality required by identified user groups that are likely to provide ongoing investment and engage in ongoing testing
+•	Develop detailed use cases
+•	Understand high level workflow requirements and constraints
+
+Develop a two year workflow development roadmap that will identify:
+
+1.	Outline user requirements for ecosystem workflows
+2.	Document high level workflows requirements and constraints
+3.	Document detailed use cases describing who are the end users, how they would use the outputs of the project, and the impact of these outputs
+4.	 Detail the priorisation of the functionality to define the first tranche of ecosystem indicator workflows to be delivered in the first 12 months
+5.	  Detail the priorisation of functionality to define the second tranche of ecosystem indicator workflows to be delivered in the following 12 months
+6.	 Review the initial second tranche functionality requirements of ecosystem indicator workflows in the 4th quarter of year 1 to be delivered in year 2 and update if necessary.
+
+
+Why this structure works
+It reconciles the three different classifications you've been using:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You're very close. Looking back at the original WP2 requirements, I think you have now covered **about 90–95% of the development plan**.
+
+Let's check against the contract requirements.
+
+# Requirement Coverage Assessment
+
+## ✅ 1. Outline user requirements for ecosystem workflows
+
+You have:
+
+* User groups/personas
+* User requirements section derived from workshops
+* User needs around adaptability, reproducibility, FAIR, training, interoperability, documentation
+* Traceability to workshop findings
+
+**Status:** Complete.
+
+***
+
+## ✅ 2. Document high-level workflow requirements and constraints
+
+You have:
+
+* Workflow scope definition
+* Target ecosystem requirements
+* Ecosystem data preparation
+* Indicator data preparation
+* Calculation
+* Validation and uncertainty
+* FAIR requirements
+* Technical requirements
+* Constraints
+
+**Status:** Complete.
+
+***
+
+## ✅ 3. Document detailed use cases
+
+You have:
+
+* User groups
+* Ten use cases
+* Users
+* Purpose
+* Workflow interaction
+* Outputs
+* Impact
+
+**Status:** Complete.
+
+***
+
+## ✅ 4. Prioritisation of first tranche functionality
+
+You now have:
+
+* Immediate priorities
+* Late Year 1 priorities
+* Mapping to WP4.1
+* Mapping to user needs
+
+**Status:** Complete.
+
+***
+
+## ✅ 5. Prioritisation of second tranche functionality
+
+You have:
+
+* WP4.2
+* WP5 Catalogue
+* WP6 training and community
+* FAIR/PID implementation
+* Vocabulary integration
+
+**Status:** Complete.
+
+***
+
+## ✅ 6. Review process for second tranche functionality
+
+You have:
+
+* Year 1 review
+* Community feedback
+* Workshop feedback
+* Steering Committee review
+* Emerging use cases
+
+**Status:** Complete.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Yes. After reading the market analysis, engagement strategy, and workshop outputs, I would **not use the SOM tiers directly as user groups**. They are useful for stakeholder engagement and market sizing, but they mix organisational roles with workflow roles. For the Development Roadmap, the user groups should reflect **how people interact with the workflows**.
+
+The workshop results strongly support a model centred on:
+
+* Subject matter experts (ecologists and ecosystem experts)
+* Workflow developers and technical practitioners
+* Data providers and custodians
+* Operational users who run/adapt workflows
+* Decision-makers who consume outputs
+* Students and new users
+* Infrastructure providers and support staff
+
+These groups appear consistently across the workshop personas, user stories, practitioner-base analysis, and engagement strategy. [\[Ecosystem...y_20260515 \| Word\]](https://unsw-my.sharepoint.com/personal/z3529065_ad_unsw_edu_au/_layouts/15/Doc.aspx?sourcedoc=%7B865CC41C-A9A0-4DC4-80F0-E2FE9AE59E8E%7D&file=Ecosystem%20Indicators%20Workflow%20ARDC%20Project%20-%20Community%20Building%20%26%20Engagement%20Strategy_20260515.docx&action=default&mobileredirect=true), [\[version 3...audiences \| Word\]](https://unsw-my.sharepoint.com/personal/z3529065_ad_unsw_edu_au/_layouts/15/Doc.aspx?sourcedoc=%7B6A2E35EB-F502-472A-A4EF-29F05D318808%7D&file=version%203%20Market%20size%20mapping%20to%20target%20audiences.docx&action=default&mobileredirect=true), [\[Draft EIW...arket size \| Word\]](https://unsw-my.sharepoint.com/personal/z3529065_ad_unsw_edu_au/_layouts/15/Doc.aspx?sourcedoc=%7BA6332FEC-9BA0-4E5A-9FCF-21839C5A74BD%7D&file=Draft%20EIW%20Market%20size.docx&action=default&mobileredirect=true)
+
+I would recommend the following section.
+
+***
+
+
+## Why this structure works
+
+It reconciles the three different classifications you've been using:
+
+| Existing classification   | Maps to                |
+| ------------------------- | ---------------------- |
+| Inputters                 | UG01, UG04             |
+| Workflow Architects       | UG02, UG03, UG05, UG07 |
+| End Users                 | UG05, UG06, UG07       |
+| Practitioner Base         | UG01, UG02, UG03, UG08 |
+| Institutional Oversight   | UG06                   |
+| Assurance                 | UG07                   |
+| Platform / Infrastructure | UG09                   |
+
+This gives you a user model that is:
+
+* directly linked to the workshop user stories (ecologists, data scientists, policy officers, platform users, RSEs, students) [\[version 3...audiences \| Word\]](https://unsw-my.sharepoint.com/personal/z3529065_ad_unsw_edu_au/_layouts/15/Doc.aspx?sourcedoc=%7B6A2E35EB-F502-472A-A4EF-29F05D318808%7D&file=version%203%20Market%20size%20mapping%20to%20target%20audiences.docx&action=default&mobileredirect=true)
+* aligned with the market segmentation work [\[Draft EIW...arket size \| Word\]](https://unsw-my.sharepoint.com/personal/z3529065_ad_unsw_edu_au/_layouts/15/Doc.aspx?sourcedoc=%7BA6332FEC-9BA0-4E5A-9FCF-21839C5A74BD%7D&file=Draft%20EIW%20Market%20size.docx&action=default&mobileredirect=true)
+* consistent with the engagement strategy audiences and training plans [\[Ecosystem...y_20260515 \| Word\]](https://unsw-my.sharepoint.com/personal/z3529065_ad_unsw_edu_au/_layouts/15/Doc.aspx?sourcedoc=%7B865CC41C-A9A0-4DC4-80F0-E2FE9AE59E8E%7D&file=Ecosystem%20Indicators%20Workflow%20ARDC%20Project%20-%20Community%20Building%20%26%20Engagement%20Strategy_20260515.docx&action=default&mobileredirect=true)
+* suitable for developing the subsequent **Use Cases** section, because each use case can now be written against one of these nine user groups.
+

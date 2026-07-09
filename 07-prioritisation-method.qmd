@@ -1,0 +1,16 @@
+
+# Prioritisation Approach
+
+Functionality was prioritised using five criteria:
+
+| Criterion            | Description                                    |
+| -------------------- | ---------------------------------------------- |
+| User Demand          | Number of user groups requiring the capability |
+| Strategic Importance | Alignment with project outcomes                |
+| Technical Dependency | Required before later functionality            |
+| Feasibility          | Delivery within available resources            |
+| Reusability          | Applicability across ecosystems                |
+
+Priority decisions were informed by workshop feedback, user stories, project deliverables and partner discussions.
+
+This creates a rationale for your roadmap.

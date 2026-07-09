@@ -1,0 +1,24 @@
+
+# Success Indicators
+
+## Year 1
+
+* First tranche workflows delivered.
+* At least one workflow demonstrated on EcoCommons.
+* Initial training materials available.
+* FAIR implementation plans completed.
+* User testing completed.
+
+## Year 2
+
+* Workflow catalogue operational.
+* Dashboard operational.
+* PID implementation completed.
+* FAIR workflow publication completed.
+* Expanded ecosystem coverage.
+
+## Beyond Project
+
+* Additional workflows contributed by community members.
+* Evidence of reuse in ecosystem reporting and management.
+* Adoption by government, research and environmental management organisations.

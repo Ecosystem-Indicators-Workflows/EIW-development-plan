@@ -1,0 +1,67 @@
+project:
+  type: book
+
+book:
+  title: "Ecosystem Indicator Workflows Development Plan"
+  subtitle: "Requirements Gathering and Two-Year Development Roadmap"
+  author:
+    - "Ecosystem Indicators Workflows Project Team"
+  date: last-modified
+
+  chapters:
+    - index.qmd
+
+    - part: "Part I - Context"
+      chapters:
+        - 01-introduction.qmd
+        - 02-requirements-gathering.qmd
+
+    - part: "Part II - User Needs"
+      chapters:
+        - 03-user-groups.qmd
+        - 04-user-requirements.qmd
+        - 05-high-level-requirements.qmd
+
+    - part: "Part III - Use Cases"
+      chapters:
+        - 06-use-cases.qmd
+        - 07-prioritisation-method.qmd
+
+    - part: "Part IV - Roadmap"
+      chapters:
+        - 08-roadmap-overview.qmd
+        - 09-tranche-1.qmd
+        - 10-tranche-2.qmd
+        - 11-tranche-review.qmd
+
+    - part: "Part V - Monitoring and Success"
+      chapters:
+        - 12-success-measures.qmd
+
+    - part: "Appendices"
+      chapters:
+        - appendices/appendix-a-workshops.qmd
+        - appendices/appendix-b-user-stories.qmd
+        - appendices/appendix-c-traceability-matrix.qmd
+        - appendices/appendix-d-roadmap-visuals.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: true
+
+  pdf:
+    toc: true
+    number-sections: true
+
+  docx:
+    toc: true
+    number-sections: true
+
+execute:
+  echo: false
+  warning: false
+  message: false

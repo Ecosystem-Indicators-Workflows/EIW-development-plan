@@ -1,0 +1,50 @@
+# Requirements Gathering Activities
+
+## Objectives
+
+Requirements gathering activities were undertaken to:
+
+* Identify workflow functionality required by prospective users.
+* Develop detailed use cases.
+* Understand workflow requirements and constraints.
+* Inform prioritisation of the first and second workflow development tranches.
+
+## Engagement Activities
+
+| Activity        | Date          | Purpose                                |
+| --------------- | ------------- | -------------------------------------- |
+| Core team meetings     | May - July 2026   | General structure and            |
+| Workshop 1      | 19 May 2026   | Scope, users and priorities            |
+| Workshop 2      | June 2026     | Workflow requirements and architecture |
+| Workshop 3      | June 2026     | Outputs, validation and adoption       |
+| Interviews      | May–July 2026 | Targeted stakeholder feedback          |
+| Document review | Continuous    | Existing workflows and requirements    |
+
+- Discussion sessions
+- Interviews and meetings
+- Workshop 1
+- Workshop 2
+- Review 
+- Existing documents
+
+
+## Participants
+
+Summarise:
+
+* Government
+* Researchers
+* Ecologists
+* Data scientists
+* Platform providers
+* Students/ECRs
+
+## Key Themes
+
+* Adaptability
+* Reproducibility
+* Documentation
+* Interoperability
+* Training
+* FAIR compliance
+
