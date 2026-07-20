@@ -1,0 +1,112 @@
+
+# 4. Prioritisation of Functionality – First Tranche (Year 1)
+
+## Tranche 1 Objective
+
+The first tranche focuses on establishing a minimum viable ecosystem workflow framework that demonstrates adaptability, reproducibility, FAIR compliance and practical applicability across multiple ecosystem indicator use cases. It delivers the foundation required for future workflow expansion while supporting the project's first reporting milestone and initial workflow deployment activities. [\[Attachment...oject Plan \| PDF\]](https://unsw-my.sharepoint.com/personal/z3529065_ad_unsw_edu_au/Documents/Microsoft%20Copilot%20Chat%20Files/Attachment%201%20-%20PLT019%20Project%20Plan.pdf)
+
+## Immediate Priorities (Mar–Sep 2026)
+
+### WP2 – Workflow Planning
+
+* Modular workflow architecture with documented swap points for:
+  * ecosystem type
+  * assessment purpose
+  * indicator variables
+  * data sources
+
+Supports:
+
+* UC01
+* UC02
+* UC07
+
+### WP3 – Data and Metadata
+
+* Pilot ecosystem map synthesis workflow
+* Initial dataset inventory
+* Initial vocabulary audit
+* Dataset transformation and harmonisation tools
+
+Supports:
+
+* UC01
+* UC05
+* UC06
+
+### WP4.1 – Initial Workflow Delivery
+
+* Core workflow structure based on:
+  * ecosystem data preparation
+  * indicator data preparation
+  * calculation
+  * validation and uncertainty
+
+Supports:
+
+* UC01
+* UC02
+* UC03
+* UC05
+
+### WP6 – Community and Adoption
+
+* Beginner-friendly quick-start guide
+* Introductory workflow documentation
+* Example workflow notebooks
+* Initial workshop outputs
+
+Supports:
+
+* UC08
+* UC09
+
+***
+
+## Late Year 1 Priorities (Oct 2026–Feb 2027)
+
+### Training and Adoption
+
+* Tiered training materials:
+  * Beginner
+  * Intermediate
+  * Advanced
+
+Supports:
+
+* UC09
+
+### Data and Metadata
+
+* Data integration templates for:
+  * spatial ecosystem maps
+  * remote sensing products
+  * monitoring datasets
+  * assessment datasets
+
+Supports:
+
+* UC06
+
+### Semantic Interoperability
+
+* Machine-readable vocabulary mappings
+* Persistent identifiers for workflows and metadata
+
+Supports:
+
+* UC07
+* UC08
+
+### Scientific Transparency
+
+* Expert judgement documentation framework
+* Validation and uncertainty guidance
+
+Supports:
+
+* UC01
+* UC03
+* UC05
+
+***

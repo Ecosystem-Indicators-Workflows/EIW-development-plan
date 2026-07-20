@@ -13,4 +13,3 @@ Functionality was prioritised using five criteria:
 
 Priority decisions were informed by workshop feedback, user stories, project deliverables and partner discussions.
 
-This creates a rationale for your roadmap.

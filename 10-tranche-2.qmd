@@ -1,0 +1,86 @@
+
+# 5. Prioritisation of Functionality – Second Tranche (Year 2)
+
+## Tranche 2 Objective
+
+The second tranche expands the workflow ecosystem beyond individual workflows to support discoverability, scaling, interoperability and broader community adoption. The focus shifts from workflow creation to workflow reuse and operationalisation. [\[Attachment...oject Plan \| PDF\]](https://unsw-my.sharepoint.com/personal/z3529065_ad_unsw_edu_au/Documents/Microsoft%20Copilot%20Chat%20Files/Attachment%201%20-%20PLT019%20Project%20Plan.pdf)
+
+***
+
+## Workflow Discovery and Reuse
+
+### WP5 Workflow Catalogue
+
+* Workflow catalogue MVP
+* Search by:
+  * ecosystem type
+  * indicator type
+  * assessment framework
+  * jurisdiction
+
+Supports:
+
+* UC08
+* UC03
+* UC04
+
+***
+
+## Metadata and Vocabulary Integration
+
+* Vocabulary cross-referencing integrated into workflow metadata
+* Crosswalking between:
+  * GET
+  * national classifications
+  * state classifications
+
+Supports:
+
+* UC02
+* UC08
+
+***
+
+## FAIR and Reproducibility
+
+### WP4.4 and WP4.5
+
+* Full PID implementation
+* FAIR4RS implementation
+* DOI assignment
+* machine-readable metadata
+
+Supports:
+
+* UC07
+
+***
+
+## Advanced Workflow Support
+
+* HPC-to-local workflow transition documentation
+* Cloud deployment guidance
+* Remote sensing workflow support
+
+Supports:
+
+* UC06
+* UC07
+
+***
+
+## Community Scaling
+
+### WP6
+
+* Publish workshop code outputs
+* Publish workshop datasets
+* Publish user stories
+* Community of practice support
+
+Supports:
+
+* UC09
+* UC10
+
+***

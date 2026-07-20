@@ -44,15 +44,24 @@ book:
         - appendices/appendix-b-user-stories.qmd
         - appendices/appendix-c-traceability-matrix.qmd
         - appendices/appendix-d-roadmap-visuals.qmd
-
+  margin-header: |
+    <center>
+    ![](/assets/logo_CES.png){height=66px}
+    </center>
+  page-footer:
+    left: "This site prepared by: [EIW project team](https://github.com/Ecosystem-Indicators-Workflows)"
+    center: "![](/assets/unsw_new_logo.png){height=20px} We acknowledge the Bedegal and Gadigal peoples who are the Traditional Owners of the lands where UNSW Sydney is located. We pay our respects to Elders past and present."
 format:
   html:
-    theme: cosmo
+    theme:
+      - minty
+      - brand
+    css: styles.css
     toc: true
     toc-depth: 3
     number-sections: true
     code-fold: true
-
+    number-depth: 3
   pdf:
     toc: true
     number-sections: true
