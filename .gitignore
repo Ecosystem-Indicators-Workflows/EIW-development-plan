@@ -3,3 +3,5 @@ _book/
 _misc/
 /.quarto/
 **/*.quarto_ipynb
+.Rproj.user
+.Rproj
