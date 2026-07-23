@@ -1,4 +1,4 @@
-# Detailed Use Cases
+# Detailed User Cases
 
 ## Overview
 
@@ -6,8 +6,37 @@ Requirements gathering activities identified a range of user groups that will co
 
 ***
 
-## Use cases
-### UC01 – Develop a New Ecosystem Indicator for a Target Ecosystem {.unnumbered}
+## User case descriptions
+
+### UC01 – Adapt an existing fit-for-purpose ecosystem-specific to make it reproducible {.unnumbered}
+
+| Attribute        | Description                                                                                  |
+| ---------------- | -------------------------------------------------------------------------------------------- |
+| Primary User     | Ecologist / Conservation Scientist (UG01)                                                    |
+| Supporting Users | Research Software Engineer (UG02), Data Scientist (UG03)                                     |
+| Purpose          | Adapt an ecosystem-specific indicator to the standard |
+| Trigger          | Update existing ecosystem assessments, revisit research or monitoring questions. |
+| Key requirements | AD01, AD02, AD05, RE01, RE02, RE04, VO01, VO02, DD02, DD03, DD04, DD06, DO04, AC01, AC03, VA02, VA03, VA04, VA05|
+
+#### Implementation steps
+
+1. Check existing scope of the workflow as per high-level requirements: ecosystem, purpose, diagnostic and variable selection.
+2. Check structure of the workflow as per high-level requirements: data preparation, calculation and validation/uncertainty assessment.
+3. Assess existing gaps in implementation of FAIR principles 
+4. Edit/modify steps to close gaps in FAIR principles
+5. Review outputs and document all steps as per high-level requirements.
+
+#### Outputs
+
+* Indicator values
+* Maps and visualisations
+* Workflow documentation including validation and uncertainty reports
+
+#### Impact
+
+Enable reproducibility of existing ecosystem-specific indicators, increase consistency, transparency, and reproducibility across ecosystem assessments. This use case emerged as a high-priority scenario during workshop discussions around workflow adaptability. 
+
+### UC02 – Develop a new fit-for-purpose ecosystem-specific indicator  {.unnumbered}
 
 | Attribute        | Description                                                                                  |
 | ---------------- | -------------------------------------------------------------------------------------------- |
@@ -20,7 +49,8 @@ Requirements gathering activities identified a range of user groups that will co
 
 1. Define the scope of the workflow as per high-level requirements: ecosystem, purpose, diagnostic and variable selection.
 2. Develop structure of the workflow as per high-level requirements: data preparation, calculation and validation/uncertainty assessment.
-3. Review outputs and document all steps as per high-level requirements.
+3. Assess implementation of FAIR principles
+4. Review outputs and document all steps as per high-level requirements.
 
 #### Outputs
 
@@ -34,7 +64,7 @@ Reduces the effort required to develop new indicators while increasing consisten
 
 ***
 
-### UC02 – Adapt an Existing Workflow to a New Ecosystem {.unnumbered}
+### UC03 – Adapt an existing reproducible fit-for-purpose indicator to a new ecosystem {.unnumbered}
 
 | Attribute        | Description                                                                  |
 | ---------------- | ---------------------------------------------------------------------------- |
@@ -63,7 +93,7 @@ Reduces duplication of effort and accelerates ecosystem assessments. Workshop pa
 ***
 
 
-### UC03 – Adapt an Existing Workflow to a different purpose {.unnumbered}
+### UC04 – Adapt an existing reproducible ecosystem-specific indicator to a different purpose {.unnumbered}
 
 | Attribute        | Description                                                                  |
 | ---------------- | ---------------------------------------------------------------------------- |
@@ -93,7 +123,7 @@ Reduces duplication of effort and accelerates ecosystem assessments. Workshop pa
 
 
 
-### UC04 – Publish and Maintain a Reproducible Workflow {.unnumbered}
+### UC05 – Publish and Maintain a Reproducible Workflow {.unnumbered}
 
 | Attribute        | Description                                                     |
 | ---------------- | --------------------------------------------------------------- |
@@ -123,7 +153,7 @@ Supports long-term maintenance and reuse while ensuring workflows remain reprodu
 ***
 
 
-### UC05 – Integrate multiple indicator workflows in assessments or reports {.unnumbered}
+### UC06 – Integrate multiple indicator workflows in assessments or reports {.unnumbered}
 
 | Attribute        | Description                                                                  |
 | ---------------- | ---------------------------------------------------------------------------- |
@@ -151,7 +181,7 @@ Reduces duplication of effort and accelerates ecosystem assessments. Workshop pa
 
 ***
 
-### UC06 – Discover and Reuse Existing Workflows {.unnumbered}
+### UC07 – Discover and Reuse Existing Workflows {.unnumbered}
 
 | Attribute    | Description                                                                        |
 | ------------ | ---------------------------------------------------------------------------------- |
@@ -177,7 +207,7 @@ Reduces duplication of effort and encourages workflow standardisation across org
 
 ***
 
-### UC07 – Training and Skills Development {.unnumbered}
+### UC08 – Training and Skills Development {.unnumbered}
 
 | Attribute        | Description                                                      |
 | ---------------- | ---------------------------------------------------------------- |

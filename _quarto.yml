@@ -10,7 +10,6 @@ book:
 
   chapters:
     - index.qmd
-
     - part: "Part I - Context"
       chapters:
         - 01-introduction.qmd
