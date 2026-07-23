@@ -53,3 +53,14 @@ This workshop also asked participants to reflect on a past ecosystem-indicator w
 | **Skills required for data preparation** | GIS and spatial analysis were reported by 35% of participants as required skills, while data cleaning and formatting were reported by 29%. | Ecological survey knowledge is important to ensure that data are used correctly, including understanding whether similar variables are measuring the same thing. Knowledge of species names, synonyms, and name changes is also important. | Support users with training, templates, and guidance covering spatial analysis, data cleaning, ecological assumptions, and taxonomy. |
 | **Reproducibility** | Indicator calculation was considered partially reproducible by 67% of participants, while the remaining participants considered it difficult to reproduce. | Limits include a lack of documented processes and validation points, data availability, limited time to engage with managers, difficulty integrating expert knowledge, and variable data quality. | Strengthen documentation, validation checkpoints, data provenance, and mechanisms for incorporating expert knowledge. |
 | **Next steps** | All participants highlighted stronger documentation as the priority of action for improving workflow reproducibility. | Important methodological details can be lost when workflows are only reported in scientific papers. | Develop complete documentation that captures assumptions, data sources, processing steps, code, validation checks, and decision points. |
+
+# Example case study
+
+## Fleurieu Swamp (Fleurieu peninsula has 65 ecosystems - 23 wetlands and swaps +40 woodlands +2 marine zones) 
+
+| Workflow stage | What happens | Reported challenge level |
+| :--- | :--- | :--- |
+| **Prepare ecosystem distribution data** | Global data sources needed reprojection/reconciliation with local expert layers; DCCEEW spatial layers authoritative but differed in resolution from global sources. | Mixed |
+| **Prepare indicator variable data** | BoM water balance data available but required preprocessing and temporal alignment with ecosystem snapshots. | Difficult |
+| **Calculation** | Adapting thresholds from Red List (collapse) to Green Status Integrity/recovery was conceptually and technically challenging — different baselines and output formats. | Frustrating |
+| **Evaluating uncertainty** | Expert review flagged as necessary but no formal protocol existed; validation data format mismatch meant manual reconciliation. | Uncertain |
