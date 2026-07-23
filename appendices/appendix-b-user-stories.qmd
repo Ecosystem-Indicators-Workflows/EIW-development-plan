@@ -1,0 +1,16 @@
+# User Story 
+
+* I want to adapt an existing indicator workflow to a new ecosystem type without rewriting the full analysis 
+* I want to understand which parts of a workflow are ecosystem-specific vs generic 
+* I want to switch the assessment purpose (e.g. risk to recovery) without needing a new workflow from scratch 
+* I want to run a workflow developed by someone else on a new dataset without modifying the code 
+* I want to containerise the workflow environment with pinned dependencies 
+* I want to know where ecosystem distribution data comes from and when it was last updated 
+* I want to access a curated vocabulary mapping between national and global classifications 
+* I want to guidance on transitioning from HPC-based preprocessing to cloud or local analysis 
+* I want to apply consistent indicator calculations across regions with uneven survey coverage 
+* I want to step-by-step guidance with plain-language explanations at every stage 
+* I want to documentation of how uncertainty is quantified and communicated in the outputs 
+* I want to worked examples covering common Australian ecosystem types 
+
+ 
