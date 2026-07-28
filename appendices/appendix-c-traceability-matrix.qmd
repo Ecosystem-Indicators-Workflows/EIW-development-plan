@@ -1,0 +1,166 @@
+---
+title: "EIW Use Case × Key Requirements Matrix"
+subtitle: "Requirements as rows, use cases as columns — grouped by category"
+format:
+  html:
+    toc: true
+    embed-resources: true
+    grid:
+      body-width: 1100px
+---
+
+```{=html}
+<style>
+.tbl-wrap { overflow-x: auto; margin-bottom: 1.5rem; }
+.tbl-wrap table { table-layout: auto; width: auto; border-collapse: collapse; font-size: 0.85rem; }
+.tbl-wrap col { width: auto !important; }
+.tbl-wrap th, .tbl-wrap td { border: 1px solid #ddd; padding: 6px 8px; vertical-align: top; }
+.tbl-wrap th:first-child, .tbl-wrap td:first-child { min-width: 380px; max-width: 460px; text-align: left; }
+.tbl-wrap th:not(:first-child), .tbl-wrap td:not(:first-child) { text-align: center; white-space: nowrap; padding-left: 10px; padding-right: 10px; }
+.tbl-wrap td:not(:first-child) { font-size: 1rem; }
+.tbl-wrap tr:nth-child(even) { background: rgba(0,0,0,0.02); }
+.tbl-wrap thead th { background: #D9EAD3; color: #27500A; font-weight: 600; }
+.tbl-wrap tr.orphan td { background: #FCEBEB; }
+.mk-c { color: #1F7A3D; font-weight: 700; }
+.mk-p { color: #BA7517; }
+.legend-key { font-size: 0.85rem; line-height: 1.9; margin-bottom: 1.2rem; }
+.legend-key span { margin-right: 1.4rem; white-space: nowrap; }
+</style>
+```
+
+::: legend-key
+[**✓**]{.mk-c} confirmed link — agreed with the project team.
+[**✓**]{.mk-p} proposed link — derived from use case text, not yet verified.
+Blank cell — not assessed.
+Rows shaded red have no use case link and need review.
+:::
+
+Requirements are numbered within their category. Use cases UC01–UC07 are those with confirmed content; UC08 onwards are not yet drafted and are therefore not shown as columns.
+
+:::::::::: panel-tabset
+
+## AD — Adaptability
+
+::: tbl-wrap
+| Requirement | UC01 | UC02 | UC03 | UC04 | UC05 | UC06 | UC07 |
+|---|---|---|---|---|---|---|---|
+| **AD01** Modular workflow designs that clearly separate ecosystem-specific components from generic analytical components. |   | [✓]{.mk-p} | [✓]{.mk-p} |   |   |   | [✓]{.mk-p} |
+| **AD02** Clearly documented points within workflows where ecosystem definitions, data sources, indicator variables, and assessment purposes can be substituted. | [✓]{.mk-p} | [✓]{.mk-p} | [✓]{.mk-p} |   |   |   | [✓]{.mk-p} |
+| **AD03** The ability to apply a common workflow structure across multiple ecosystem types. |   | [✓]{.mk-p} |   |   |   | [✓]{.mk-p} |   |
+| **AD04** The ability to support alternative assessment frameworks, including ecosystem risk, ecosystem condition, recovery, and ecosystem accounting applications. | [✓]{.mk-p} |   | [✓]{.mk-p} |   |   | [✓]{.mk-p} |   |
+| **AD05** Guidance for reconciling global datasets with local and jurisdictional data sources. |   | [✓]{.mk-p} |   |   |   |   |   |
+:::
+
+## RE — Reproducibility and transparency
+
+::: tbl-wrap
+| Requirement | UC01 | UC02 | UC03 | UC04 | UC05 | UC06 | UC07 |
+|---|---|---|---|---|---|---|---|
+| **RE01** Fully documented workflow processes from data acquisition through to final outputs. | [✓]{.mk-p} | [✓]{.mk-p} | [✓]{.mk-p} | [✓]{.mk-p} | [✓]{.mk-p} | [✓]{.mk-p} |   |
+| **RE02** Clear provenance records for all input datasets. |   |   |   |   | [✓]{.mk-c} |   |   |
+| **RE03** Version-controlled workflow code and analytical methods. |   |   |   | [✓]{.mk-p} |   |   |   |
+| **RE04** Documented software dependencies and computational environments. |   |   |   | [✓]{.mk-p} |   |   |   |
+| **RE05** Long-term maintainability as software platforms and packages evolve. |   |   |   | [✓]{.mk-p} |   |   |   |
+| **RE06** Repeatable execution across multiple computing environments. |   |   |   | [✓]{.mk-p} |   | [✓]{.mk-p} |   |
+| **RE07** Persistent identifiers and citation metadata for published workflows as research software outputs. |   |   |   | [✓]{.mk-p} |   |   |   |
+:::
+
+## VO — Classification and vocabularies
+
+::: tbl-wrap
+| Requirement | UC01 | UC02 | UC03 | UC04 | UC05 | UC06 | UC07 |
+|---|---|---|---|---|---|---|---|
+| **VO01** Alignment with the IUCN Global Ecosystem Typology. | [✓]{.mk-p} | [✓]{.mk-p} |   |   | [✓]{.mk-p} | [✓]{.mk-p} |   |
+| **VO02** Clear mapping between local ecosystem classifications and global typologies. |   | [✓]{.mk-p} |   |   | [✓]{.mk-p} | [✓]{.mk-p} |   |
+| **VO03** Use of authoritative identifiers where possible. |   |   |   |   | [✓]{.mk-p} | [✓]{.mk-p} |   |
+| **VO04** Machine-readable classification mappings and metadata. |   |   |   | [✓]{.mk-p} |   |   |   |
+| **VO05** Transparent documentation of classification decisions and assumptions. | [✓]{.mk-p} |   |   |   |   |   |   |
+:::
+
+## DD — Data discovery
+
+::: tbl-wrap
+| Requirement | UC01 | UC02 | UC03 | UC04 | UC05 | UC06 | UC07 |
+|---|---|---|---|---|---|---|---|
+| **DD01** Guidance on identifying authoritative ecosystem and indicator datasets. | [✓]{.mk-p} | [✓]{.mk-p} |   |   |   |   |   |
+| **DD02** Clear documentation of data provenance, quality, currency, and fitness-for-purpose. | [✓]{.mk-p} |   |   |   |   |   |   |
+| **DD03** Consistent approaches for harmonising heterogeneous datasets. | [✓]{.mk-p} |   |   |   | [✓]{.mk-p} |   |   |
+| **DD04** Mechanisms to support integration of biological surveys, monitoring data, remote sensing products, and spatial datasets. |   |   |   |   | [✓]{.mk-p} |   |   |
+| **DD05** ⚠ Support for workflows operating across local, cloud, and high-performance computing environments. |   |   |   |   |   |   |   |
+| **DD06** ⚠ Explicit documentation of data limitations and known biases. |   |   |   |   |   |   |   |
+| **DD07** ⚠ Approaches that reduce the effort and time required for data preparation relative to manual processing. |   |   |   |   |   |   |   |
+:::
+
+## DO — Documentation and training
+
+::: tbl-wrap
+| Requirement | UC01 | UC02 | UC03 | UC04 | UC05 | UC06 | UC07 |
+|---|---|---|---|---|---|---|---|
+| **DO01** Plain-language workflow documentation. | [✓]{.mk-p} |   |   | [✓]{.mk-p} |   | [✓]{.mk-p} | [✓]{.mk-p} |
+| **DO02** Worked examples using real ecosystem assessments. |   |   |   |   |   | [✓]{.mk-p} | [✓]{.mk-p} |
+| **DO03** Step-by-step implementation guidance. |   |   |   |   |   | [✓]{.mk-p} | [✓]{.mk-p} |
+| **DO04** Technical documentation describing workflow functions and analytical methods. | [✓]{.mk-p} |   |   | [✓]{.mk-p} |   | [✓]{.mk-p} | [✓]{.mk-p} |
+| **DO05** Guidance on interpretation of outputs, assumptions, limitations, and uncertainty. | [✓]{.mk-p} |   | [✓]{.mk-p} |   | [✓]{.mk-p} |   | [✓]{.mk-p} |
+| **DO06** Training resources suitable for beginner, intermediate, and advanced users. |   |   |   |   |   |   | [✓]{.mk-p} |
+| **DO07** Standardised output formats and schemas so indicator products can be ingested without reformatting. |   |   |   |   | [✓]{.mk-p} |   |   |
+:::
+
+## AC — Accessibility
+
+::: tbl-wrap
+| Requirement | UC01 | UC02 | UC03 | UC04 | UC05 | UC06 | UC07 |
+|---|---|---|---|---|---|---|---|
+| **AC01** Support for commonly used open-source tools and platforms. |   |   |   | [✓]{.mk-p} |   |   | [✓]{.mk-p} |
+| **AC02** Use of technologies already familiar to the target user community where possible. |   |   |   |   |   |   | [✓]{.mk-p} |
+| **AC03** Clear installation and setup instructions. |   |   |   | [✓]{.mk-p} |   |   | [✓]{.mk-p} |
+| **AC04** ⚠ Support for users operating within institutional security and software restrictions. |   |   |   |   |   |   |   |
+| **AC05** Outputs that can be interpreted by both technical and non-technical users. | [✓]{.mk-p} |   |   |   | [✓]{.mk-c} |   |   |
+| **AC06** A searchable workflow catalogue supporting filtering by ecosystem type, assessment criterion, and jurisdiction. |   | [✓]{.mk-p} | [✓]{.mk-p} |   |   | [✓]{.mk-p} |   |
+| **AC07** Documented compute and memory requirements for each workflow to support resource provisioning. |   |   |   | [✓]{.mk-p} |   |   |   |
+:::
+
+## VA — Validation
+
+::: tbl-wrap
+| Requirement | UC01 | UC02 | UC03 | UC04 | UC05 | UC06 | UC07 |
+|---|---|---|---|---|---|---|---|
+| **VA01** Explicit validation procedures. | [✓]{.mk-p} | [✓]{.mk-p} | [✓]{.mk-p} |   |   |   |   |
+| **VA02** Documentation of assumptions and methodological limitations. | [✓]{.mk-p} |   |   |   | [✓]{.mk-p} |   |   |
+| **VA03** Quantification and communication of uncertainty. | [✓]{.mk-p} |   |   |   |   |   |   |
+| **VA04** ⚠ Support for expert judgement where empirical validation data are unavailable. |   |   |   |   |   |   |   |
+| **VA05** Consistent reporting of confidence in indicator outputs. |   |   |   |   | [✓]{.mk-c} |   |   |
+| **VA06** ⚠ Documented review protocols specifying how and when expert input is sought, including fallbacks where experts are unavailable. |   |   |   |   |   |   |   |
+:::
+
+::::::::::
+
+## Coverage summary
+
+| Measure | Value |
+|---|---|
+| Requirements | 44 |
+| Use cases with content | 7 |
+| User stories | 43 |
+| Requirement ↔ use case links | 79 (3 confirmed, 76 proposed) |
+| Requirements with no use case | 6 |
+| Requirements with no user story | 9 |
+
+### Requirements with no use case link
+
+`DD05`, `DD06`, `DD07`, `AC04`, `VA04`, `VA06`
+
+These cluster into two themes that no current use case covers: data discovery and
+preparation (`DD05`, `DD06`, `DD07`, `AC04`) and expert-led validation
+(`VA04`, `VA06`). Both are candidates for new use cases rather than for
+forcing a link to an existing one.
+
+### Requirements with no user story
+
+`AD02`, `RE05`, `VO05`, `DD07`, `AC02`, `AC03`, `VA02`, `VA04`, `VA06`
+
+::: callout-warning
+## Status
+All proposed links were derived from use case text rather than supplied by
+stakeholders, and every row remains pending manual review. Nothing in this
+matrix is sign-off ready.
+:::
