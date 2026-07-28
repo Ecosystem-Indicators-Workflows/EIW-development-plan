@@ -4,4 +4,3 @@ _misc/
 /.quarto/
 **/*.quarto_ipynb
 .Rproj.user
-.Rproj
