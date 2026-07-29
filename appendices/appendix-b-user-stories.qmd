@@ -1,198 +1,109 @@
 ---
-title: "EIW User Stories"
-subtitle: "Grouped by requirement category, with derived use case coverage"
+title: "User Stories × Use Cases"
 format:
   html:
     toc: true
-    embed-resources: true
     grid:
       body-width: 1100px
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
-```{=html}
-<style>
-.tbl-wrap { overflow-x: auto; margin-bottom: 1.5rem; }
-.tbl-wrap table { table-layout: auto; width: auto; border-collapse: collapse; font-size: 0.85rem; }
-.tbl-wrap col { width: auto !important; }
-.tbl-wrap th, .tbl-wrap td { border: 1px solid #ddd; padding: 6px 8px; vertical-align: top; }
-.tbl-wrap th:first-child, .tbl-wrap td:first-child { min-width: 420px; max-width: 520px; text-align: left; }
-.tbl-wrap th:not(:first-child), .tbl-wrap td:not(:first-child) { text-align: center; white-space: nowrap; padding-left: 10px; padding-right: 10px; }
-.tbl-wrap td:not(:first-child) { font-size: 1rem; }
-.tbl-wrap tr:nth-child(even) { background: rgba(0,0,0,0.02); }
-.tbl-wrap thead th { background: #D9EAD3; color: #27500A; font-weight: 600; }
-.mk-d { color: #BA7517; }
-.sid { font-weight: 700; }
-.ug { color: #55534d; font-style: italic; }
-.ac { color: #55534d; font-size: 0.92em; }
-.req { color: #27500A; font-size: 0.92em; }
-.layer-spec { background: #EAF3DE; color: #27500A; border-radius: 3px; padding: 0 5px; font-size: 0.8em; }
-.layer-need { background: #E8EEF6; color: #1F4E78; border-radius: 3px; padding: 0 5px; font-size: 0.8em; }
-.legend-key { font-size: 0.85rem; line-height: 1.9; margin-bottom: 1.2rem; }
-</style>
+```{r}
+#| label: setup
+source("_eiw-data.R")
+library(knitr)
+
+eiw <- eiw_load()
 ```
 
-::: legend-key
-[**✓**]{.mk-d} the story is exercised by that use case — **derived**, not asserted.
-A story is linked to a use case when the use case exercises at least one requirement the story satisfies.
-[Need]{.layer-need} stakeholder voice captured in workshops. [Spec]{.layer-spec} implementation-level story.
-:::
+```{r}
+#| label: derive
+# No story-to-use-case column exists, so the link goes story -> requirement ->
+# use case: a story shows against a use case when they share a requirement.
+link_us_uc <- eiw$link_us_req |>
+  inner_join(eiw$link_uc_req, by = "req_id", relationship = "many-to-many") |>
+  distinct(us_id, uc_id) |>
+  mutate(linked = TRUE)
+
+# The story ID already carries its category prefix.
+stories <- eiw$user_stories |>
+  mutate(prefix = substr(us_id, 4, 5))
+
+prefix_to_category <- eiw$requirements |>
+  mutate(prefix = substr(req_id, 1, 2)) |>
+  distinct(prefix, category)
+```
 
 ::: callout-important
-## How to read the use case columns
-There is no direct user story to use case link in the source material. The marks
-below are inferred through the shared requirement: if a story satisfies `AD01`
-and `UC02` exercises `AD01`, the story is shown against `UC02`. This is a
-reasonable approximation for coverage checking, but it is not a stakeholder
-assertion and should not be treated as traceability evidence until each story is
-tagged to a use case directly.
+## How to read these columns
+A ✓ means the story and the use case share a requirement.
 :::
 
-:::::::::: panel-tabset
+::: panel-tabset
 
-## AD — Adaptability
+```{r}
+#| label: story-tabs
+#| output: asis
+# Same tab structure as the requirements chapter so the two read alike.
+for (cat_name in EIW_CATEGORIES) {
 
-7 stories in this category.
+  pre <- prefix_to_category |> filter(category == cat_name) |> pull(prefix)
+  grp <- stories |> filter(prefix %in% pre) |> arrange(us_id)
 
-::: tbl-wrap
-| User story | UC01 | UC02 | UC03 | UC04 | UC05 | UC06 | UC07 |
-|---|---|---|---|---|---|---|---|
-| [US-AD-01]{.sid} [Need]{.layer-need}<br>[Ecologist]{.ug}<br>As an ecologist, I want to adapt an existing indicator workflow to a new ecosystem type without rewriting the full analysis, so that I can reuse established methods and save weeks of rework.<br>[**Acceptance:** Workflow's ecosystem-specific components are isolated in a documented config file/module; swapping to a new ecosystem requires editing only that file, not the core analysis code.]{.ac}<br>[**Satisfies:** AD03]{.req} |   | [✓]{.mk-d} |   |   |   | [✓]{.mk-d} |   |
-| [US-AD-02]{.sid} [Need]{.layer-need}<br>[Data analyst]{.ug}<br>As a data analyst, I want to understand which parts of a workflow are ecosystem-specific vs generic, so that I know exactly what to change when switching context.<br>[**Acceptance:** Workflow documentation includes an explicit table separating 'ecosystem-specific' from 'generic/reusable' components.]{.ac}<br>[**Satisfies:** AD01]{.req} |   | [✓]{.mk-d} | [✓]{.mk-d} |   |   |   | [✓]{.mk-d} |
-| [US-AD-03]{.sid} [Need]{.layer-need}<br>[Government analyst]{.ug}<br>As a government analyst, I want to switch the assessment purpose (e.g. risk to recovery) without needing a new workflow from scratch, so that I can serve multiple reporting needs with one underlying system.<br>[**Acceptance:** A single workflow run accepts a 'purpose' parameter (e.g. risk / condition / recovery) that changes calculation and interpretation without altering the ecosystem or data inputs.]{.ac}<br>[**Satisfies:** AD04]{.req} | [✓]{.mk-d} |   | [✓]{.mk-d} |   |   | [✓]{.mk-d} |   |
-| [US-AD-04]{.sid} [Need]{.layer-need}<br>[Ecologist]{.ug}<br>As an ecologist, I want to receive guidance on reconciling global and local data sources for the same ecosystem, so that my workflow is defensible, reproducible, and transparent.<br>[**Acceptance:** Workflow documentation includes a named reconciliation method for combining global and local/jurisdictional datasets, with the resampling or matching approach stated explicitly.]{.ac}<br>[**Satisfies:** AD05]{.req} |   | [✓]{.mk-d} |   |   |   |   |   |
-| [US-AD-05]{.sid} [Spec]{.layer-spec}<br>[Research Software Engineer]{.ug}<br>As an RSE, I want each workflow structured as numbered, self-contained notebooks (e.g. 01-data-download, 10-data-preparation, 20-calculate-indicator), so that individual steps can be re-run or replaced without re-running the entire pipeline.<br>[**Acceptance:** Each numbered notebook runs independently given the previous step's outputs; no step depends on in-memory state from another.]{.ac}<br>[**Satisfies:** AD01]{.req} |   | [✓]{.mk-d} | [✓]{.mk-d} |   |   |   | [✓]{.mk-d} |
-| [US-AD-06]{.sid} [Spec]{.layer-spec}<br>[Research Software Engineer]{.ug}<br>As an RSE, I want a single workflow template (Quarto .qmd or R Markdown .Rmd) enforcing a consistent structure (metadata block, data sources, methods, outputs, known limitations), so that all workflows are comparable and cataloguable.<br>[**Acceptance:** A published template exists; every new workflow is generated from it and contains all five required sections.]{.ac}<br>[**Satisfies:** AD03, RE01]{.req} | [✓]{.mk-d} | [✓]{.mk-d} | [✓]{.mk-d} | [✓]{.mk-d} | [✓]{.mk-d} | [✓]{.mk-d} |   |
-| [US-AD-07]{.sid} [Spec]{.layer-spec}<br>[Ecologist]{.ug}<br>As an ecologist, I want workflows to calculate indicator values aligned to specific IUCN RLE criteria (A: extent decline; B: restricted distribution; C: abiotic condition; D: biotic condition), so that outputs are directly usable in risk assessment documentation.<br>[**Acceptance:** Each workflow states which RLE criterion it addresses; output fields map to the values required by that criterion.]{.ac}<br>[**Satisfies:** AD04, VO01]{.req} | [✓]{.mk-d} | [✓]{.mk-d} | [✓]{.mk-d} |   | [✓]{.mk-d} | [✓]{.mk-d} |   |
+  if (nrow(grp) == 0) next
+
+  cat("\n## ", pre[1], " — ", cat_name, "\n\n", sep = "")
+
+  tbl <- eiw_tick_matrix(
+    links   = link_us_uc,
+    id_col  = "us_id",
+    row_ids = grp$us_id,
+    uc_ids  = eiw$uc_ids
+  ) |>
+    left_join(select(grp, us_id, story, satisfies), by = "us_id") |>
+    mutate(`User story` = paste0("**", us_id, "** ", story,
+                                 "<br>*Satisfies: ", satisfies, "*")) |>
+    relocate(`User story`) |>
+    select(-us_id, -story, -satisfies)
+
+  print(kable(tbl, align = c("l", rep("c", length(eiw$uc_ids)))))
+  cat("\n")
+}
+```
+
 :::
 
-## RE — Reproducibility and transparency
+## Coverage by category
 
-5 stories in this category.
+```{r}
+#| label: coverage
+# Column headings match the requirements chapter so both tables read together.
+story_cat <- stories |>
+  left_join(prefix_to_category, by = "prefix")
 
-::: tbl-wrap
-| User story | UC01 | UC02 | UC03 | UC04 | UC05 | UC06 | UC07 |
-|---|---|---|---|---|---|---|---|
-| [US-RE-01]{.sid} [Need]{.layer-need}<br>[Data scientist]{.ug}<br>As a data scientist, I want to run a workflow developed by someone else on a new dataset without modifying the code, so that I can validate and replicate published assessments independently.<br>[**Acceptance:** A third party can clone the workflow repository, point it at a new dataset conforming to the documented input schema, and produce results without editing any source file.]{.ac}<br>[**Satisfies:** RE06]{.req} |   |   |   | [✓]{.mk-d} |   | [✓]{.mk-d} |   |
-| [US-RE-02]{.sid} [Need]{.layer-need}<br>[Research Software Engineer]{.ug}<br>As a research software engineer, I want to containerise the workflow environment with pinned dependencies, so that software versions don't break the workflow when R or packages change.<br>[**Acceptance:** Workflow ships with a container definition (Dockerfile or equivalent) pinning all package versions; a fresh container build reproduces identical output on a reference dataset.]{.ac}<br>[**Satisfies:** RE04]{.req} |   |   |   | [✓]{.mk-d} |   |   |   |
-| [US-RE-03]{.sid} [Spec]{.layer-spec}<br>[Platform Administrator]{.ug}<br>As a platform administrator, I want each workflow to declare its software environment (R/Python version, package list with versions) in a machine-readable format (renv.lock or requirements.txt), so that the environment is reproducible anywhere.<br>[**Acceptance:** Environment file is present, version-pinned, and a clean rebuild from it runs the workflow to completion.]{.ac}<br>[**Satisfies:** RE04]{.req} |   |   |   | [✓]{.mk-d} |   |   |   |
-| [US-RE-04]{.sid} [Spec]{.layer-spec}<br>[Environmental Policy Analyst / Reporting Officer]{.ug}<br>As a government reporting officer, I want each workflow run to produce a reproducibility record (timestamp, software environment snapshot, parameter values, input checksums), so that results can be independently verified.<br>[**Acceptance:** Every run emits a machine-readable record containing all four elements, stored alongside the outputs.]{.ac}<br>[**Satisfies:** RE01, RE02, RE03]{.req} | [✓]{.mk-d} | [✓]{.mk-d} | [✓]{.mk-d} | [✓]{.mk-d} | [✓]{.mk-d} | [✓]{.mk-d} |   |
-| [US-RE-05]{.sid} [Spec]{.layer-spec}<br>[Research Software Engineer]{.ug}<br>As an RSE, I want each workflow registered in the indicator catalogue with a DOI and codemeta.json, so that workflows are citable as research software outputs.<br>[**Acceptance:** Catalogue entry contains a resolvable DOI and a valid codemeta.json file.]{.ac}<br>[**Satisfies:** RE07]{.req} |   |   |   | [✓]{.mk-d} |   |   |   |
-:::
+story_counts <- story_cat |>
+  count(category, name = "Stories")
 
-## VO — Classification and vocabularies
+link_counts <- link_us_uc |>
+  left_join(select(story_cat, us_id, category), by = "us_id") |>
+  group_by(category) |>
+  summarise(
+    `Use case links`    = n(),
+    `Use cases covered` = n_distinct(uc_id),
+    .groups = "drop"
+  )
 
-5 stories in this category.
-
-::: tbl-wrap
-| User story | UC01 | UC02 | UC03 | UC04 | UC05 | UC06 | UC07 |
-|---|---|---|---|---|---|---|---|
-| [US-VO-01]{.sid} [Need]{.layer-need}<br>[Ecologist]{.ug}<br>As an ecologist, I want to map local ecosystem classifications to global typologies (e.g. IUCN GET), so that my assessments align with international standards.<br>[**Acceptance:** Workflow metadata includes a documented cross-reference between the local ecosystem classification used and the corresponding IUCN GET unit(s).]{.ac}<br>[**Satisfies:** VO02]{.req} |   | [✓]{.mk-d} |   |   | [✓]{.mk-d} | [✓]{.mk-d} |   |
-| [US-VO-02]{.sid} [Need]{.layer-need}<br>[Data manager]{.ug}<br>As a data manager, I want a curated vocabulary mapping between national and global ecosystem classifications, so that others don't have to reconcile it themselves each time.<br>[**Acceptance:** A published, versioned mapping table exists linking national classification codes to GET units, accessible independently of any single workflow.]{.ac}<br>[**Satisfies:** VO02, VO04]{.req} |   | [✓]{.mk-d} |   | [✓]{.mk-d} | [✓]{.mk-d} | [✓]{.mk-d} |   |
-| [US-VO-03]{.sid} [Need]{.layer-need}<br>[Indicator developer]{.ug}<br>As an indicator developer, I want vocabulary mapping to be machine-readable for workflow metadata, so that classification alignment can be automated rather than manual.<br>[**Acceptance:** The classification mapping is available in a machine-readable format (e.g. SKOS/CSV/JSON) that can be parsed programmatically, not only as prose documentation.]{.ac}<br>[**Satisfies:** VO04]{.req} |   |   |   | [✓]{.mk-d} |   |   |   |
-| [US-VO-04]{.sid} [Need]{.layer-need}<br>[Policy officer]{.ug}<br>As a policy officer, I want ecosystem types linked to authoritative identifiers (IBRA, IUCN GET IDs), so that reporting references are unambiguous and citable.<br>[**Acceptance:** Each ecosystem type referenced in workflow outputs carries at least one authoritative identifier (e.g. IBRA region code, IUCN GET unit ID).]{.ac}<br>[**Satisfies:** VO03]{.req} |   |   |   |   | [✓]{.mk-d} | [✓]{.mk-d} |   |
-| [US-VO-05]{.sid} [Spec]{.layer-spec}<br>[Research Software Engineer]{.ug}<br>As an RSE, I want workflows to use GET vocabulary identifiers for ecosystem types in all metadata fields, so that outputs are semantically interoperable with other Australian and global ecosystem datasets.<br>[**Acceptance:** Every ecosystem reference in workflow metadata resolves to a GET unit identifier.]{.ac}<br>[**Satisfies:** VO01, VO03]{.req} | [✓]{.mk-d} | [✓]{.mk-d} |   |   | [✓]{.mk-d} | [✓]{.mk-d} |   |
-:::
-
-## DD — Data discovery
-
-13 stories in this category.
-
-::: tbl-wrap
-| User story | UC01 | UC02 | UC03 | UC04 | UC05 | UC06 | UC07 |
-|---|---|---|---|---|---|---|---|
-| [US-DD-01]{.sid} [Need]{.layer-need}<br>[Data Scientist]{.ug}<br>As a data scientist, I want each catalogued dataset to expose machine-readable provenance, currency, and licence metadata, so that I can assess fitness-for-purpose before committing analysis time.<br>[**Acceptance:** Metadata record validates against a STAC Item schema; includes datetime, providers, license, and a provenance field conforming to W3C PROV-O.]{.ac}<br>[**Satisfies:** DD01, DD02]{.req} | [✓]{.mk-d} | [✓]{.mk-d} |   |   |   |   |   |
-| [US-DD-02]{.sid} [Need]{.layer-need}<br>[Data Scientist]{.ug}<br>As a data scientist, I want a documented transformation function that reconciles a national dataset with a global equivalent (CRS, resolution, temporal extent), so that I don't hand-roll reconciliation logic per workflow.<br>[**Acceptance:** Function accepts source + target CRS/grid, logs the resampling method used, and fails loudly (not silently) on unresolvable mismatches.]{.ac}<br>[**Satisfies:** DD03, AD05]{.req} | [✓]{.mk-d} | [✓]{.mk-d} |   |   | [✓]{.mk-d} |   |   |
-| [US-DD-03]{.sid} [Need]{.layer-need}<br>[Data Scientist]{.ug}<br>As a data scientist, I want known limitations and bias flags attached at the point of use, not buried in a separate PDF, so that downstream users can't miss them.<br>[**Acceptance:** Limitations field is a required, non-empty property in the workflow's metadata block.]{.ac}<br>[**Satisfies:** DD06]{.req} |   |   |   |   |   |   |   |
-| [US-DD-04]{.sid} [Need]{.layer-need}<br>[Data Provider / Data Custodian]{.ug}<br>As a data custodian, I want to publish datasets with a persistent identifier and update-cadence declaration, so that consumers know whether "current" data is a live feed or a static snapshot.<br>[**Acceptance:** Dataset has a DOI or equivalent PID; update frequency stated in ISO 8601 duration format (e.g. P1Y for annual).]{.ac}<br>[**Satisfies:** DD02, DD05]{.req} | [✓]{.mk-d} |   |   |   |   |   |   |
-| [US-DD-05]{.sid} [Need]{.layer-need}<br>[Platform user]{.ug}<br>As a platform user, I want to know where ecosystem distribution data comes from and when it was last updated, so that I can assess its fitness for purpose before committing to an analysis.<br>[**Acceptance:** Each catalogued dataset entry states its source, last-updated date, and update frequency in a consistent, visible field.]{.ac}<br>[**Satisfies:** DD02]{.req} | [✓]{.mk-d} |   |   |   |   |   |   |
-| [US-DD-06]{.sid} [Need]{.layer-need}<br>[Analyst — restricted data]{.ug}<br>As an analyst working with restricted data, I want to run the workflow within the platform where the data lives, so that I can comply with data governance requirements while still doing the analysis.<br>[**Acceptance:** Workflow can execute entirely within the hosting platform (e.g. CoESRA, NCI) without requiring the restricted dataset to be downloaded or copied elsewhere.]{.ac}<br>[**Satisfies:** DD05, AC04]{.req} |   |   |   |   |   |   |   |
-| [US-DD-07]{.sid} [Need]{.layer-need}<br>[Wetland ecologist]{.ug}<br>As a wetland ecologist, I want to integrate aerial survey data with satellite water extent time series, so that I can build a more complete picture of ecosystem condition.<br>[**Acceptance:** Workflow includes a documented step for combining aerial survey inputs with satellite time-series data, including how differing time steps/resolutions are aligned.]{.ac}<br>[**Satisfies:** DD04]{.req} |   |   |   |   | [✓]{.mk-d} |   |   |
-| [US-DD-08]{.sid} [Need]{.layer-need}<br>[Data scientist]{.ug}<br>As a data scientist, I want guidance on transitioning from HPC preprocessing to cloud/local analysis, so that I'm not locked into one computing environment.<br>[**Acceptance:** Workflow documentation states which steps run locally, in the cloud, or on HPC, and what changes (if any) are needed to move between them.]{.ac}<br>[**Satisfies:** DD05]{.req} |   |   |   |   |   |   |   |
-| [US-DD-09]{.sid} [Need]{.layer-need}<br>[Marine ecologist]{.ug}<br>As a marine ecologist, I want to apply consistent indicator calculations across regions with uneven survey coverage, so that results remain comparable despite data gaps.<br>[**Acceptance:** Workflow calculation method is documented as producing comparable outputs regardless of uneven survey coverage across regions (e.g. via standardisation or a stated limitation where this isn't possible).]{.ac}<br>[**Satisfies:** DD03]{.req} | [✓]{.mk-d} |   |   |   | [✓]{.mk-d} |   |   |
-| [US-DD-10]{.sid} [Need]{.layer-need}<br>[Indicator developer]{.ug}<br>As an indicator developer, I want templates for harmonising heterogeneous survey datasets, so that I don't rebuild harmonisation logic for every new workflow.<br>[**Acceptance:** A reusable harmonisation template (script or function) exists that new workflows can call rather than re-implementing dataset harmonisation logic.]{.ac}<br>[**Satisfies:** DD03]{.req} | [✓]{.mk-d} |   |   |   | [✓]{.mk-d} |   |   |
-| [US-DD-11]{.sid} [Need]{.layer-need}<br>[Data analyst]{.ug}<br>As a data analyst, I want clear documentation of data sources and known limitations embedded in each workflow, so that I can make informed fitness-for-purpose decisions before investing in an analysis.<br>[**Acceptance:** Workflow output or metadata includes a non-empty 'limitations and known biases' field before results are presented as final.]{.ac}<br>[**Satisfies:** DD06]{.req} |   |   |   |   |   |   |   |
-| [US-DD-12]{.sid} [Spec]{.layer-spec}<br>[Ecologist]{.ug}<br>As an ecologist, I want to access named datasets (DEA data cube, NARCliM2.0, TASVEG, CRU TS) via documented API calls or download scripts, so that data provenance is captured from the first pipeline step.<br>[**Acceptance:** Each named dataset has a documented access method (API endpoint or download script) that records source, retrieval date, and version in the workflow log.]{.ac}<br>[**Satisfies:** DD01, RE02]{.req} | [✓]{.mk-d} | [✓]{.mk-d} |   |   | [✓]{.mk-d} |   |   |
-| [US-DD-13]{.sid} [Spec]{.layer-spec}<br>[Data Scientist]{.ug}<br>As a data scientist, I want an assessment check for each input dataset, so that I know which datasets are ready for use and which require transformation before entering a workflow.<br>[**Acceptance:** Workflow reports a per-dataset readiness status (ready / needs transformation) with the specific reason before calculation begins.]{.ac}<br>[**Satisfies:** DD02]{.req} | [✓]{.mk-d} |   |   |   |   |   |   |
-:::
-
-## DO — Documentation and training
-
-8 stories in this category.
-
-::: tbl-wrap
-| User story | UC01 | UC02 | UC03 | UC04 | UC05 | UC06 | UC07 |
-|---|---|---|---|---|---|---|---|
-| [US-DO-01]{.sid} [Need]{.layer-need}<br>[Non-coder ecologist]{.ug}<br>As a non-coder ecologist, I want step-by-step guidance with plain-language explanations at every stage, so that I can run the workflow without needing programming expertise.<br>[**Acceptance:** Documentation includes a plain-language, numbered walkthrough usable by someone with no coding background, validated by at least one non-coder test read.]{.ac}<br>[**Satisfies:** DO01]{.req} | [✓]{.mk-d} |   |   | [✓]{.mk-d} |   | [✓]{.mk-d} | [✓]{.mk-d} |
-| [US-DO-02]{.sid} [Need]{.layer-need}<br>[Mid-career data scientist]{.ug}<br>As a mid-career data scientist, I want documentation explaining what each workflow function does and why it exists, so that I can modify components confidently for new use cases.<br>[**Acceptance:** Each workflow function has an accompanying description of its purpose and behaviour, accessible without reading the source code.]{.ac}<br>[**Satisfies:** DO04]{.req} | [✓]{.mk-d} |   |   | [✓]{.mk-d} |   | [✓]{.mk-d} | [✓]{.mk-d} |
-| [US-DO-03]{.sid} [Need]{.layer-need}<br>[Senior scientist]{.ug}<br>As a senior scientist, I want documentation of how uncertainty is quantified and communicated in the outputs, so that I can defend the workflow's results to government decision-makers.<br>[**Acceptance:** Documentation explicitly states the uncertainty quantification method used and how confidence should be communicated to a non-technical decision-maker.]{.ac}<br>[**Satisfies:** DO05, VA03]{.req} | [✓]{.mk-d} |   | [✓]{.mk-d} |   | [✓]{.mk-d} |   | [✓]{.mk-d} |
-| [US-DO-04]{.sid} [Need]{.layer-need}<br>[Workshop participant]{.ug}<br>As a workshop participant, I want worked examples covering common Australian ecosystem types, so that I can use the workflow as a template rather than starting from scratch.<br>[**Acceptance:** At least one worked example exists for a common Australian ecosystem type, runnable end-to-end as a template.]{.ac}<br>[**Satisfies:** DO02]{.req} |   |   |   |   |   | [✓]{.mk-d} | [✓]{.mk-d} |
-| [US-DO-05]{.sid} [Need]{.layer-need}<br>[Team leader]{.ug}<br>As a team leader, I want training materials that accommodate different learning levels within the same team, so that everyone can contribute regardless of technical background.<br>[**Acceptance:** Training materials are tiered (e.g. beginner/intermediate/advanced) so a mixed-skill team can each start at an appropriate level.]{.ac}<br>[**Satisfies:** DO06]{.req} |   |   |   |   |   |   | [✓]{.mk-d} |
-| [US-DO-06]{.sid} [Need]{.layer-need}<br>[Platform administrator]{.ug}<br>As a platform administrator, I want workshops supported by published, reusable data and code outputs, so that participants have concrete materials to reference after the session ends.<br>[**Acceptance:** Workshop or training session outputs (code, data, slides) are published to a persistent, shareable location before the session ends.]{.ac}<br>[**Satisfies:** DO03]{.req} |   |   |   |   |   | [✓]{.mk-d} | [✓]{.mk-d} |
-| [US-DO-07]{.sid} [Spec]{.layer-spec}<br>[Research Software Engineer]{.ug}<br>As an RSE, I want each workflow to include a data flow diagram (.dot or Mermaid) showing inputs, transformation steps, and outputs, so that I can understand the pipeline structure before running or modifying it.<br>[**Acceptance:** Diagram source file is version-controlled alongside the workflow and renders in the workflow documentation.]{.ac}<br>[**Satisfies:** DO04]{.req} | [✓]{.mk-d} |   |   | [✓]{.mk-d} |   | [✓]{.mk-d} | [✓]{.mk-d} |
-| [US-DO-08]{.sid} [Spec]{.layer-spec}<br>[Environmental Policy Analyst / Reporting Officer]{.ug}<br>As a government reporting officer, I want indicator outputs delivered as standardised tabular summaries (CSV with a defined column schema) and spatial layers (cloud-optimised GeoTIFF), so that I can ingest them into reporting pipelines without reformatting.<br>[**Acceptance:** Published column schema exists and outputs validate against it; raster outputs are valid COGs.]{.ac}<br>[**Satisfies:** DO07, AC05]{.req} | [✓]{.mk-d} |   |   |   | [✓]{.mk-d} |   |   |
-:::
-
-## AC — Accessibility
-
-3 stories in this category.
-
-::: tbl-wrap
-| User story | UC01 | UC02 | UC03 | UC04 | UC05 | UC06 | UC07 |
-|---|---|---|---|---|---|---|---|
-| [US-AC-01]{.sid} [Spec]{.layer-spec}<br>[Ecologist]{.ug}<br>As an ecologist, I want to run a workflow on EcoCommons (cloud notebook) and locally (R/RStudio or Python) without modifying any code, so that I am not dependent on a single platform.<br>[**Acceptance:** Same workflow produces identical outputs on both platforms from the same inputs; no platform-specific paths hard-coded.]{.ac}<br>[**Satisfies:** AC01, RE06]{.req} |   |   |   | [✓]{.mk-d} |   | [✓]{.mk-d} | [✓]{.mk-d} |
-| [US-AC-02]{.sid} [Spec]{.layer-spec}<br>[Platform Administrator]{.ug}<br>As a platform administrator, I want compute and memory requirements specified per workflow, so that I can provision appropriate resources on Nectar or NCI without trial and error.<br>[**Acceptance:** Workflow metadata states minimum and recommended CPU, RAM, and storage, validated against at least one benchmark run.]{.ac}<br>[**Satisfies:** AC07]{.req} |   |   |   | [✓]{.mk-d} |   |   |   |
-| [US-AC-03]{.sid} [Spec]{.layer-spec}<br>[Environmental Policy Analyst / Reporting Officer]{.ug}<br>As a government reporting officer, I want to access the catalogue and filter by ecosystem type (GET level), IUCN RLE criterion, or state/territory, so that I can identify available workflows for my reporting jurisdiction.<br>[**Acceptance:** Catalogue supports all three filters and returns workflows matching any combination of them.]{.ac}<br>[**Satisfies:** AC06]{.req} |   | [✓]{.mk-d} | [✓]{.mk-d} |   |   | [✓]{.mk-d} |   |
-:::
-
-## VA — Validation
-
-2 stories in this category.
-
-::: tbl-wrap
-| User story | UC01 | UC02 | UC03 | UC04 | UC05 | UC06 | UC07 |
-|---|---|---|---|---|---|---|---|
-| [US-VA-01]{.sid} [Spec]{.layer-spec}<br>[Ecologist]{.ug}<br>As an ecologist, I want workflows to validate input data against minimum quality thresholds (spatial coverage, completeness, temporal resolution) before running calculations, so that invalid inputs are caught early with informative error messages.<br>[**Acceptance:** Workflow halts with a named threshold and the observed value when an input fails; passing inputs are logged with their measured values.]{.ac}<br>[**Satisfies:** VA01]{.req} | [✓]{.mk-d} | [✓]{.mk-d} | [✓]{.mk-d} |   |   |   |   |
-| [US-VA-02]{.sid} [Spec]{.layer-spec}<br>[Ecologist]{.ug}<br>As an ecologist, I want indicator values to include uncertainty estimates where methodologically appropriate, so that outputs communicate confidence for decision-making contexts.<br>[**Acceptance:** Outputs carry an uncertainty field, or an explicit statement of why uncertainty could not be quantified for that indicator.]{.ac}<br>[**Satisfies:** VA03, VA05]{.req} | [✓]{.mk-d} |   |   |   | [✓]{.mk-d} |   |   |
-:::
-
-::::::::::
-
-## Coverage summary
-
-| Measure | Value |
-|---|---|
-| Total user stories | 43 |
-| Need layer (from workshops) | 27 |
-| Spec layer (implementation) | 16 |
-| Stories with no derived use case | 4 |
-
-### Stories per requirement category
-
-| Category | Stories |
-|---|---|
-| AD — Adaptability | 7 |
-| RE — Reproducibility and transparency | 5 |
-| VO — Classification and vocabularies | 5 |
-| DD — Data discovery | 13 |
-| DO — Documentation and training | 8 |
-| AC — Accessibility | 3 |
-| VA — Validation | 2 |
-
-The distribution is uneven by design of the source material rather than by
-intent. Data discovery carries 13 stories while validation carries
-2; validation was the least-developed theme in both workshops, and the
-same imbalance appears in the requirement to use case matrix, where `VA04` and
-`VA06` have no use case at all.
-
-### Stories with no derived use case
-
-`US-DD-03`, `US-DD-06`, `US-DD-08`, `US-DD-11`
-
-These satisfy requirements that no current use case exercises, so they are the clearest evidence for which new use cases are needed.
+story_counts |>
+  left_join(link_counts, by = "category") |>
+  arrange(category) |>
+  rename(Category = category) |>
+  kable()
+```
 
 ::: callout-warning
 ## Status
-Acceptance criteria were drafted from the story text rather than supplied by
-stakeholders, and all stories remain pending review. Use case marks are derived,
-not asserted.
+Pending review.
 :::
