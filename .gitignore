@@ -5,3 +5,4 @@ _misc/
 **/*.quarto_ipynb
 .Rproj.user
 .DS_Store
+appendices/.DS_Store
