@@ -24,9 +24,12 @@ eiw <- eiw_load()
 # No story-to-use-case column exists, so the link goes story -> requirement ->
 # use case: a story shows against a use case when they share a requirement.
 link_us_uc <- eiw$link_us_req |>
-  inner_join(eiw$link_uc_req, by = "req_id", relationship = "many-to-many") |>
+  filter(mark == "\u2713") |>
+  inner_join(filter(eiw$link_uc_req, mark == "\u2713"),
+             by = "req_id", relationship = "many-to-many",
+             suffix = c("", "_uc")) |>
   distinct(us_id, uc_id) |>
-  mutate(linked = TRUE)
+  mutate(mark = "\u2713")
 
 # The story ID already carries its category prefix.
 stories <- eiw$user_stories |>
@@ -61,7 +64,8 @@ for (cat_name in EIW_CATEGORIES) {
     links   = link_us_uc,
     id_col  = "us_id",
     row_ids = grp$us_id,
-    uc_ids  = eiw$uc_ids
+    col_ids = eiw$uc_ids,
+    col_key = "uc_id"
   ) |>
     left_join(select(grp, us_id, story, satisfies), by = "us_id") |>
     mutate(`User story` = paste0("**", us_id, "** ", story,
@@ -76,7 +80,7 @@ for (cat_name in EIW_CATEGORIES) {
 
 :::
 
-## Coverage by category
+## Coverage
 
 ```{r}
 #| label: coverage

@@ -37,11 +37,11 @@ for (cat_name in EIW_CATEGORIES) {
   cat("\n## ", substr(reqs$req_id[1], 1, 2), " — ", cat_name, "\n\n", sep = "")
 
   tbl <- eiw_tick_matrix(
-    links      = eiw$link_uc_req,
-    id_col     = "req_id",
-    row_ids    = reqs$req_id,
-    uc_ids     = eiw$uc_ids,
-    status_col = "status"
+    links   = eiw$link_uc_req,
+    id_col  = "req_id",
+    row_ids = reqs$req_id,
+    col_ids = eiw$uc_ids,
+    col_key = "uc_id"
   ) |>
     left_join(select(reqs, req_id, description), by = "req_id") |>
     mutate(Requirement = paste0("**", req_id, "** ", description)) |>
@@ -59,11 +59,13 @@ for (cat_name in EIW_CATEGORIES) {
 
 ```{r}
 #| label: coverage
-# "Use cases covered" counts distinct use cases, separating breadth from depth.
+# Only ticks count as links; x and ? are recorded decisions, not coverage.
+ticks <- eiw$link_uc_req |> filter(mark == "\u2713")
+
 req_counts <- eiw$requirements |>
   count(category, name = "Requirements")
 
-link_counts <- eiw$link_uc_req |>
+link_counts <- ticks |>
   left_join(select(eiw$requirements, req_id, category), by = "req_id") |>
   group_by(category) |>
   summarise(
@@ -77,6 +79,20 @@ req_counts |>
   arrange(category) |>
   rename(Category = category) |>
   kable()
+```
+
+```{r}
+#| label: drift
+#| output: asis
+# Silent when the matrix and the Use_Cases text column agree; prints a warning
+# when a hand edit to one has not been carried across to the other.
+drift <- eiw_check(eiw)
+
+if (sum(drift$n) > 0) {
+  cat("::: callout-caution\n## Registry out of sync\n\n")
+  print(kable(drift))
+  cat("\n:::\n")
+}
 ```
 
 ::: callout-warning
