@@ -3,3 +3,8 @@ _book/
 _misc/
 /.quarto/
 **/*.quarto_ipynb
+.Rproj.user
+.Rhistory
+13-requirements_matrix.qmd
+git_team_commits_catch-up.R
+*.Rproj

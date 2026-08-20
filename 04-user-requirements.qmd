@@ -2,133 +2,129 @@
 
 ## Overview
 
-Workshop participants explored a series of realistic workflow development scenarios and identified user needs, technical challenges, and priorities for future Ecosystem Indicator Workflows (EIWs). 
+Workshop participants explored a series of realistic workflow development scenarios and identified user needs, technical challenges, and priorities for future Ecosystem Indicator Workflows (EIWs).
 
-Workshop participants consistently emphasised that the value of Ecosystem Indicator Workflows extends beyond indicator calculation. Users require workflows that are adaptable, reproducible, transparent, well-documented, and capable of integrating diverse ecosystem datasets while remaining accessible to users with varying technical capabilities. 
+Workshop participants consistently emphasised that the value of Ecosystem Indicator Workflows extends beyond indicator calculation. Users require workflows that are adaptable, reproducible, transparent, well-documented, and capable of integrating diverse ecosystem datasets while remaining accessible to users with varying technical capabilities.
 
 ## Considerations for user requirements
 
 ### Workflow Adaptability
 
-Users require workflows that can be adapted to different ecosystem types, geographic regions, and assessment purposes without requiring complete redevelopment. Stakeholders identified adaptability as one of the most important requirements for the initiative. 
+Users require workflows that can be adapted to different ecosystem types, geographic regions, and assessment purposes without requiring complete redevelopment. Stakeholders identified adaptability as one of the most important requirements for the initiative.
 
-Participants repeatedly highlighted that existing workflows are often difficult to repurpose because ecosystem-specific assumptions and methods are embedded throughout the workflow rather than isolated in configurable components. 
+Participants repeatedly highlighted that existing workflows are often difficult to repurpose because ecosystem-specific assumptions and methods are embedded throughout the workflow rather than isolated in configurable components.
 
 ### Reproducibility and Transparency
 
-Users require workflows that can be independently reproduced, verified, and maintained over time. Reproducibility was identified as a core requirement underpinning scientific credibility and long-term adoption. 
+Users require workflows that can be independently reproduced, verified, and maintained over time. Reproducibility was identified as a core requirement underpinning scientific credibility and long-term adoption.
 
-Users highlighted challenges associated with legacy workflows, undocumented dependencies, restricted data access, and software version incompatibilities. Participants identified containerisation and explicit environment management as important mechanisms for maintaining reproducibility. 
+Users highlighted challenges associated with legacy workflows, undocumented dependencies, restricted data access, and software version incompatibilities. Participants identified containerisation and explicit environment management as important mechanisms for maintaining reproducibility.
 
----
+------------------------------------------------------------------------
 
 ### Data Discovery, Access and Integration
 
-Users require workflows that simplify the process of locating, understanding, accessing, and combining ecosystem and indicator datasets from multiple sources. Data preparation was consistently identified as the most time-consuming component of indicator development. 
+Users require workflows that simplify the process of locating, understanding, accessing, and combining ecosystem and indicator datasets from multiple sources. Data preparation was consistently identified as the most time-consuming component of indicator development.
 
+Participants highlighted common challenges including fragmented datasets, inconsistent survey methodologies, varying spatial resolutions, uneven geographic coverage, and difficulties obtaining access to restricted datasets.
 
-Participants highlighted common challenges including fragmented datasets, inconsistent survey methodologies, varying spatial resolutions, uneven geographic coverage, and difficulties obtaining access to restricted datasets. 
-
----
+------------------------------------------------------------------------
 
 ### Classification and Vocabulary Alignment
 
 Users require ecosystem workflows that support alignment between national ecosystem classifications and international standards.
 
+Stakeholders identified ecosystem classification mapping as one of the largest barriers to workflow development and noted that a substantial proportion of effort is currently spent reconciling classification systems across jurisdictions and assessment frameworks.
 
-Stakeholders identified ecosystem classification mapping as one of the largest barriers to workflow development and noted that a substantial proportion of effort is currently spent reconciling classification systems across jurisdictions and assessment frameworks. 
-
----
+------------------------------------------------------------------------
 
 ### Documentation, Training and Knowledge Transfer
 
 Users require documentation and training resources that accommodate varying levels of technical expertise.
 
+Participants consistently identified documentation and training as critical enablers of workflow adoption. Requirements varied across user groups, but all groups emphasised the need for high-quality documentation and practical examples.
 
-Participants consistently identified documentation and training as critical enablers of workflow adoption. Requirements varied across user groups, but all groups emphasised the need for high-quality documentation and practical examples. 
-
----
+------------------------------------------------------------------------
 
 ### Accessibility and Usability
 
 Users require workflows that minimise technical barriers to adoption while supporting a diverse user community.
 
+Workshop participants demonstrated strong familiarity with R, Python, RStudio, QGIS, and Jupyter-based environments, while familiarity with specialised platforms and workflow technologies varied considerably. As a result, workflow design should prioritise accessibility and user experience over technical complexity where practical.
 
-Workshop participants demonstrated strong familiarity with R, Python, RStudio, QGIS, and Jupyter-based environments, while familiarity with specialised platforms and workflow technologies varied considerably. As a result, workflow design should prioritise accessibility and user experience over technical complexity where practical. 
-
----
+------------------------------------------------------------------------
 
 ### Validation, Uncertainty and Scientific Confidence
 
 Users require workflows that support the transparent evaluation of indicator quality and reliability.
 
-Participants noted that uncertainty information is frequently omitted from final products despite being critical for interpretation and decision-making. Validation approaches and integration of expert judgement were identified as areas requiring greater consistency across workflows. 
+Participants noted that uncertainty information is frequently omitted from final products despite being critical for interpretation and decision-making. Validation approaches and integration of expert judgement were identified as areas requiring greater consistency across workflows.
 
----
+------------------------------------------------------------------------
 
 ## Priority User Requirements
 
 Across all workshops, the following requirements emerged as the highest priorities for the Ecosystem Indicator Workflow program:
 
-1. Adaptable and modular workflow architecture.
-2. Reproducible workflows supported by version-controlled computational environments.
-3. Alignment with the IUCN Global Ecosystem Typology and other recognised standards.
-4. Transparent data provenance and metadata.
-5. Guidance for integrating heterogeneous ecosystem datasets.
-6. Comprehensive documentation and tiered training materials.
-7. Explicit treatment of validation, uncertainty, and expert judgement.
-8. FAIR-compliant workflows, tools, metadata, and outputs.
+1.  Adaptable and modular workflow architecture.
+2.  Reproducible workflows supported by version-controlled computational environments.
+3.  Alignment with the IUCN Global Ecosystem Typology and other recognised standards.
+4.  Transparent data provenance and metadata.
+5.  Guidance for integrating heterogeneous ecosystem datasets.
+6.  Comprehensive documentation and tiered training materials.
+7.  Explicit treatment of validation, uncertainty, and expert judgement.
+8.  FAIR-compliant workflows, tools, metadata, and outputs.
 
-Requirements 1 to 7 provide the foundation for prioritising workflow functionality and defining the staged delivery roadmap described in subsequent sections of this document. Requiment 8 is embedded in all activities of the project. 
+Requirements 1 to 7 provide the foundation for prioritising workflow functionality and defining the staged delivery roadmap described in subsequent sections of this document. Requirement 8 is embedded in all activities of the project.
 
 ## Key requirements
 
-The following list of key requirements represent a comprehensive set of needs identified across stakeholder groups. They map to the priority requirements, except that the points 5 and 6 are 
+The following list of key requirements represent a comprehensive set of needs identified across stakeholder groups. They map to the priority requirements, except that the points 5 and 6 are
 
-| ID | Description | Comments |
-|-----|-----------------------|----------------------|
-||**AD** Adaptability||
-|AD01| Modular workflow designs that clearly separate ecosystem-specific components from generic analytical components. | |
-|AD02| Clearly documented points within workflows where ecosystem definitions, data sources, indicator variables, and assessment purposes can be substituted. | |
-|AD03| The ability to apply a common workflow structure across multiple ecosystem types. | |
-|AD04| The ability to support alternative assessment frameworks, including ecosystem risk, ecosystem condition, recovery, and ecosystem accounting applications. | |
-|AD05| Guidance for reconciling global datasets with local and jurisdictional data sources.| |
-||**RE** Reproducibility and transparency ||
-|RE01| Fully documented workflow processes from data acquisition through to final outputs.||
-|RE02| Clear provenance records for all input datasets.||
-|RE03| Version-controlled workflow code and analytical methods.||
-|RE04| Documented software dependencies and computational environments.||
-|RE05| Long-term maintainability as software platforms and packages evolve.||
-|RE06| Repeatable execution across multiple computing environments.||
-||**VO** Classification and vocabularies||
-|VO01| Alignment with the IUCN Global Ecosystem Typology.
-|VO02| Clear mapping between local ecosystem classifications and global typologies.
-|VO03| Use of authoritative identifiers where possible.
-|VO04| Machine-readable classification mappings and metadata.
-|VO05| Transparent documentation of classification decisions and assumptions.
-||**DD** Data discovery ||
-|DD01| Guidance on identifying authoritative ecosystem and indicator datasets.
-|DD02| Clear documentation of data provenance, quality, currency, and fitness-for-purpose.
-|DD03| Consistent approaches for harmonising heterogeneous datasets.
-|DD04| Mechanisms to support integration of biological surveys, monitoring data, remote sensing products, and spatial datasets.
-|DD05| Support for workflows operating across local, cloud, and high-performance computing environments.
-|DD06| Explicit documentation of data limitations and known biases.
-||**DO** Documentation and training||
-|DO01| Plain-language workflow documentation.
-|DO02| Worked examples using real ecosystem assessments.
-|DO03| Step-by-step implementation guidance.
-|DO04| Technical documentation describing workflow functions and analytical methods.
-|DO05| Guidance on interpretation of outputs, assumptions, limitations, and uncertainty.
-|DO06| Training resources suitable for beginner, intermediate, and advanced users.
-||**AC** Accessibility||
-|AC01| Support for commonly used open-source tools and platforms.
-|AC02| Use of technologies already familiar to the target user community where possible.
-|AC03| Clear installation and setup instructions.
-|AC04| Support for users operating within institutional security and software restrictions.
-|AC05| Outputs that can be interpreted by both technical and non-technical users.
-||**VA** Validation||
-|VA01| Explicit validation procedures.
-|VA02| Documentation of assumptions and methodological limitations.
-|VA03| Quantification and communication of uncertainty.
-|VA04| Support for expert judgement where empirical validation data are unavailable.
-|VA05| Consistent reporting of confidence in indicator outputs.
+| ID | Description |
+|---------------|-----------------------------------------------------------|
+|  | ***AD** Adaptability* |
+| AD01 | Modular workflow designs that clearly separate ecosystem-specific components from generic analytical components. |
+| AD02 | Clearly documented points within workflows where ecosystem definitions, data sources, indicator variables, and assessment purposes can be substituted. |
+| AD03 | The ability to apply a common workflow structure across multiple ecosystem types. |
+| AD04 | The ability to support alternative assessment frameworks, including ecosystem risk, ecosystem condition, recovery, and ecosystem accounting applications. |
+| AD05 | Guidance for reconciling global datasets with local and jurisdictional data sources. |
+|  | ***RE** Reproducibility and transparency* |
+| RE01 | Fully documented workflow processes from data acquisition through to final outputs. |
+| RE02 | Clear provenance records for all input datasets. |
+| RE03 | Version-controlled workflow code and analytical methods. |
+| RE04 | Documented software dependencies and computational environments. |
+| RE05 | Long-term maintainability as software platforms and packages evolve. |
+| RE06 | Repeatable execution across multiple computing environments. |
+|  | **VO** Classification and vocabularies |
+| VO01 | Alignment with the IUCN Global Ecosystem Typology. |
+| VO02 | Clear mapping between local ecosystem classifications and global typologies. |
+| VO03 | Use of authoritative identifiers where possible. |
+| VO04 | Machine-readable classification mappings and metadata. |
+| VO05 | Transparent documentation of classification decisions and assumptions. |
+|  | ***DD** Data discovery* |
+| DD01 | Guidance on identifying authoritative ecosystem and indicator datasets. |
+| DD02 | Clear documentation of data provenance, quality, currency, and fitness-for-purpose. |
+| DD03 | Consistent approaches for harmonising heterogeneous datasets. |
+| DD04 | Mechanisms to support integration of biological surveys, monitoring data, remote sensing products, and spatial datasets. |
+| DD05 | Support for workflows operating across local, cloud, and high-performance computing environments. |
+| DD06 | Explicit documentation of data limitations and known biases. |
+|  | ***DO** Documentation and training* |
+| DO01 | Plain-language workflow documentation. |
+| DO02 | Worked examples using real ecosystem assessments. |
+| DO03 | Step-by-step implementation guidance. |
+| DO04 | Technical documentation describing workflow functions and analytical methods. |
+| DO05 | Guidance on interpretation of outputs, assumptions, limitations, and uncertainty. |
+| DO06 | Training resources suitable for beginner, intermediate, and advanced users. |
+|  | ***AC** Accessibility* |
+| AC01 | Support for commonly used open-source tools and platforms. |
+| AC02 | Use of technologies already familiar to the target user community where possible. |
+| AC03 | Clear installation and setup instructions. |
+| AC04 | Support for users operating within institutional security and software restrictions. |
+| AC05 | Outputs that can be interpreted by both technical and non-technical users. |
+|  | ***VA** Validation* |
+| VA01 | Explicit validation procedures. |
+| VA02 | Documentation of assumptions and methodological limitations. |
+| VA03 | Quantification and communication of uncertainty. |
+| VA04 | Support for expert judgement where empirical validation data are unavailable. |
+| VA05 | Consistent reporting of confidence in indicator outputs. |
