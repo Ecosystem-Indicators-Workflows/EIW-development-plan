@@ -1,4 +1,26 @@
 # Executive summary {.unnumbered}
 
-# Version history {.unnumbered}
+# Document Details {.unnumbered}
+
+|||
+|-------------|----------------------|
+|Project title | Ecosystem Indicators Workflows |
+|Project ID | PLT019 |
+|Lead organisation | University of New South Wales ([UNSW Sydney](https://ror.org/03r8z3t63)) Centre for Ecosystem Science |
+|Funder | Australian Research Data Commons ([ARDC](https://ror.org/038sjwq14)) Planet RDC, Focus Area 2 |
+|Partners | [University of Melbourne](https://ror.org/01ej9dk98), [Queensland University of Technology](https://ror.org/03pnv4752), [James Cook University](https://ror.org/04gsp2c11), [QCIF](https://ror.org/03sd43014) / EcoCommons |
+|Project period | February 2026 – February 2028 |
+|Document type | Requirements gathering and development roadmap |
+|Project Lead | Dr José R. Ferrer-Paris, UNSW CES |
+
+# Revision history {.unnumbered}
+
+|Version | Date | Editor | Summary of Changes |
+|------|------|-----------------|----------------------|
+| 0.1 | April 2026 | Abhimanyu Raj Singh, Silvia Colombo | Initial draft based on WP2 planning and requirement specifications |
+| 0.2 | June 2026 | Abhimanyu Raj Singh | Updated draft of User Groups, User stories and User requirements after first workshop |
+| 0.3 | 6 July 2026 | Abhimanyu Raj Singh, Silvia Colombo, Ada Sánchez-Mercado, [AI tools: Claude] | Updated User Groups, User stories and User requirements, incorporated human and AI generated summaries from both workshop, consolidate documents with multiple sections |
+| 0.4 | 10 July 2026 | JR Ferrer-Paris, [AI tools: Co-pilot] | Consolidate information from multiple documents, provide document structure assisted by AI-tools, use of markdown authoring and version control tools |
+| 0.5 | 20 July 2026 | JR Ferrer-Paris | Review, improve, edit or remove AI-generated content. |
+| 0.6 | 20 Aug 2026 | JR Ferrer-Paris, Abhimanyu Raj Singh, [AI tools: Co-pilot] | Introduction with overview and scope. |
 

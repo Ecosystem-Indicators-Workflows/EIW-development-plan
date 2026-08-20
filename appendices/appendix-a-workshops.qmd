@@ -1,0 +1,66 @@
+# Workshop Feedbacks: 
+
+## Workshop 1 
+
+This workshop was designed as a co-design exercise to gather structured feedback from a heterogeneous, multidisciplinary community of end users. Including ecologists, data analysts, coders, and software engineers, on a demo workflow for ecosystem indicator development, as the first in a series of co-design workshops for the Ecosystem Indicators Workflows (EIW) project aimed at ensuring the workflow reflects how people actually work. The workflow follows FAIR principles and supports applications such as ecosystem risk assessment, ecosystem accounting, and the IUCN Green Status, and given the diversity of expertise, institutions, and working practices among users, the workshop set out to understand how people interact with the workflow in practice, tools, preferred data collections, where friction occurs, and what support and collaboration mechanisms are needed to improve usability and adoption. 
+ 
+Familiarity -> ALA CSIRO FED | shape files tabular and RDA | rstudio GIS, GEE, quarto, Jupyter | R python Bash1 
+
+## Workshop 2 
+
+This workshop was a second co-design exercise as a follow-up for the first one, bringing together ecologists, data analysts, coders, and software engineers to improve reproducible workflows for ecosystem indicator development. Where Workshop 1 tested and refined a workflow demo against real-world experience, Workshop 2 shifts focus to scoping and reflection: identifying priority ecosystems, biomes, and functional groups to fill urgent knowledge gaps, surfacing which ecosystems/indicators are most useful for current programs versus future scalability, and assessing how reproducible and reusable participants' past indicator-development workflows have actually been. 
+
+Ecosystems / focus areas nominated for expanding coverage  
+
+* Oyster Reef of Southern & Eastern Australia12% 
+* Cumberland Plain Woodland, NSW12% 
+* Mangroves of Moreton Bay8% 
+* Saltmarshes of Moreton Bay8% 
+* Alpine snow patch herb fields, SE Australia8% 
+* Coastal lowland rainforests8% 
+* Connected wetlands of the Lake Eyre Basin8% 
+* Georgina gidgee woodlands, Central Australia 
+
+Planned future work named by participants (next ~2 years)  
+
+* Tropical and subtropical rainforests (pending funding)  
+* Yellow Box–White Box–Blakely's Red Gum and other woodlands (pending funding)  
+* Semi-arid and freshwater ecosystems  
+* Pyric savannas in northern Australia (extending existing Brazil-based indicator work)  
+* Broader RLE/GSE program: compiling existing assessments and building tools to support new ones at scale 
+
+This workshop also asked participants to reflect on a past ecosystem-indicator workflow they had personally worked on. The key findings were:   
+
+* Findability: most participants rated finding the needed data as “moderate” (required searching across sources) to “difficult” (scattered/poorly documented); none rated it “very easy.”  
+* Accessibility: a majority reported data was only “accessible with request/permission” or fully restricted; approx. 71% selected difficulty finding/locating sources as a factor (figure extracted from poll widget — treat as approximate).  
+* Main accessibility blockers reported: complex access procedures, data ownership issues, broken/outdated links, and low-quality metadata. Free-text comments repeatedly cited data-sharing agreements “taking months” and experts “not responding to emails.”  
+* Data readiness challenges: inconsistent classification systems (ecosystem types, species names), varying data quality/resolution, temporal mismatches, and difficulty integrating expert knowledge with quantitative data were the most frequently cited.  
+* Skills required for data preparation: GIS/spatial analysis, remote sensing, and timeseries analysis were most cited, alongside general data cleaning/formatting.  
+* Reproducibility of the calculation step itself: participants were split between “reproducible” and “partially/difficult to reproduce” — several noted that while code for the quantitative portion was reproducible, the expert-elicitation component (setting thresholds) generally was not documented in a reproducible way.  
+* Top priority action nominated to improve reproducibility of the existing workflow: “Strengthen documentation” (most-selected option, ahead of standardising methods, validating with independent data, and increasing technical capacity).  
+* What participants said is needed for the next project to be reproducible from the start: build reproducibility into project design/coding standards from day one rather than as an afterthought; train lead assessors in reproducible coding practices; ensure both accessible data and reproducible compute environments; document species/terminology decisions explicitly. 
+
+ | Topic | Key points | Constraints / challenges | Implications / actions |
+| :--- | :--- | :--- | :--- |
+| **Workshop 2 outputs** | Focus could move beyond single ecosystems to groups of ecosystems to understand how tailored both sets of indicators and individual indicators need to be. | Need to balance general methods across ecosystems with ecosystem-specific adaptation. | Clarify the scale of indicator development: individual ecosystems, ecosystem groups, or cross-ecosystem methods. |
+| **Ecosystem focus areas** | Tropical and subtropical rainforest, semi-arid woodlands, freshwater ecosystems, and all ecosystems through the Red List of Ecosystems. | Progress depends on existing and pending funding. Most projects are still in early stages, including requirements gathering, indicator exploration, dataset identification, and pilot analyses. | Prioritize projects according to funding status, readiness of datasets, indicators, and whether pilot studies have already been completed. |
+| **General constraints** | Main constraints are funding and data availability. Datasets need to be collated, cleaned, and harmonized before use in assessments. | Final products must be easy for end users to access, use, and reuse. There is also a tension between user consultation needs and the time required to build infrastructure. | Develop an implementation pathway that combines funding strategy, data preparation, user consultation, and infrastructure design. |
+| **Reproducibility of methods and indicators** | Core methodologies such as the Red List of Ecosystems are well documented, but reproducible indicators are often lacking. | Indicator execution can remain difficult because coding and programming skills vary among end users. | Provide clear workflows, reusable code, documentation, and user guidance to support reproducible indicator calculation. |
+| **Data findability** | Data needed for indicators is often difficult to obtain, scattered, and poorly documented. Only a small proportion of participants found the search process moderately difficult. | Search processes vary widely, including search engines, online catalogues, and other sources. | Create clearer guidance on where to find relevant datasets and how to assess their suitability for indicators. |
+| **Data accessibility** | Nearly half of participants (47%) reported that data was fully open to access, while 27% reported partial access requiring request or permission. The remaining participants reported restricted or inaccessible data. | Access barriers include complex access procedures, data-sharing agreements, difficult database navigation, data ownership issues, broken or outdated links, and low-quality metadata. | Prioritize open and well-documented datasets, while documenting access requirements and known barriers for restricted datasets. |
+| **How is the data accessed?** | Most data are accessed directly from public repositories (40%) or extracted from published literature, such as supplementary data, printed tables, and figures (25%). | Smaller proportions of participants query specialized databases or use their own data. Downloading spatial data may be complicated. | Explore systems that reduce the need for users to download spatial data manually. |
+| **Data readiness & integration** | Frequent challenges include varying data resolution and quality, inconsistent classification systems, spatial-scale differences, temporal mismatches, limited metadata, and missing or incomplete data. | These issues make it difficult to align datasets and compare indicators across ecosystems or regions. | Define minimum data standards, harmonization procedures, and metadata requirements for indicator workflows. |
+| **Skills required for data preparation** | GIS and spatial analysis were reported by 35% of participants as required skills, while data cleaning and formatting were reported by 29%. | Ecological survey knowledge is important to ensure that data are used correctly, including understanding whether similar variables are measuring the same thing. Knowledge of species names, synonyms, and name changes is also important. | Support users with training, templates, and guidance covering spatial analysis, data cleaning, ecological assumptions, and taxonomy. |
+| **Reproducibility** | Indicator calculation was considered partially reproducible by 67% of participants, while the remaining participants considered it difficult to reproduce. | Limits include a lack of documented processes and validation points, data availability, limited time to engage with managers, difficulty integrating expert knowledge, and variable data quality. | Strengthen documentation, validation checkpoints, data provenance, and mechanisms for incorporating expert knowledge. |
+| **Next steps** | All participants highlighted stronger documentation as the priority of action for improving workflow reproducibility. | Important methodological details can be lost when workflows are only reported in scientific papers. | Develop complete documentation that captures assumptions, data sources, processing steps, code, validation checks, and decision points. |
+
+# Example case study
+
+## Fleurieu Swamp (Fleurieu peninsula has 65 ecosystems - 23 wetlands and swaps +40 woodlands +2 marine zones) 
+
+| Workflow stage | What happens | Reported challenge level |
+| :--- | :--- | :--- |
+| **Prepare ecosystem distribution data** | Global data sources needed reprojection/reconciliation with local expert layers; DCCEEW spatial layers authoritative but differed in resolution from global sources. | Mixed |
+| **Prepare indicator variable data** | BoM water balance data available but required preprocessing and temporal alignment with ecosystem snapshots. | Difficult |
+| **Calculation** | Adapting thresholds from Red List (collapse) to Green Status Integrity/recovery was conceptually and technically challenging — different baselines and output formats. | Frustrating |
+| **Evaluating uncertainty** | Expert review flagged as necessary but no formal protocol existed; validation data format mismatch meant manual reconciliation. | Uncertain |
