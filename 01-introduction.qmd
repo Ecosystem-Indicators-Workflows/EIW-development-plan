@@ -1,0 +1,68 @@
+# Introduction
+
+## Background
+
+Ecosystem-specific indicators are used to support ecosystem assessment, monitoring, reporting, conservation planning, ecosystem accounting, and environmental decision-making. These indicators provide a structured way to measure ecosystem characteristics, assess ecological condition, track change through time, and evaluate progress towards management and policy objectives.
+
+Despite their growing importance, the development of ecosystem indicators is often hampered by fragmented analytical approaches, inconsistent methods, poorly documented workflows, and challenges associated with integrating diverse data sources. Indicator development frequently relies on bespoke analyses that are difficult to reproduce, adapt to new contexts, or apply consistently across ecosystem types. These limitations reduce transparency, constrain scalability, and hinder the uptake of ecosystem indicators by the broader research, policy, and management communities.
+
+The Ecosystem Indicator Workflows (EIW) project was established to address these challenges through the development of modular, transparent, and reproducible workflows that support the creation of ecosystem-specific indicators. The project aims to enable users to develop fit-for-purpose indicators by combining ecological expertise, data resources, computational workflows, and reproducible research practices within a common framework.
+
+![Schematic representation of the vision of the EIW project, moving from a current state of fragmented and ad hoc methods towards fully reproducible workflows that are supported by a community of practice and that integrate seamlessly into online catalogues and reporting tools. The coloured codes in each box refer to specific work packages of the EIW project plan. WP3: Work Package 3 - Ecosystem Data and Metadata; WP4: Work Package 4 - Workflow Delivery; Work Package 5 - Indicator Workflow Catalogue and Dashboard; Work Package 6 - Community Building and Engagement, Communication, Skills and Training.](/figures/EIW-project-plan-context.jpg){#fig-vision}
+
+:::{.aside}
+Diagram available in [draw.io](https://drive.google.com/file/d/1TxnK7BMdlmnkzF72b7TDzEi62u1ebX47/view?usp=sharing)
+:::
+
+
+## FAIR workflows for Ecosystem-specific Indicators 
+
+For the purpose of this document an ecosystem indicator workflow is a documented and reproducible computational workflow for the development of ecosystem-specific and fit-for-purpose indicators. Each workflow begins with a clearly defined scope and follows a common structure that supports transparency, consistency, and reuse.
+
+The workflow framework comprises four core components:
+
+1. Ecosystem data preparation;
+2. Indicator data preparation;
+3. Indicator calculation; and
+4. Validation and uncertainty assessment.
+
+The scope of each workflow is defined through:
+
+1. Identification of the target ecosystem;
+2. Definition of the intended purpose of the indicator;
+3. Description of the diagnostic mechanism linking the indicator to ecosystem condition or change; and
+4. Selection of the indicator variable or variables.
+
+To support interoperability and scientific consistency, ecosystem definitions are aligned with the IUCN Global Ecosystem Typology and workflows are designed to incorporate the best available ecosystem and indicator datasets appropriate to the intended purpose.
+
+## Requirements Gathering and Planning
+
+A key objective of the project is to ensure that workflow development is driven by the needs of the communities that will create, adapt, maintain, and use ecosystem indicator workflows. During the first phase of the project, requirements gathering activities were undertaken with researchers, ecologists, data scientists, software developers, infrastructure providers, environmental managers, government agencies, and other potential users of the workflows.
+
+These activities sought to:
+
+- identify user groups and their requirements;
+- understand high-level workflow requirements and constraints;
+- document priority use cases;
+- identify opportunities for workflow reuse and adaptation;
+- understand barriers to adoption; and
+- inform the prioritisation of workflow functionality over the life of the project.
+
+The findings from these activities provide the foundation for the workflow development roadmap described in this document.
+
+## Purpose of this Development Plan
+
+This document presents a documented workflow development plan for the period 2026–2028. This document describes the requirements gathered from stakeholders and translates them into a staged development roadmap for workflow delivery. 
+
+Specifically, the plan:
+
+- identifies the primary user groups and their requirements;
+- documents high-level workflow requirements and constraints;
+- describes priority use cases for ecosystem indicator workflows;
+- defines the functionality to be delivered during the first and second workflow development tranches;
+- outlines the process for reviewing and refining future priorities; and
+- provides a framework for guiding workflow development, community engagement, and future investment.
+
+The plan will be used by project partners, workflow developers, stakeholders, and governance groups to guide implementation of the Ecosystem Indicator Workflows project and to ensure that workflow development remains aligned with user needs, scientific best practice, and the long-term objective of building a sustainable ecosystem indicator workflow community.
+
+This document focuses only on activities directly related to Work Package 4 - Workflow Delivery. There will be other documents outlining requirements and guidance for other work packages.
