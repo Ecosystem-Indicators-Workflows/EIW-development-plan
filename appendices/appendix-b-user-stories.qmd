@@ -1,16 +1,113 @@
-# User Story 
+---
+title: "User Stories × Use Cases"
+format:
+  html:
+    toc: true
+    grid:
+      body-width: 1100px
+execute:
+  echo: false
+  warning: false
+  message: false
+---
 
-* I want to adapt an existing indicator workflow to a new ecosystem type without rewriting the full analysis 
-* I want to understand which parts of a workflow are ecosystem-specific vs generic 
-* I want to switch the assessment purpose (e.g. risk to recovery) without needing a new workflow from scratch 
-* I want to run a workflow developed by someone else on a new dataset without modifying the code 
-* I want to containerise the workflow environment with pinned dependencies 
-* I want to know where ecosystem distribution data comes from and when it was last updated 
-* I want to access a curated vocabulary mapping between national and global classifications 
-* I want to guidance on transitioning from HPC-based preprocessing to cloud or local analysis 
-* I want to apply consistent indicator calculations across regions with uneven survey coverage 
-* I want to step-by-step guidance with plain-language explanations at every stage 
-* I want to documentation of how uncertainty is quantified and communicated in the outputs 
-* I want to worked examples covering common Australian ecosystem types 
+```{r}
+#| label: setup
+source("_eiw-data.R")
+library(knitr)
 
- 
+eiw <- eiw_load()
+```
+
+```{r}
+#| label: derive
+# No story-to-use-case column exists, so the link goes story -> requirement ->
+# use case: a story shows against a use case when they share a requirement.
+link_us_uc <- eiw$link_us_req |>
+  filter(mark == "\u2713") |>
+  inner_join(filter(eiw$link_uc_req, mark == "\u2713"),
+             by = "req_id", relationship = "many-to-many",
+             suffix = c("", "_uc")) |>
+  distinct(us_id, uc_id) |>
+  mutate(mark = "\u2713")
+
+# The story ID already carries its category prefix.
+stories <- eiw$user_stories |>
+  mutate(prefix = substr(us_id, 4, 5))
+
+prefix_to_category <- eiw$requirements |>
+  mutate(prefix = substr(req_id, 1, 2)) |>
+  distinct(prefix, category)
+```
+
+::: callout-important
+## How to read these columns
+A ✓ means the story and the use case share a requirement.
+:::
+
+::: panel-tabset
+
+```{r}
+#| label: story-tabs
+#| output: asis
+# Same tab structure as the requirements chapter so the two read alike.
+for (cat_name in EIW_CATEGORIES) {
+
+  pre <- prefix_to_category |> filter(category == cat_name) |> pull(prefix)
+  grp <- stories |> filter(prefix %in% pre) |> arrange(us_id)
+
+  if (nrow(grp) == 0) next
+
+  cat("\n## ", pre[1], " — ", cat_name, "\n\n", sep = "")
+
+  tbl <- eiw_tick_matrix(
+    links   = link_us_uc,
+    id_col  = "us_id",
+    row_ids = grp$us_id,
+    col_ids = eiw$uc_ids,
+    col_key = "uc_id"
+  ) |>
+    left_join(select(grp, us_id, story, satisfies), by = "us_id") |>
+    mutate(`User story` = paste0("**", us_id, "** ", story,
+                                 "<br>*Satisfies: ", satisfies, "*")) |>
+    relocate(`User story`) |>
+    select(-us_id, -story, -satisfies)
+
+  print(kable(tbl, align = c("l", rep("c", length(eiw$uc_ids)))))
+  cat("\n")
+}
+```
+
+:::
+
+## Coverage
+
+```{r}
+#| label: coverage
+# Column headings match the requirements chapter so both tables read together.
+story_cat <- stories |>
+  left_join(prefix_to_category, by = "prefix")
+
+story_counts <- story_cat |>
+  count(category, name = "Stories")
+
+link_counts <- link_us_uc |>
+  left_join(select(story_cat, us_id, category), by = "us_id") |>
+  group_by(category) |>
+  summarise(
+    `Use case links`    = n(),
+    `Use cases covered` = n_distinct(uc_id),
+    .groups = "drop"
+  )
+
+story_counts |>
+  left_join(link_counts, by = "category") |>
+  arrange(category) |>
+  rename(Category = category) |>
+  kable()
+```
+
+::: callout-warning
+## Status
+Pending review.
+:::

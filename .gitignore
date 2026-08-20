@@ -8,3 +8,5 @@ _misc/
 13-requirements_matrix.qmd
 git_team_commits_catch-up.R
 *.Rproj
+.DS_Store
+appendices/.DS_Store

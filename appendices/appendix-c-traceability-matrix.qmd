@@ -1,0 +1,101 @@
+---
+title: "Requirements × Use Cases"
+format:
+  html:
+    toc: true
+    grid:
+      body-width: 1100px
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+source("_eiw-data.R")
+library(knitr)
+
+eiw <- eiw_load()
+```
+
+::: panel-tabset
+
+```{r}
+#| label: req-tabs
+#| output: asis
+# One tab per requirement category, written by a loop so the tabs follow the
+# registry rather than being typed out.
+for (cat_name in EIW_CATEGORIES) {
+
+  reqs <- eiw$requirements |>
+    filter(category == cat_name) |>
+    arrange(req_id)
+
+  if (nrow(reqs) == 0) next
+
+  cat("\n## ", substr(reqs$req_id[1], 1, 2), " — ", cat_name, "\n\n", sep = "")
+
+  tbl <- eiw_tick_matrix(
+    links   = eiw$link_uc_req,
+    id_col  = "req_id",
+    row_ids = reqs$req_id,
+    col_ids = eiw$uc_ids,
+    col_key = "uc_id"
+  ) |>
+    left_join(select(reqs, req_id, description), by = "req_id") |>
+    mutate(Requirement = paste0("**", req_id, "** ", description)) |>
+    relocate(Requirement) |>
+    select(-req_id, -description)
+
+  print(kable(tbl, align = c("l", rep("c", length(eiw$uc_ids)))))
+  cat("\n")
+}
+```
+
+:::
+
+## Coverage by category
+
+```{r}
+#| label: coverage
+# Only ticks count as links; x and ? are recorded decisions, not coverage.
+ticks <- eiw$link_uc_req |> filter(mark == "\u2713")
+
+req_counts <- eiw$requirements |>
+  count(category, name = "Requirements")
+
+link_counts <- ticks |>
+  left_join(select(eiw$requirements, req_id, category), by = "req_id") |>
+  group_by(category) |>
+  summarise(
+    `Use case links`    = n(),
+    `Use cases covered` = n_distinct(uc_id),
+    .groups = "drop"
+  )
+
+req_counts |>
+  left_join(link_counts, by = "category") |>
+  arrange(category) |>
+  rename(Category = category) |>
+  kable()
+```
+
+```{r}
+#| label: drift
+#| output: asis
+# Silent when the matrix and the Use_Cases text column agree; prints a warning
+# when a hand edit to one has not been carried across to the other.
+drift <- eiw_check(eiw)
+
+if (sum(drift$n) > 0) {
+  cat("::: callout-caution\n## Registry out of sync\n\n")
+  print(kable(drift))
+  cat("\n:::\n")
+}
+```
+
+::: callout-warning
+## Status
+Pending.
+:::
