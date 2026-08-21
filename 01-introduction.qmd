@@ -9,11 +9,10 @@ Despite their growing importance, the development of ecosystem indicators is oft
 
 The Ecosystem Indicator Workflows (EIW) project was established to address these challenges through the development of modular, transparent, and reproducible workflows that support the creation of ecosystem-specific indicators. The project aims to enable users to develop fit-for-purpose indicators by combining ecological expertise, data resources, computational workflows, and reproducible research practices within a common framework.
 
-![Schematic representation of the vision of the EIW project, moving from a current state of fragmented and ad hoc methods towards fully reproducible workflows that are supported by a community of practice and that integrate seamlessly into online catalogues and reporting tools. The coloured codes in each box refer to specific work packages of the EIW project plan. WP3: Work Package 3 - Ecosystem Data and Metadata; WP4: Work Package 4 - Workflow Delivery; Work Package 5 - Indicator Workflow Catalogue and Dashboard; Work Package 6 - Community Building and Engagement, Communication, Skills and Training.](/figures/EIW-project-plan-context.jpg){#fig-vision}
+![Schematic representation of the vision of the EIW project, moving from a current state of fragmented and ad hoc methods towards fully reproducible workflows that are supported by a community of practice and that integrate seamlessly into online catalogues and reporting tools. The coloured codes in each box refer to specific work packages of the EIW project plan. WP3: Work Package 3 - Ecosystem Data and Metadata; WP4: Work Package 4 - Workflow Delivery; Work Package 5 - Indicator Workflow Catalogue and Dashboard; Work Package 6 - Community Building and Engagement, Communication, Skills and Training. Diagram available in [draw.io](https://drive.google.com/file/d/1TxnK7BMdlmnkzF72b7TDzEi62u1ebX47/view?usp=sharing)
+](/figures/EIW-project-plan-context.jpg){#fig-vision}
 
-:::{.aside}
-Diagram available in [draw.io](https://drive.google.com/file/d/1TxnK7BMdlmnkzF72b7TDzEi62u1ebX47/view?usp=sharing)
-:::
+
 
 
 ## FAIR workflows for Ecosystem-specific Indicators 
