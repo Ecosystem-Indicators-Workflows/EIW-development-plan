@@ -20,31 +20,6 @@ Requirements gathering activities were undertaken to:
 | Document review | Continuous    | Existing workflows and requirements    |
 
 
-## Participants in stakeholder workshops
+## Participants in requirement gathering activities
 
-We had 32 participants in the first stakeholder workshop that involved ecosystem scientists, data analysts, government practitioners, research software engineers, data managers, and platform providers. We had 12 participants in the second workshop that targeted researchers with direct experience in ecosystem assessments.
-
-## Meetings and interviews
-
-We gathered feedback through participation in ... meetings with different participants.
-
-
-
-Summarise:
-
-* Government
-* Researchers
-* Ecologists
-* Data scientists
-* Platform providers
-* Students/ECRs
-
-## Key Themes
-
-* Adaptability
-* Reproducibility
-* Documentation
-* Interoperability
-* Training
-* FAIR compliance
-
+We had 32 participants in the first stakeholder workshop that involved ecosystem scientists, data analysts, government practitioners, research software engineers, data managers, and platform providers. We had 12 participants in the second workshop that targeted researchers with direct experience in ecosystem assessments. We gathered feedback through participation in ... ^[TO DO: Check total] meetings with different participants from government, data scientists,  platform providers, and researchers and students.

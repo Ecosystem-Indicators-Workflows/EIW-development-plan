@@ -79,7 +79,7 @@ Requirements 1 to 7 provide the foundation for prioritising workflow functionali
 
 ## Key requirements
 
-The following list of key requirements represent a comprehensive set of needs identified across stakeholder groups. They map to the priority requirements, except that the points 5 and 6 are
+The following list of key requirements represent a comprehensive set of needs identified across stakeholder groups. They map to the priority requirements, except that the points 5 and 6 are merged for practical reasons.
 
 | ID | Description |
 |---------------|-----------------------------------------------------------|

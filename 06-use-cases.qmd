@@ -1,4 +1,4 @@
-# Detailed User Cases
+# Detailed Use cases
 
 ## Overview
 
@@ -6,14 +6,14 @@ Requirements gathering activities identified a range of user groups that will co
 
 ------------------------------------------------------------------------
 
-## User case descriptions
+## Use case descriptions
 
 ### UC01 – Adapt an existing fit-for-purpose ecosystem-specific to make it reproducible {.unnumbered}
 
 | Attribute        | Description                                                                                  |
 | ---------------- | -------------------------------------------------------------------------------------------- |
 | Primary User     | Ecologist / Conservation Scientist (UG01)                                                    |
-| Supporting Users | Research Software Engineer (UG02), Data Scientist (UG03)                                     |
+| Supporting Users | Research Software Engineer (UG07), Data Scientist (UG06)                                     |
 | Purpose          | Adapt an ecosystem-specific indicator to the standard |
 | Trigger          | Update existing ecosystem assessments, revisit research or monitoring questions. |
 | Key requirements | AD01, AD02, AD05, RE01, RE02, RE04, VO01, VO02, DD02, DD03, DD04, DD06, DO04, AC01, AC03, VA02, VA03, VA04, VA05|
@@ -40,8 +40,8 @@ Enable reproducibility of existing ecosystem-specific indicators, increase consi
 
 | Attribute | Description |
 |---------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| Primary User | Ecologist / Conservation Scientist (UG01) |
-| Supporting Users | Research Software Engineer (UG02), Data Scientist (UG03) |
+| Primary User | Ecologist / Conservation Scientist (UG01, UG02) |
+| Supporting Users | Research Software Engineer (UG07), Data Scientist (UG06) |
 | Purpose | Develop an ecosystem indicator for a previously unassessed ecosystem type. |
 | Trigger | A new ecosystem assessment, conservation program, or research project requires an indicator. |
 
@@ -68,8 +68,8 @@ Reduces the effort required to develop new indicators while increasing consisten
 
 | Attribute | Description |
 |-------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Primary User | Ecologist / Technical Analyst (UG01, UG03) |
-| Supporting Users | RSE (UG02) |
+| Primary User | Ecologist / Conservation Scientist (UG01, UG02) |
+| Supporting Users | RSE (UG07), Data Scientist (UG06) |
 | Purpose | Reuse an existing workflow for another ecosystem type or assessment purpose. |
 
 #### Implementation steps
@@ -96,9 +96,9 @@ Reduces duplication of effort and accelerates ecosystem assessments. Workshop pa
 
 | Attribute | Description |
 |-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| Primary User | Ecologist / Technical Analyst (UG01, UG03) |
-| Supporting Users | RSE (UG02) |
-| Purpose | Reuse an existing workflow for another ecosystem type or assessment purpose. |
+| Primary User | Ecologist / Conservation Scientist (UG01, UG02) |
+| Supporting Users | RSE (UG07), Data Scientist (UG06) |
+| Purpose | Reuse an existing workflow for a different assessment or purpose. |
 
 #### Implementation steps
 
@@ -124,7 +124,7 @@ Reduces duplication of effort and accelerates ecosystem assessments. Workshop pa
 
 | Attribute | Description |
 |------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| Primary User | Research Software Engineer (UG02) |
+| Primary User | Workflow authors (UG01, UG02, UG06, UG07) |
 | Supporting Users | Platform Administrator (UG09) |
 | Purpose | Publish a workflow that can be reused and maintained over time. |
 
@@ -153,23 +153,22 @@ Supports long-term maintenance and reuse while ensuring workflows remain reprodu
 
 | Attribute | Description |
 |-----------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| Primary User | Ecologist / Technical Analyst (UG01, UG03) |
-| Supporting Users | RSE (UG02) |
-| Purpose | Reuse an existing workflow for another ecosystem type or assessment purpose. |
+| Primary User | Ecologist / Technical Analyst (UG01, UG02, UG03) |
+| Supporting Users | RSE (UG07), Data Scientist (UG06) |
+| Purpose | Reuse existing workflows and integrate them in a larger ecosystem assessment or report with a defined purpose, including one or multiple ecosystems. |
 
 #### Implementation steps
 
-1.  Locate a suitable workflow in the workflow catalogue.
-2.  Identify ecosystem-specific components.
-3.  Replace ecosystem definitions, datasets and parameters.
-4.  Re-run workflow using the new ecosystem context.
-5.  Validate outputs.
+1.  Locate suitable workflows in the workflow catalogue.
+2.  Verify alignment with assessment or report purpose, adapt if necessary (see UC03, UC04)
+3.  Combine outputs and document selection process 
+4.  Update report metadata including provenance information and references to input workflow (see UC05).
+
 
 #### Outputs
 
--   Adapted workflow
--   Updated metadata and documentation
--   New indicator outputs
+-   Assessment or report with embedded workflows (documented methods and/or outputs)
+-   Workflow citations
 
 #### Impact
 
@@ -181,7 +180,7 @@ Reduces duplication of effort and accelerates ecosystem assessments. Workshop pa
 
 | Attribute | Description |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Primary User | Researcher, Analyst, Ecologist (UG01, UG03, UG08) |
+| Primary User | Researchers (UG01, UG02), Technical practicioner (UG03), Policy Analyst (UG04) Consultant (UG05)  |
 | Purpose | Find workflows relevant to a specific ecosystem, indicator, or assessment purpose. |
 
 #### Implementation steps
@@ -189,7 +188,7 @@ Reduces duplication of effort and accelerates ecosystem assessments. Workshop pa
 1.  Search workflow catalogue.
 2.  Filter by ecosystem type, indicator type, or assessment framework.
 3.  Review documentation and examples.
-4.  Execute or adapt workflow.
+4.  Execute or adapt workflow (see UC03 and UC04).
 
 #### Outputs
 
@@ -207,8 +206,8 @@ Reduces duplication of effort and encourages workflow standardisation across org
 
 | Attribute | Description |
 |---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Primary User | Student / Early-Career Researcher (UG08) |
-| Supporting Users | Ecologists, RSEs |
+| Primary User | Student / Early-Career Researcher (UG02) |
+| Supporting Users | Ecologists (UG01), Trainers (UG10) |
 | Purpose | Build capability in reproducible ecosystem assessment workflows. |
 
 #### Implementation steps
@@ -231,7 +230,7 @@ Expands the user base and supports long-term sustainability of the workflow ecos
 
 ------------------------------------------------------------------------
 
-### UC08 – Apply an Existing Workflow to a Specific Assessment
+### UC09 – Apply an Existing Workflow to a Specific Assessment {.unnumbered}
 
 | Attribute | Description |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------|
@@ -239,7 +238,7 @@ Expands the user base and supports long-term sustainability of the workflow ecos
 | Supporting Users | Environmental Manager / Technical Practitioner (UG03), Data Scientist (UG06) |
 | Purpose | Run an existing, unmodified indicator workflow against a specific site, region, or portfolio to produce a result for an assessment, audit, ecosystem account, or nature-related disclosure. |
 
-### Implementation steps
+#### Implementation steps
 
 1.  Select a workflow matching the ecosystem and assessment framework required.
 2.  Confirm the workflow can run within the available data access and IT constraints.
@@ -247,13 +246,13 @@ Expands the user base and supports long-term sustainability of the workflow ecos
 4.  Execute the workflow; where empirical validation data are unavailable, apply and document expert judgement.
 5.  Put outputs through documented review before release.
 
-### Outputs
+#### Outputs
 
 -   Indicator result for the assessment
 -   Documented limitations statement
 -   Review and expert-judgement record
 
-### Impact
+#### Impact
 
 Covers routine application of existing workflows, which is the highest-volume activity across the user community and was previously the only major activity without a use case. Distinguishes applied assessment from workflow development (UC01) and adaptation (UC02, UC03), and makes documented limitations and expert review standard steps rather than optional extras. This use case also brings the consulting and assurance community (UG05) into scope, reflecting the growth of ecosystem accounting and nature-related disclosure obligations.
 
@@ -261,11 +260,11 @@ Covers routine application of existing workflows, which is the highest-volume ac
 
 ## Summary
 
-Across the requirements gathering process, seven recurring use cases were identified. These can be grouped into four broad categories:
+Across the requirements gathering process, nine recurring use cases were identified. These can be grouped into four broad categories:
 
-1.  **Workflow development** (UC01, UC04)
-2.  **Assessment based on indicator production** (UC02, UC03, UC05)
-3.  **Workflow discovery and reuse** (UC06, UC08)
-4.  **Capacity building and adoption** (UC02, UC03, UC07)
+1.  **Workflow development and adaptation** (UC01, UC02, UC03, UC04)
+2.  **Workflow publication, discovery and integration** (UC05, UC06, UC07)
+3.  **Capacity building and adoption** (UC01, UC08)
+4.  **Assessment and reporting based on indicator production** (UC06, UC07, UC09)
 
 These use cases form the basis for prioritising functionality and defining the first and second tranches of workflow development activities described in subsequent sections.

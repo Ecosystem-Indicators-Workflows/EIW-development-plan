@@ -22,5 +22,5 @@
 | 0.3 | 6 July 2026 | Abhimanyu Raj Singh, Silvia Colombo, Ada Sánchez-Mercado, [AI tools: Claude] | Updated User Groups, User stories and User requirements, incorporated human and AI generated summaries from both workshop, consolidate documents with multiple sections |
 | 0.4 | 10 July 2026 | JR Ferrer-Paris, [AI tools: Co-pilot] | Consolidate information from multiple documents, provide document structure assisted by AI-tools, use of markdown authoring and version control tools |
 | 0.5 | 20 July 2026 | JR Ferrer-Paris | Review, improve, edit or remove AI-generated content. |
-| 0.6 | 20 Aug 2026 | JR Ferrer-Paris, Abhimanyu Raj Singh, [AI tools: Co-pilot] | Introduction with overview and scope. |
+| 0.6 | 20 Aug 2026 | JR Ferrer-Paris, Abhimanyu Raj Singh, [AI tools: Co-pilot] | Introduction with overview and scope. Restructuring user groups, requirements and use cases after whiteboard session. Review of AI-generated content. |
 
