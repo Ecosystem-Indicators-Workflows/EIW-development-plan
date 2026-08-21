@@ -42,7 +42,6 @@ book:
         - appendices/appendix-a-workshops.qmd
         - appendices/appendix-b-user-stories.qmd
         - appendices/appendix-c-traceability-matrix.qmd
-        - appendices/appendix-d-roadmap-visuals.qmd
   margin-header: |
     <center>
     ![](/assets/logo_CES.png){height=66px}
