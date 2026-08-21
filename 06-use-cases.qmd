@@ -265,6 +265,6 @@ Across the requirements gathering process, nine recurring use cases were identif
 1.  **Workflow development and adaptation** (UC01, UC02, UC03, UC04)
 2.  **Workflow publication, discovery and integration** (UC05, UC06, UC07)
 3.  **Capacity building and adoption** (UC01, UC08)
-4.  **Assessment and reporting based on indicator production** (UC06, UC07, UC09)
+4.  **Assessment and reporting based on existing indicators** (UC06, UC07, UC09)
 
 These use cases form the basis for prioritising functionality and defining the first and second tranches of workflow development activities described in subsequent sections.

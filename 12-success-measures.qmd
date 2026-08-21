@@ -1,7 +1,7 @@
 
 # Success Indicators
 
-## Year 1
+## Year 1 (Nov 2026)
 
 * First tranche workflows delivered.
 * At least one workflow demonstrated on EcoCommons.
@@ -9,13 +9,13 @@
 * FAIR implementation plans completed.
 * User testing completed.
 
-## Year 2
+## Year 2 (Nov 2027)
 
-* Workflow catalogue operational.
-* Dashboard operational.
+* Second tranche workflows delivered with expanded ecosystem coverage.
+* Workflow catalogue (MVP) operational.
+* Dashboard (MVP) operational.
 * PID implementation completed.
 * FAIR workflow publication completed.
-* Expanded ecosystem coverage.
 
 ## Beyond Project
 

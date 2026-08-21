@@ -1,15 +1,14 @@
 
 # Prioritisation Approach
 
-Functionality was prioritised using five criteria:
+Functionality was prioritised based on four criteria:
 
 | Criterion            | Description                                    |
 | -------------------- | ---------------------------------------------- |
-| User Demand          | Number of user groups requiring the capability |
 | Strategic Importance | Alignment with project outcomes                |
 | Technical Dependency | Required before later functionality            |
 | Feasibility          | Delivery within available resources            |
 | Reusability          | Applicability across ecosystems                |
 
-Priority decisions were informed by workshop feedback, user stories, project deliverables and partner discussions.
+Priority decisions were informed by workshop feedback, use cases, user stories, project deliverables and partner discussions.
 

@@ -1,42 +1,26 @@
-# Roadmap Summary
+# Roadmap Overview
 
-| Theme                  | Tranche 1 | Tranche 2           |
-| ---------------------- | --------- | ------------------- |
-| Workflow Architecture  | ✅         | Enhancement         |
-| Data Harmonisation     | ✅         | Enhancement         |
-| Workflow Catalogue     | Planning  | ✅                   |
-| Dashboard              | Planning  | ✅                   |
-| Training               | Initial   | Expanded            |
-| FAIR & PID             | Initial   | Full implementation |
-| Vocabulary Integration | Initial   | Full integration    |
+Based on the user groups, requirements and use cases described in previous sections we propose a roadmap for **Work Package 4 Workflow delivery**:
 
+| Theme                  | Use cases | Tranche 1 | Tranche 2       | Dependencies |
+| ---------------------- | --------- | ----------|--------- |--------- |
+| Workflow development   | UC1 UC2   | Priority  | Enhance  | WP3 |
+| Workflow adaptation    | UC3 UC4   | Explore   | Priority | WP3 |
+| Workflow publication   | UC5       | Explore   | Priority |     |
+| Integration in assessments | UC6   | Explore   | Explore |     |
+| Discoverability        | UC7       | Initial   | Expanded | WP5 |
+| Training               | UC8       | Initial   | Expanded | WP6 |
+| Applications           | UC09      |           | Explore | |
+| FAIR & PID             | All      | Initial   | Full implementation | WP2 |
 
-The project already defines:
-
-* **WP3** Data and Metadata
-* **WP4.1** First tranche workflow functionality (May–Nov 2026)
-* **WP4.2** Second tranche workflow functionality (Jan–Nov 2027)
-* **WP5** Workflow Catalogue and Dashboard
-* **WP6** Training, community building, workshops and user stories 
+Where the first tranche is programed from (May–Nov 2026) and the second tranche (Jan–Nov 2027). This mapping aligns directly with the project's intended outcomes around modular workflows, FAIR workflows, interoperability, workflow catalogues and community adoption. 
 
 
+The proposed roadmap has following dependencies with other project work packages:
 
-## Linking Use Cases to Roadmap Priorities
+* **WP2 PID and FAIR4RS implementation plans** completed during Tranche 1 is required for theme *FAIR & PID*.
+* **WP3 Data and Metadata** is completed or in development during Tranche 1 and completed before Tranche 2.
+* **WP5 Catalogue and Dashboard** will be developed after completion of Tranche 1 and in parallel to Tranche 2. 
+* **WP6 Community and Engagement** Training, community building, workshops and user stories are developed in accordance with community and engagement plan.
 
-| Use Case                                    | Main User Groups | Tranche 1 (Year 1)            | Tranche 2 (Year 2)                   |
-| ------------------------------------------- | ---------------- | ----------------------------- | ------------------------------------ |
-| UC01 Develop new ecosystem indicator        | UG01, UG02, UG03 | ✅ Core priority               | Enhancement and expansion            |
-| UC02 Adapt workflow to new ecosystem        | UG01, UG03       | ✅ Core priority               | Improved tooling                     |
-| UC03 State of Environment reporting         | UG06             | ✅ Basic outputs               | Catalogue integration                |
-| UC04 Ecosystem accounting                   | UG06             | Partial support               | ✅ Priority expansion                 |
-| UC05 Environmental management               | UG05             | ✅ Demonstration workflows     | Expanded ecosystem coverage          |
-| UC06 Integrate heterogeneous datasets       | UG03, UG04       | ✅ Initial harmonisation tools | Improved templates and automation    |
-| UC07 Publish FAIR workflows                 | UG02, UG09       | ✅ Core requirement            | Enhanced FAIR and PID implementation |
-| UC08 Discover and reuse workflows           | UG01, UG03, UG08 | Limited documentation         | ✅ Workflow catalogue                 |
-| UC09 Training and skills development        | UG08             | Initial guides                | ✅ Full training program              |
-| UC10 Nature-related reporting and assurance | UG07             | Initial use cases             | ✅ Expanded support                   |
-
-This mapping aligns directly with the project's intended outcomes around modular workflows, FAIR workflows, interoperability, workflow catalogues and community adoption. 
-
-***
 

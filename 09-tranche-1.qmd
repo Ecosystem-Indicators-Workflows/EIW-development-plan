@@ -1,112 +1,19 @@
 
-# 4. Prioritisation of Functionality – First Tranche (Year 1)
+# Prioritisation of Functionality – First Tranche (May–Nov 2026)
 
 ## Tranche 1 Objective
 
-The first tranche focuses on establishing a minimum viable ecosystem workflow framework that demonstrates adaptability, reproducibility, FAIR compliance and practical applicability across multiple ecosystem indicator use cases. It delivers the foundation required for future workflow expansion while supporting the project's first reporting milestone and initial workflow deployment activities. [\[Attachment...oject Plan \| PDF\]](https://unsw-my.sharepoint.com/personal/z3529065_ad_unsw_edu_au/Documents/Microsoft%20Copilot%20Chat%20Files/Attachment%201%20-%20PLT019%20Project%20Plan.pdf)
+The first tranche focuses on establishing a minimum viable ecosystem workflow framework that demonstrates adaptability, reproducibility, FAIR compliance and practical applicability across multiple ecosystem indicator use cases. It delivers the foundation required for future workflow expansion while supporting the project's first reporting milestone and initial workflow deployment activities. 
 
-## Immediate Priorities (Mar–Sep 2026)
+The first objective is to use existing indicator examples as a foundation for developing FAIR reproducible indicator workflows (UC01). Second objective is to use the proposed framework to develop new workflows (UC02).
 
-### WP2 – Workflow Planning
+The modular workflow architecture will have documented swap points for ecosystem type, assessment purpose, indicator variables, and data sources allowing initial exploration of adaptation options (UC03 and UC04).
 
-* Modular workflow architecture with documented swap points for:
-  * ecosystem type
-  * assessment purpose
-  * indicator variables
-  * data sources
+Special attention will be given to initial implementation of FAIR principles and alignment with PID and FAIR4RS implementation plans whenever practicable, aiming at publication of reproducible workflows (UC05). 
 
-Supports:
+Integration of workflows into on-going or planned assessments will be explored (UC06). It is expected that on-going asssessments will be the main drivers and motivation for selecting specific ecosystems and purposes for UC02, UC03 and UC04.
 
-* UC01
-* UC02
-* UC07
+This stage will require an initial exploration of options for discoverability (UC07), coupled with requirement gathering steps for Work Package 5. 
 
-### WP3 – Data and Metadata
+The development of this tranche will allow initial opportunities for training (UC08) and involvement of early career researchers and students, with a focus on documentation (introductory workflow documentation), development of training material (beginner-friendly quick-start guide), example workflow notebooks and potentially one community event with published workshop outputs.
 
-* Pilot ecosystem map synthesis workflow
-* Initial dataset inventory
-* Initial vocabulary audit
-* Dataset transformation and harmonisation tools
-
-Supports:
-
-* UC01
-* UC05
-* UC06
-
-### WP4.1 – Initial Workflow Delivery
-
-* Core workflow structure based on:
-  * ecosystem data preparation
-  * indicator data preparation
-  * calculation
-  * validation and uncertainty
-
-Supports:
-
-* UC01
-* UC02
-* UC03
-* UC05
-
-### WP6 – Community and Adoption
-
-* Beginner-friendly quick-start guide
-* Introductory workflow documentation
-* Example workflow notebooks
-* Initial workshop outputs
-
-Supports:
-
-* UC08
-* UC09
-
-***
-
-## Late Year 1 Priorities (Oct 2026–Feb 2027)
-
-### Training and Adoption
-
-* Tiered training materials:
-  * Beginner
-  * Intermediate
-  * Advanced
-
-Supports:
-
-* UC09
-
-### Data and Metadata
-
-* Data integration templates for:
-  * spatial ecosystem maps
-  * remote sensing products
-  * monitoring datasets
-  * assessment datasets
-
-Supports:
-
-* UC06
-
-### Semantic Interoperability
-
-* Machine-readable vocabulary mappings
-* Persistent identifiers for workflows and metadata
-
-Supports:
-
-* UC07
-* UC08
-
-### Scientific Transparency
-
-* Expert judgement documentation framework
-* Validation and uncertainty guidance
-
-Supports:
-
-* UC01
-* UC03
-* UC05
-
-***
