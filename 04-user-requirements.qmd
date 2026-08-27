@@ -14,6 +14,8 @@ Users require workflows that can be adapted to different ecosystem types, geogra
 
 Participants repeatedly highlighted that existing workflows are often difficult to repurpose because ecosystem-specific assumptions and methods are embedded throughout the workflow rather than isolated in configurable components.
 
+------------------------------------------------------------------------
+
 ### Reproducibility and Transparency
 
 Users require workflows that can be independently reproduced, verified, and maintained over time. Reproducibility was identified as a core requirement underpinning scientific credibility and long-term adoption.
