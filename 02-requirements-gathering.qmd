@@ -22,4 +22,4 @@ Requirements gathering activities were undertaken to:
 
 ## Participants in requirement gathering activities
 
-We had 32 participants in the first stakeholder workshop that involved ecosystem scientists, data analysts, government practitioners, research software engineers, data managers, and platform providers. We had 12 participants in the second workshop that targeted researchers with direct experience in ecosystem assessments. We gathered feedback through participation in ... ^[TO DO: Check total] meetings with different participants from government, data scientists,  platform providers, and researchers and students.
+We had 32 participants in the first stakeholder workshop that involved ecosystem scientists, data analysts, government practitioners, research software engineers, data managers, and platform providers. We had 12 participants in the second workshop that targeted researchers with direct experience in ecosystem assessments. We gathered feedback through participation in 18 meetings with different participants from government, data scientists,  platform providers, and researchers and students.
