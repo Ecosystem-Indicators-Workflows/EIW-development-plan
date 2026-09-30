@@ -260,11 +260,42 @@ Covers routine application of existing workflows, which is expected to be the hi
 
 ## Summary
 
-Across the requirements gathering process, nine recurring use cases were identified. These can be grouped into four broad categories:
+## Summary
 
-1.  **Workflow development and adaptation** (UC01, UC02, UC03, UC04)
-2.  **Workflow publication, discovery and integration** (UC05, UC06, UC07)
-3.  **Capacity building and adoption** (UC01, UC08)
-4.  **Assessment and reporting based on existing indicators** (UC06, UC07, UC09)
+Across the requirements gathering process, nine recurring use cases were identified. Together, they describe the lifecycle of ecosystem indicator workflows, from development and adaptation through publication, discovery, training, integration, and applied assessment.
 
-These use cases form the basis for prioritising functionality and defining the first and second tranches of workflow development activities described in subsequent sections.
+These use cases can be grouped into four overlapping categories:
+
+1. **Workflow development and adaptation** (UC01, UC02, UC03, UC04)
+
+   - **UC01 – Adapt an existing indicator to make it reproducible:** improves the reproducibility, transparency, and documentation of an existing workflow.
+   - **UC02 – Develop a new ecosystem indicator:** creates an indicator for an ecosystem that has not previously been assessed.
+   - **UC03 – Adapt an existing indicator to a new ecosystem:** transfers an existing workflow to another ecosystem, region, or jurisdiction.
+   - **UC04 – Adapt an existing indicator to a different purpose:** repurposes an existing workflow for a different assessment, monitoring, reporting, or decision-making context.
+
+   These use cases overlap because they all involve workflow development or modification. They differ according to the starting point and the intended change: improving reproducibility, creating a new indicator, changing the ecosystem, or changing the assessment purpose.
+
+2. **Workflow publication, discovery, and integration** (UC05, UC06, UC07)
+
+   - **UC05 – Publish and maintain a reproducible workflow:** makes workflows available, documented, versioned, and maintainable over time.
+   - **UC06 – Integrate multiple indicator workflows:** combines outputs from several workflows into a larger assessment or report.
+   - **UC07 – Discover and reuse existing workflows:** helps users find workflows relevant to a particular ecosystem, indicator, or assessment purpose.
+
+   These use cases represent connected stages of workflow reuse. UC07 supports discovery, UC05 supports publication and maintenance, and UC06 supports the combination of multiple workflows for broader assessments.
+
+3. **Capacity building and adoption** (UC01, UC08)
+
+   - **UC01** supports adoption by improving the reproducibility and usability of existing workflows.
+   - **UC08 – Training and skills development:** builds the knowledge and practical skills required to use, adapt, and contribute to reproducible ecosystem workflows.
+
+   These use cases overlap because both support users who are learning to apply reproducible workflow practices. UC01 focuses on improving the workflow, while UC08 focuses on developing user capability.
+
+4. **Assessment and reporting using existing indicators** (UC06, UC07, UC09)
+
+   - **UC06** combines multiple workflow outputs into an assessment or report.
+   - **UC07** identifies existing workflows that may be relevant to an assessment.
+   - **UC09 – Apply an existing workflow to a specific assessment:** runs an existing workflow for a site, region, portfolio, audit, ecosystem account, or nature-related disclosure.
+
+   These use cases overlap in their focus on practical application. UC07 supports finding the relevant workflow, UC06 supports combining multiple workflows, and UC09 focuses on applying one existing workflow to a specific assessment.
+
+The categories are not mutually exclusive. For example, a user may discover a workflow through UC07, adapt it for a new ecosystem or purpose through UC03 or UC04, publish the revised workflow through UC05, and then apply it in an assessment through UC09. Together, these use cases provide the basis for prioritising functionality and defining the first and second tranches of workflow development activities.
