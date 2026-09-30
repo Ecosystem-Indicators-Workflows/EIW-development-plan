@@ -44,6 +44,7 @@ Enable reproducibility of existing ecosystem-specific indicators, increase consi
 | Supporting Users | Research Software Engineer (UG07), Data Scientist (UG06) |
 | Purpose | Develop an ecosystem indicator for a previously unassessed ecosystem type. |
 | Trigger | A new ecosystem assessment, conservation program, or research project requires an indicator. |
+| Key requirements | AD01, AD03, AD04, RE01, RE02, RE04, VO01, VO02, DD01, DD02, DD03, DD04, DD06, DO01, DO03, DO04, DO05, VA01, VA02, VA03, VA04, VA05 |
 
 #### Implementation steps
 
@@ -69,8 +70,10 @@ Reduces the effort required to develop new indicators while increasing consisten
 | Attribute | Description |
 |-------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
 | Primary User | Ecologist / Conservation Scientist (UG01, UG02) |
-| Supporting Users | RSE (UG07), Data Scientist (UG06) |
+| Supporting Users | Research Software Engineer (UG07), Data Scientist (UG06) |
 | Purpose | Reuse an existing workflow for another ecosystem type or assessment purpose. |
+| Trigger | An existing indicator workflow needs to be applied to a new ecosystem, region, or jurisdiction. |
+| Key requirements | AD01, AD02, AD03, AD05, RE01, RE02, RE03, RE04, RE06, VO01, VO02, VO03, VO04, VO05, DD01, DD02, DD03, DD04, DD06, DO01, DO03, DO04, DO05, VA01, VA02, VA03, VA04, VA05 |
 
 #### Implementation steps
 
@@ -97,8 +100,10 @@ Reduces duplication of effort and accelerates ecosystem assessments. Workshop pa
 | Attribute | Description |
 |-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | Primary User | Ecologist / Conservation Scientist (UG01, UG02) |
-| Supporting Users | RSE (UG07), Data Scientist (UG06) |
+| Supporting Users | Research Software Engineer (UG07), Data Scientist (UG06) |
 | Purpose | Reuse an existing workflow for a different assessment or purpose. |
+| Trigger | An existing indicator is required for a new decision-making, monitoring, reporting, or assessment context. |
+| Key requirements | AD01, AD02, AD04, RE01, RE02, RE03, RE04, RE05, DD02, DD03, DD06, DO04, DO05, VA01, VA02, VA03, VA04, VA05 |
 
 #### Implementation steps
 
@@ -127,6 +132,8 @@ Reduces duplication of effort and accelerates ecosystem assessments. Workshop pa
 | Primary User | Workflow authors (UG01, UG02, UG06, UG07) |
 | Supporting Users | Platform Administrator (UG09) |
 | Purpose | Publish a workflow that can be reused and maintained over time. |
+| Trigger | A workflow is ready for publication, reuse, review, or long-term maintenance. |
+| Key requirements | AD01, AD02, RE01, RE02, RE03, RE04, RE05, RE06, VO03, VO04, DD01, DD02, DO01, DO04, DO05, AC01, AC03, AC04 |
 
 #### Implementation steps
 
@@ -154,8 +161,10 @@ Supports long-term maintenance and reuse while ensuring workflows remain reprodu
 | Attribute | Description |
 |-----------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | Primary User | Ecologist / Technical Analyst (UG01, UG02, UG03) |
-| Supporting Users | RSE (UG07), Data Scientist (UG06) |
+| Supporting Users | Research Software Engineer (UG07), Data Scientist (UG06) |
 | Purpose | Reuse existing workflows and integrate them in a larger ecosystem assessment or report with a defined purpose, including one or multiple ecosystems. |
+| Trigger | An assessment or report requires outputs from multiple indicators, ecosystems, or workflow components. |
+| Key requirements | AD03, AD04, RE01, RE02, RE03, RE04, RE05, RE06, VO01, VO02, VO03, VO04, VO05, DD01, DD02, DD03, DD04, DD05, DD06, DO01, DO04, DO05, AC05, VA01, VA02, VA03, VA04, VA05 |
 
 #### Implementation steps
 
@@ -180,8 +189,11 @@ Reduces duplication of effort and accelerates ecosystem assessments. Workshop pa
 
 | Attribute | Description |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Primary User | Researchers (UG01, UG02), Technical practicioner (UG03), Policy Analyst (UG04) Consultant (UG05)  |
+| Primary User | Researchers (UG01, UG02), Technical Practitioner (UG03), Policy Analyst (UG04), Consultant (UG05) |
+| Supporting Users | Data Scientist (UG06), Research Software Engineer (UG07), Platform Administrator (UG09) |
 | Purpose | Find workflows relevant to a specific ecosystem, indicator, or assessment purpose. |
+| Trigger | A user begins a new assessment, research project, monitoring activity, or reporting task. |
+| Key requirements | AD01, AD02, AD03, AD04, RE01, RE02, RE03, RE04, RE05, VO01, VO02, VO03, VO04, VO05, DD01, DD02, DD06, DO01, DO02, DO03, DO05, DO06, AC01, AC03, AC05 |
 
 #### Implementation steps
 
@@ -209,6 +221,8 @@ Reduces duplication of effort and encourages workflow standardisation across org
 | Primary User | Student / Early-Career Researcher (UG02) |
 | Supporting Users | Ecologists (UG01), Trainers (UG10) |
 | Purpose | Build capability in reproducible ecosystem assessment workflows. |
+| Trigger | A learner or organisation requires training, onboarding, or skills development in ecosystem workflows. |
+| Key requirements | AD01, AD03, RE01, RE03, RE04, RE06, DO01, DO02, DO03, DO04, DO05, DO06, AC01, AC02, AC03, AC04, AC05 |
 
 #### Implementation steps
 
@@ -237,6 +251,8 @@ Expands the user base and supports long-term sustainability of the workflow ecos
 | Primary User | Environmental Consultant / Assurance Practitioner (UG05) |
 | Supporting Users | Environmental Manager / Technical Practitioner (UG03), Data Scientist (UG06) |
 | Purpose | Run an existing, unmodified indicator workflow against a specific site, region, or portfolio to produce a result for an assessment, audit, ecosystem account, or nature-related disclosure. |
+| Trigger | An organisation requires an indicator result to support an assessment, audit, ecosystem account, or nature-related disclosure. |
+| Key requirements | AD04, RE01, RE02, RE04, RE05, RE06, DD01, DD02, DD06, DO01, DO05, AC05, VA01, VA02, VA03, VA04, VA05 |
 
 #### Implementation steps
 
