@@ -254,7 +254,7 @@ Expands the user base and supports long-term sustainability of the workflow ecos
 
 #### Impact
 
-Covers routine application of existing workflows, which is the highest-volume activity across the user community and was previously the only major activity without a use case. Distinguishes applied assessment from workflow development (UC01) and adaptation (UC02, UC03), and makes documented limitations and expert review standard steps rather than optional extras. This use case also brings the consulting and assurance community (UG05) into scope, reflecting the growth of ecosystem accounting and nature-related disclosure obligations.
+Covers routine application of existing workflows, which is expected to be the highest-volume activity across the user community. Distinguishes applied assessment from workflow development (UC01) and adaptation (UC02, UC03), and places a larger focus on documented limitations and expert review as standard requirements. This use case also brings the consulting and assurance community (UG05) into scope, reflecting the growth of ecosystem accounting and nature-related disclosure obligations.
 
 ------------------------------------------------------------------------
 
