@@ -1,19 +1,19 @@
 # Executive summary {.unnumbered}
- 
+
 The Ecosystem Indicator Workflows (EIW) project aims to establish a sustainable framework for the development, sharing, and reuse of ecosystem-specific indicators through documented, reproducible, and modular computational workflows. The project responds to a growing need for transparent and scalable approaches to ecosystem assessment, monitoring, reporting, conservation planning, ecosystem accounting, and environmental decision-making.
- 
+
 Ecosystem indicators are increasingly used to understand ecosystem condition, measure ecological change, support environmental reporting, and track progress towards national and international biodiversity objectives. However, the methods used to develop these indicators are often developed independently for specific projects, resulting in duplicated effort, limited reproducibility, inconsistent documentation, and challenges in adapting workflows to new ecosystems and applications.
- 
+
 The EIW project addresses these challenges through the development of a common workflow framework that supports the creation of fit-for-purpose ecosystem indicators. Each workflow is designed to begin with a user-defined scope, including the definition of a target ecosystem, intended purpose, diagnostic mechanism, and indicator variable. Workflows follow a consistent structure comprising ecosystem data preparation, indicator data preparation, indicator calculation, and validation and uncertainty assessment. To promote scientific consistency and interoperability, ecosystem definitions are aligned with the IUCN Global Ecosystem Typology and workflows are designed to follow FAIR and reproducible research principles.
- 
+
 This Development Plan presents the outcomes of the project's requirements gathering activities and defines a two-year roadmap for workflow development. Requirements were collected through stakeholder workshops, consultations, interviews, and engagement activities involving researchers, ecologists, software developers, data scientists, environmental managers, government agencies, infrastructure providers, and other prospective users of ecosystem indicator workflows. These activities identified strong demand for workflows that are adaptable, transparent, interoperable, well-documented, and easy to reuse across different ecosystem types and assessment contexts.
- 
+
 The plan identifies nine primary user groups and a series of priority use cases spanning indicator development, environmental reporting, ecosystem accounting, environmental management, workflow publication, workflow discovery, training, and nature-related reporting applications. These use cases provide the basis for prioritising workflow functionality and establishing a staged delivery roadmap.
- 
+
 The roadmap is structured around two development tranches. The first tranche focuses on establishing the foundational components of the workflow ecosystem, including a modular workflow architecture, ecosystem and indicator data preparation workflows, data harmonisation approaches, validation methods, demonstration workflows, metadata standards, and introductory training resources. The second tranche focuses on scaling and operationalising the workflow ecosystem through the development of workflow catalogues, enhanced interoperability services, vocabulary crosswalks, FAIR-compliant workflow publication, advanced training resources, and expanded workflow coverage.
- 
+
 The Development Plan also establishes a framework for ongoing review and prioritisation. Functionality planned for the second development tranche will be reviewed during the fourth quarter of Year 1 to ensure that future development continues to reflect user needs, technological opportunities, and emerging ecosystem assessment requirements. This adaptive approach recognises that user requirements, data availability, policy demands, and scientific methods will continue to evolve throughout the life of the project.
- 
+
 Ultimately, the EIW project seeks to build more than a collection of workflows. It aims to establish a community-supported toolbox of reusable methods, software, data resources, and training materials that enable ecosystem indicators to be developed, shared, adapted, and maintained across organisations, disciplines, and jurisdictions. By embedding principles of reproducibility, transparency, interoperability, and reuse throughout the workflow lifecycle, the project will support more consistent and accessible ecosystem indicator development for research, management, policy, and reporting applications.
 
 # Document Details {.unnumbered}

@@ -128,5 +128,5 @@ quarto render
 Render a specific format:
  
 ```bash
-quarto render --to html
+quarto render --to pdf
 ```

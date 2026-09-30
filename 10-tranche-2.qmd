@@ -1,7 +1,4 @@
-
-# Prioritisation of Functionality – Second Tranche (Jan–Nov 2027)
-
-## Tranche 2 Objective
+# Second Tranche (Jan to Nov 2027)
 
 The second tranche expands the workflow ecosystem beyond individual workflows to support discoverability, scaling, interoperability and broader community adoption. The focus shifts from workflow creation to workflow reuse and operationalisation. 
 

@@ -13,8 +13,7 @@ Based on the user groups, requirements and use cases described in previous secti
 | Applications           | UC09      |           | Explore | |
 | FAIR & PID             | All      | Initial   | Full implementation | WP2 |
 
-Where the first tranche is programed from (May–Nov 2026) and the second tranche (Jan–Nov 2027). This mapping aligns directly with the project's intended outcomes around modular workflows, FAIR workflows, interoperability, workflow catalogues and community adoption. 
-
+Where the first tranche is programed from (May to Nov 2026) and the second tranche (Jan to Nov 2027). This mapping aligns directly with the project's intended outcomes around modular workflows, FAIR workflows, interoperability, workflow catalogues and community adoption. 
 
 The proposed roadmap has following dependencies with other project work packages:
 
