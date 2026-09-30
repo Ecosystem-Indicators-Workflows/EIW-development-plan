@@ -36,6 +36,7 @@ book:
     - part: "Part V - Monitoring and Success"
       chapters:
         - 12-success-measures.qmd
+        - 13-sustainability.qmd
 
     - part: "Appendices"
       chapters:
