@@ -1,0 +1,474 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ecosystem Indicator Workflows Development Plan",
+    "section": "",
+    "text": "Executive summary\nThe Ecosystem Indicator Workflows (EIW) project aims to establish a sustainable framework for the development, sharing, and reuse of ecosystem-specific indicators through documented, reproducible, and modular computational workflows. The project responds to a growing need for transparent and scalable approaches to ecosystem assessment, monitoring, reporting, conservation planning, ecosystem accounting, and environmental decision-making.\nEcosystem indicators are increasingly used to understand ecosystem condition, measure ecological change, support environmental reporting, and track progress towards national and international biodiversity objectives. However, the methods used to develop these indicators are often developed independently for specific projects, resulting in duplicated effort, limited reproducibility, inconsistent documentation, and challenges in adapting workflows to new ecosystems and applications.\nThe EIW project addresses these challenges through the development of a common workflow framework that supports the creation of fit-for-purpose ecosystem indicators. Each workflow is designed to begin with a user-defined scope, including the definition of a target ecosystem, intended purpose, diagnostic mechanism, and indicator variable. Workflows follow a consistent structure comprising ecosystem data preparation, indicator data preparation, indicator calculation, and validation and uncertainty assessment. To promote scientific consistency and interoperability, ecosystem definitions are aligned with the IUCN Global Ecosystem Typology and workflows are designed to follow FAIR and reproducible research principles.\nThis Development Plan presents the outcomes of the project’s requirements gathering activities and defines a two-year roadmap for workflow development. Requirements were collected through stakeholder workshops, consultations, interviews, and engagement activities involving researchers, ecologists, software developers, data scientists, environmental managers, government agencies, infrastructure providers, and other prospective users of ecosystem indicator workflows. These activities identified strong demand for workflows that are adaptable, transparent, interoperable, well-documented, and easy to reuse across different ecosystem types and assessment contexts.\nThe plan identifies nine primary user groups and a series of priority use cases spanning indicator development, environmental reporting, ecosystem accounting, environmental management, workflow publication, workflow discovery, training, and nature-related reporting applications. These use cases provide the basis for prioritising workflow functionality and establishing a staged delivery roadmap.\nThe roadmap is structured around two development tranches. The first tranche focuses on establishing the foundational components of the workflow ecosystem, including a modular workflow architecture, ecosystem and indicator data preparation workflows, data harmonisation approaches, validation methods, demonstration workflows, metadata standards, and introductory training resources. The second tranche focuses on scaling and operationalising the workflow ecosystem through the development of workflow catalogues, enhanced interoperability services, vocabulary crosswalks, FAIR-compliant workflow publication, advanced training resources, and expanded workflow coverage.\nThe Development Plan also establishes a framework for ongoing review and prioritisation. Functionality planned for the second development tranche will be reviewed during the fourth quarter of Year 1 to ensure that future development continues to reflect user needs, technological opportunities, and emerging ecosystem assessment requirements. This adaptive approach recognises that user requirements, data availability, policy demands, and scientific methods will continue to evolve throughout the life of the project.\nUltimately, the EIW project seeks to build more than a collection of workflows. It aims to establish a community-supported toolbox of reusable methods, software, data resources, and training materials that enable ecosystem indicators to be developed, shared, adapted, and maintained across organisations, disciplines, and jurisdictions. By embedding principles of reproducibility, transparency, interoperability, and reuse throughout the workflow lifecycle, the project will support more consistent and accessible ecosystem indicator development for research, management, policy, and reporting applications.\n\n\nDocument Details\n\n\n\nProject title\nEcosystem Indicators Workflows\n\n\nProject ID\nPLT019\n\n\nLead organisation\nUniversity of New South Wales (UNSW Sydney) Centre for Ecosystem Science\n\n\nFunder\nAustralian Research Data Commons (ARDC) Planet RDC, Focus Area 2\n\n\nPartners\nUniversity of Melbourne, Queensland University of Technology, James Cook University, QCIF / EcoCommons\n\n\nProject period\nFebruary 2026 – February 2028\n\n\nDocument type\nRequirements gathering and development roadmap\n\n\nProject Lead\nDr José R. Ferrer-Paris, UNSW CES\n\n\n\n\n\nRevision history\n\n\n\n\n\n\n\n\n\nVersion\nDate\nEditor\nSummary of Changes\n\n\n\n\n0.1\nApril 2026\nAbhimanyu Raj Singh, Silvia Colombo\nInitial draft based on WP2 planning and requirement specifications\n\n\n0.2\nJune 2026\nAbhimanyu Raj Singh\nUpdated draft of User Groups, User stories and User requirements after first workshop\n\n\n0.3\n6 July 2026\nAbhimanyu Raj Singh, Silvia Colombo, Ada Sánchez-Mercado, [AI tools: Claude]\nUpdated User Groups, User stories and User requirements, incorporated human and AI generated summaries from both workshop, consolidate documents with multiple sections\n\n\n0.4\n10 July 2026\nJR Ferrer-Paris, [AI tools: Co-pilot]\nConsolidate information from multiple documents, provide document structure assisted by AI-tools, use of markdown authoring and version control tools\n\n\n0.5\n20 July 2026\nJR Ferrer-Paris\nReview, improve, edit or remove AI-generated content.\n\n\n0.6\n21 Aug 2026\nJR Ferrer-Paris, Abhimanyu Raj Singh, Ada Sanchez-Mercado [AI tools: Co-pilot]\nIntroduction with overview and scope. Restructuring user groups, requirements and use cases after whiteboard session. Review of AI-generated content.\n\n\n0.7\n30 Sep 2026\nJR Ferrer-Paris, Paula Martinez, Elliot Gould, Yannick Tidou [AI tools: Co-pilot]\nSummarise and address feedback on use cases, add sustainability section, add executive summary",
+    "crumbs": [
+      "Executive summary"
+    ]
+  },
+  {
+    "objectID": "01-introduction.html",
+    "href": "01-introduction.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "1.1 Background\nEcosystem-specific indicators are used to support ecosystem assessment, monitoring, reporting, conservation planning, ecosystem accounting, and environmental decision-making. These indicators provide a structured way to measure ecosystem characteristics, assess ecological condition, track change through time, and evaluate progress towards management and policy objectives.\nDespite their growing importance, the development of ecosystem indicators is often hampered by fragmented analytical approaches, inconsistent methods, poorly documented workflows, and challenges associated with integrating diverse data sources. Indicator development frequently relies on bespoke analyses that are difficult to reproduce, adapt to new contexts, or apply consistently across ecosystem types. These limitations reduce transparency, constrain scalability, and hinder the uptake of ecosystem indicators by the broader research, policy, and management communities.\nThe Ecosystem Indicator Workflows (EIW) project was established to address these challenges through the development of modular, transparent, and reproducible workflows that support the creation of ecosystem-specific indicators. The project aims to enable users to develop fit-for-purpose indicators by combining ecological expertise, data resources, computational workflows, and reproducible research practices within a common framework.",
+    "crumbs": [
+      "Part I - Context",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "01-introduction.html#background",
+    "href": "01-introduction.html#background",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "Figure 1.1: Schematic representation of the vision of the EIW project, moving from a current state of fragmented and ad hoc methods towards fully reproducible workflows that are supported by a community of practice and that integrate seamlessly into online catalogues and reporting tools. The coloured codes in each box refer to specific work packages of the EIW project plan. WP3: Work Package 3 - Ecosystem Data and Metadata; WP4: Work Package 4 - Workflow Delivery; Work Package 5 - Indicator Workflow Catalogue and Dashboard; Work Package 6 - Community Building and Engagement, Communication, Skills and Training. Diagram available in draw.io",
+    "crumbs": [
+      "Part I - Context",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "01-introduction.html#fair-workflows-for-ecosystem-specific-indicators",
+    "href": "01-introduction.html#fair-workflows-for-ecosystem-specific-indicators",
+    "title": "1  Introduction",
+    "section": "1.2 FAIR workflows for Ecosystem-specific Indicators",
+    "text": "1.2 FAIR workflows for Ecosystem-specific Indicators\nFor the purpose of this document an ecosystem indicator workflow is a documented and reproducible computational workflow for the development of ecosystem-specific and fit-for-purpose indicators. Each workflow begins with a clearly defined scope and follows a common structure that supports transparency, consistency, and reuse.\nThe workflow framework comprises four core components:\n\nEcosystem data preparation;\nIndicator data preparation;\nIndicator calculation; and\nValidation and uncertainty assessment.\n\nThe scope of each workflow is defined through:\n\nIdentification of the target ecosystem;\nDefinition of the intended purpose of the indicator;\nDescription of the diagnostic mechanism linking the indicator to ecosystem condition or change; and\nSelection of the indicator variable or variables.\n\nTo support interoperability and scientific consistency, ecosystem definitions are aligned with the IUCN Global Ecosystem Typology and workflows are designed to incorporate the best available ecosystem and indicator datasets appropriate to the intended purpose.",
+    "crumbs": [
+      "Part I - Context",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "01-introduction.html#requirements-gathering-and-planning",
+    "href": "01-introduction.html#requirements-gathering-and-planning",
+    "title": "1  Introduction",
+    "section": "1.3 Requirements Gathering and Planning",
+    "text": "1.3 Requirements Gathering and Planning\nA key objective of the project is to ensure that workflow development is driven by the needs of the communities that will create, adapt, maintain, and use ecosystem indicator workflows. During the first phase of the project, requirements gathering activities were undertaken with researchers, ecologists, data scientists, software developers, infrastructure providers, environmental managers, government agencies, and other potential users of the workflows.\nThese activities sought to:\n\nidentify user groups and their requirements;\nunderstand high-level workflow requirements and constraints;\ndocument priority use cases;\nidentify opportunities for workflow reuse and adaptation;\nunderstand barriers to adoption; and\ninform the prioritisation of workflow functionality over the life of the project.\n\nThe findings from these activities provide the foundation for the workflow development roadmap described in this document.",
+    "crumbs": [
+      "Part I - Context",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "01-introduction.html#purpose-of-this-development-plan",
+    "href": "01-introduction.html#purpose-of-this-development-plan",
+    "title": "1  Introduction",
+    "section": "1.4 Purpose of this Development Plan",
+    "text": "1.4 Purpose of this Development Plan\nThis document presents a documented workflow development plan for the period 2026–2028. This document describes the requirements gathered from stakeholders and translates them into a staged development roadmap for workflow delivery.\nSpecifically, the plan:\n\nidentifies the primary user groups and their requirements;\ndocuments high-level workflow requirements and constraints;\ndescribes priority use cases for ecosystem indicator workflows;\ndefines the functionality to be delivered during the first and second workflow development tranches;\noutlines the process for reviewing and refining future priorities; and\nprovides a framework for guiding workflow development, community engagement, and future investment.\n\nThe plan will be used by project partners, workflow developers, stakeholders, and governance groups to guide implementation of the Ecosystem Indicator Workflows project and to ensure that workflow development remains aligned with user needs, scientific best practice, and the long-term objective of building a sustainable ecosystem indicator workflow community.\nThis document focuses only on activities directly related to Work Package 4 - Workflow Delivery. There will be other documents outlining requirements and guidance for other work packages.",
+    "crumbs": [
+      "Part I - Context",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "02-requirements-gathering.html",
+    "href": "02-requirements-gathering.html",
+    "title": "2  Requirements Gathering Activities",
+    "section": "",
+    "text": "2.1 Objectives\nRequirements gathering activities were undertaken to:",
+    "crumbs": [
+      "Part I - Context",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Requirements Gathering Activities</span>"
+    ]
+  },
+  {
+    "objectID": "02-requirements-gathering.html#objectives",
+    "href": "02-requirements-gathering.html#objectives",
+    "title": "2  Requirements Gathering Activities",
+    "section": "",
+    "text": "Identify workflow functionality required by prospective users.\nDevelop detailed use cases.\nUnderstand workflow requirements and constraints.\nInform prioritisation of the first and second workflow development tranches.",
+    "crumbs": [
+      "Part I - Context",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Requirements Gathering Activities</span>"
+    ]
+  },
+  {
+    "objectID": "02-requirements-gathering.html#engagement-activities",
+    "href": "02-requirements-gathering.html#engagement-activities",
+    "title": "2  Requirements Gathering Activities",
+    "section": "2.2 Engagement Activities",
+    "text": "2.2 Engagement Activities\n\n\n\n\n\n\n\n\nActivity\nDate\nPurpose\n\n\n\n\nCore team meetings\nMay - July 2026\nGeneral structure and background\n\n\nWorkshop 1\n19 May 2026\nScope, users and priorities\n\n\nWorkshop 2\n29 June 2026\nWorkflow requirements and architecture\n\n\nInterviews / meetings\nMay–July 2026\nTargeted stakeholder feedback\n\n\nDocument review\nContinuous\nExisting workflows and requirements",
+    "crumbs": [
+      "Part I - Context",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Requirements Gathering Activities</span>"
+    ]
+  },
+  {
+    "objectID": "02-requirements-gathering.html#participants-in-requirement-gathering-activities",
+    "href": "02-requirements-gathering.html#participants-in-requirement-gathering-activities",
+    "title": "2  Requirements Gathering Activities",
+    "section": "2.3 Participants in requirement gathering activities",
+    "text": "2.3 Participants in requirement gathering activities\nWe had 32 participants in the first stakeholder workshop that involved ecosystem scientists, data analysts, government practitioners, research software engineers, data managers, and platform providers. We had 12 participants in the second workshop that targeted researchers with direct experience in ecosystem assessments. We gathered feedback through participation in 18 meetings with different participants from government, data scientists, platform providers, and researchers and students.",
+    "crumbs": [
+      "Part I - Context",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Requirements Gathering Activities</span>"
+    ]
+  },
+  {
+    "objectID": "03-user-groups.html",
+    "href": "03-user-groups.html",
+    "title": "3  User Groups",
+    "section": "",
+    "text": "The Ecosystem Indicator Workflow (EIW) program serves a diverse community of users with different technical capabilities, responsibilities, and objectives. User groups were identified through stakeholder workshops, requirements gathering activities, market analysis, and community engagement planning.\nThe user groups described below represent the primary audiences for workflow development, testing, adoption, and long-term sustainability.\n\n\n\n\n\n\n\n\n\nID\nUser Type\nDescription\nPrimary Interaction\n\n\n\n\nUG01\nEcologist / Conservation Scientist\nSubject-matter expert responsible for defining ecological concepts, ecosystem boundaries, diagnostic mechanisms, and indicator variables. Typically familiar with ecosystem classification systems such as the IUCN Global Ecosystem Typology and ecosystem assessment frameworks. Technical skills vary considerably.\nDefines workflow scope; identifies indicator requirements; reviews assumptions; validates indicator outputs; contributes ecological expertise throughout workflow development.\n\n\nUG02\nStudent / Early-Career Researcher\nLearner and emerging practitioner using workflows as educational and skill-development resources. Often has limited experience with ecosystem indicators, reproducible workflows, or scientific programming.\nParticipates in training; runs demonstration workflows; contributes testing and documentation feedback; develops workflow skills through worked examples and guided exercises.\n\n\nUG03\nEnvironmental Manager / Technical Practitioner\nOperational user applying ecosystem indicators to support ecosystem management, conservation planning, monitoring programs, natural resource management, restoration activities, or environmental assessments. May work in government, NGOs, Indigenous organisations, or consultancies.\nExecutes workflows or uses workflow outputs to support management decisions; provides feedback on usability and operational requirements; contributes use cases and validation examples.\n\n\nUG04\nEnvironmental Policy Analyst / Reporting Officer\nUser of ecosystem indicators for policy development, environmental reporting, ecosystem accounting, State of the Environment reporting, biodiversity monitoring, and compliance obligations. Typically consumes workflow outputs rather than running workflows directly.\nAccesses indicator outputs, reports, metadata, and provenance records; evaluates indicators for policy and reporting purposes; identifies emerging reporting requirements.\n\n\nUG05\nEnvironmental Consultant / Assurance Practitioner\nProfessional user applying ecosystem indicators within environmental consulting, auditing, sustainability reporting, ecosystem accounting, and nature-related disclosure activities. Includes organisations supporting TNFD and related reporting frameworks.\nUses workflow outputs and methods to support client assessments; adapts workflows to project-specific requirements; contributes implementation feedback and industry use cases.\n\n\nUG06\nData Scientist / Technical Analyst\nTechnical practitioner who applies, adapts, and extends workflows for research, monitoring, and assessment purposes. Typically uses R, Python, GIS tools, and statistical workflows.\nRuns workflows using new datasets; adapts workflows for new ecosystems or assessment purposes; performs data preparation and quality assurance; develops new workflow components.\n\n\nUG07\nResearch Software Engineer (RSE) / Workflow Developer\nTechnical specialist responsible for designing, implementing, maintaining, and documenting workflows. Develops reproducible computational methods, modular workflow components, and software infrastructure.\nDevelops workflow code; manages repositories; implements FAIR practices; maintains software environments; contributes documentation and workflow standards.\n\n\nUG08\nData Provider / Data Custodian\nOrganisation or individual responsible for generating, managing, or publishing ecosystem and indicator datasets. Includes government agencies, monitoring programs, research infrastructures, and repository managers.\nProvides authoritative datasets; supports metadata and provenance requirements; advises on data quality, limitations, licensing, and update schedules.\n\n\nUG09\nPlatform Administrator / Research Infrastructure Provider\nTechnical personnel responsible for workflow deployment, hosting, security, interoperability, performance, and long-term infrastructure support. Includes providers of cloud, HPC, and research infrastructure platforms.\nDeploys workflow environments; manages containerised infrastructure; supports interoperability, authentication, monitoring, and operational sustainability.\n\n\nUG10\nScience Communicator and Trainer\nTranslates ecosystem indicator outputs and methods into accessible formats for diverse audiences (educators, outreach officers, training coordinators). Strong in communication/pedagogy; may have limited technical background.\nConverts outputs into plain-language summaries, visuals, and training materials; bridges technical developers (UG06/UG07) and non-technical users (UG03/UG04); gathers feedback to improve accessibility.",
+    "crumbs": [
+      "Part II - User Needs",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>User Groups</span>"
+    ]
+  },
+  {
+    "objectID": "04-user-requirements.html",
+    "href": "04-user-requirements.html",
+    "title": "4  User Requirements for Ecosystem Indicator Workflows",
+    "section": "",
+    "text": "4.1 Overview\nWorkshop participants explored a series of realistic workflow development scenarios and identified user needs, technical challenges, and priorities for future Ecosystem Indicator Workflows (EIWs).\nWorkshop participants consistently emphasised that the value of Ecosystem Indicator Workflows extends beyond indicator calculation. Users require workflows that are adaptable, reproducible, transparent, well-documented, and capable of integrating diverse ecosystem datasets while remaining accessible to users with varying technical capabilities.",
+    "crumbs": [
+      "Part II - User Needs",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>User Requirements for Ecosystem Indicator Workflows</span>"
+    ]
+  },
+  {
+    "objectID": "04-user-requirements.html#considerations-for-user-requirements",
+    "href": "04-user-requirements.html#considerations-for-user-requirements",
+    "title": "4  User Requirements for Ecosystem Indicator Workflows",
+    "section": "4.2 Considerations for user requirements",
+    "text": "4.2 Considerations for user requirements\n\n4.2.1 Workflow Adaptability\nUsers require workflows that can be adapted to different ecosystem types, geographic regions, and assessment purposes without requiring complete redevelopment. Stakeholders identified adaptability as one of the most important requirements for the initiative.\nParticipants repeatedly highlighted that existing workflows are often difficult to repurpose because ecosystem-specific assumptions and methods are embedded throughout the workflow rather than isolated in configurable components.\n\n\n\n4.2.2 Reproducibility and Transparency\nUsers require workflows that can be independently reproduced, verified, and maintained over time. Reproducibility was identified as a core requirement underpinning scientific credibility and long-term adoption.\nUsers highlighted challenges associated with legacy workflows, undocumented dependencies, restricted data access, and software version incompatibilities. Participants identified containerisation and explicit environment management as important mechanisms for maintaining reproducibility.\n\n\n\n4.2.3 Data Discovery, Access and Integration\nUsers require workflows that simplify the process of locating, understanding, accessing, and combining ecosystem and indicator datasets from multiple sources. Data preparation was consistently identified as the most time-consuming component of indicator development.\nParticipants highlighted common challenges including fragmented datasets, inconsistent survey methodologies, varying spatial resolutions, uneven geographic coverage, and difficulties obtaining access to restricted datasets.\n\n\n\n4.2.4 Classification and Vocabulary Alignment\nUsers require ecosystem workflows that support alignment between national ecosystem classifications and international standards.\nStakeholders identified ecosystem classification mapping as one of the largest barriers to workflow development and noted that a substantial proportion of effort is currently spent reconciling classification systems across jurisdictions and assessment frameworks.\n\n\n\n4.2.5 Documentation, Training and Knowledge Transfer\nUsers require documentation and training resources that accommodate varying levels of technical expertise.\nParticipants consistently identified documentation and training as critical enablers of workflow adoption. Requirements varied across user groups, but all groups emphasised the need for high-quality documentation and practical examples.\n\n\n\n4.2.6 Accessibility and Usability\nUsers require workflows that minimise technical barriers to adoption while supporting a diverse user community.\nWorkshop participants demonstrated strong familiarity with R, Python, RStudio, QGIS, and Jupyter-based environments, while familiarity with specialised platforms and workflow technologies varied considerably. As a result, workflow design should prioritise accessibility and user experience over technical complexity where practical.\n\n\n\n4.2.7 Validation, Uncertainty and Scientific Confidence\nUsers require workflows that support the transparent evaluation of indicator quality and reliability.\nParticipants noted that uncertainty information is frequently omitted from final products despite being critical for interpretation and decision-making. Validation approaches and integration of expert judgement were identified as areas requiring greater consistency across workflows.",
+    "crumbs": [
+      "Part II - User Needs",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>User Requirements for Ecosystem Indicator Workflows</span>"
+    ]
+  },
+  {
+    "objectID": "04-user-requirements.html#priority-user-requirements",
+    "href": "04-user-requirements.html#priority-user-requirements",
+    "title": "4  User Requirements for Ecosystem Indicator Workflows",
+    "section": "4.3 Priority User Requirements",
+    "text": "4.3 Priority User Requirements\nAcross all workshops, the following requirements emerged as the highest priorities for the Ecosystem Indicator Workflow program:\n\nAdaptable and modular workflow architecture.\nReproducible workflows supported by version-controlled computational environments.\nAlignment with the IUCN Global Ecosystem Typology and other recognised standards.\nTransparent data provenance and metadata.\nGuidance for integrating heterogeneous ecosystem datasets.\nComprehensive documentation and tiered training materials.\nExplicit treatment of validation, uncertainty, and expert judgement.\nFAIR-compliant workflows, tools, metadata, and outputs.\n\nRequirements 1 to 7 provide the foundation for prioritising workflow functionality and defining the staged delivery roadmap described in subsequent sections of this document. Requirement 8 is embedded in all activities of the project.",
+    "crumbs": [
+      "Part II - User Needs",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>User Requirements for Ecosystem Indicator Workflows</span>"
+    ]
+  },
+  {
+    "objectID": "04-user-requirements.html#key-requirements",
+    "href": "04-user-requirements.html#key-requirements",
+    "title": "4  User Requirements for Ecosystem Indicator Workflows",
+    "section": "4.4 Key requirements",
+    "text": "4.4 Key requirements\nThe following list of key requirements represent a comprehensive set of needs identified across stakeholder groups. They map to the priority requirements, except that the points 5 and 6 are merged for practical reasons.\n\n\n\n\n\n\n\nID\nDescription\n\n\n\n\n\nAD Adaptability\n\n\nAD01\nModular workflow designs that clearly separate ecosystem-specific components from generic analytical components.\n\n\nAD02\nClearly documented points within workflows where ecosystem definitions, data sources, indicator variables, and assessment purposes can be substituted.\n\n\nAD03\nThe ability to apply a common workflow structure across multiple ecosystem types.\n\n\nAD04\nThe ability to support alternative assessment frameworks, including ecosystem risk, ecosystem condition, recovery, and ecosystem accounting applications.\n\n\nAD05\nGuidance for reconciling global datasets with local and jurisdictional data sources.\n\n\n\nRE Reproducibility and transparency\n\n\nRE01\nFully documented workflow processes from data acquisition through to final outputs.\n\n\nRE02\nClear provenance records for all input datasets.\n\n\nRE03\nVersion-controlled workflow code and analytical methods.\n\n\nRE04\nDocumented software dependencies and computational environments.\n\n\nRE05\nLong-term maintainability as software platforms and packages evolve.\n\n\nRE06\nRepeatable execution across multiple computing environments.\n\n\n\nVO Classification and vocabularies\n\n\nVO01\nAlignment with the IUCN Global Ecosystem Typology.\n\n\nVO02\nClear mapping between local ecosystem classifications and global typologies.\n\n\nVO03\nUse of authoritative identifiers where possible.\n\n\nVO04\nMachine-readable classification mappings and metadata.\n\n\nVO05\nTransparent documentation of classification decisions and assumptions.\n\n\n\nDD Data discovery\n\n\nDD01\nGuidance on identifying authoritative ecosystem and indicator datasets.\n\n\nDD02\nClear documentation of data provenance, quality, currency, and fitness-for-purpose.\n\n\nDD03\nConsistent approaches for harmonising heterogeneous datasets.\n\n\nDD04\nMechanisms to support integration of biological surveys, monitoring data, remote sensing products, and spatial datasets.\n\n\nDD05\nSupport for workflows operating across local, cloud, and high-performance computing environments.\n\n\nDD06\nExplicit documentation of data limitations and known biases.\n\n\n\nDO Documentation and training\n\n\nDO01\nPlain-language workflow documentation.\n\n\nDO02\nWorked examples using real ecosystem assessments.\n\n\nDO03\nStep-by-step implementation guidance.\n\n\nDO04\nTechnical documentation describing workflow functions and analytical methods.\n\n\nDO05\nGuidance on interpretation of outputs, assumptions, limitations, and uncertainty.\n\n\nDO06\nTraining resources suitable for beginner, intermediate, and advanced users.\n\n\n\nAC Accessibility\n\n\nAC01\nSupport for commonly used open-source tools and platforms.\n\n\nAC02\nUse of technologies already familiar to the target user community where possible.\n\n\nAC03\nClear installation and setup instructions.\n\n\nAC04\nSupport for users operating within institutional security and software restrictions.\n\n\nAC05\nOutputs that can be interpreted by both technical and non-technical users.\n\n\n\nVA Validation\n\n\nVA01\nExplicit validation procedures.\n\n\nVA02\nDocumentation of assumptions and methodological limitations.\n\n\nVA03\nQuantification and communication of uncertainty.\n\n\nVA04\nSupport for expert judgement where empirical validation data are unavailable.\n\n\nVA05\nConsistent reporting of confidence in indicator outputs.",
+    "crumbs": [
+      "Part II - User Needs",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>User Requirements for Ecosystem Indicator Workflows</span>"
+    ]
+  },
+  {
+    "objectID": "05-high-level-requirements.html",
+    "href": "05-high-level-requirements.html",
+    "title": "5  High-Level Workflow Requirements and Constraints",
+    "section": "",
+    "text": "5.1 Purpose\nEcosystem Indicator Workflows (EIWs) are documented, transparent, and reproducible computational workflows developed to generate ecosystem-specific and fit-for-purpose indicators. The workflows are intended to support consistent indicator development across ecosystem types while providing sufficient flexibility to address different management, monitoring, assessment and reporting needs.\nAll workflows are designed to align with FAIR principles (Findable, Accessible, Interoperable and Reusable) and support reproducible research practices.",
+    "crumbs": [
+      "Part II - User Needs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>High-Level Workflow Requirements and Constraints</span>"
+    ]
+  },
+  {
+    "objectID": "05-high-level-requirements.html#scope-and-structure",
+    "href": "05-high-level-requirements.html#scope-and-structure",
+    "title": "5  High-Level Workflow Requirements and Constraints",
+    "section": "5.2 Scope and Structure",
+    "text": "5.2 Scope and Structure\nThe development of an Ecosystem Indicator Workflow must begin with a clearly defined scope. The scope establishes the context, purpose and intended application of the workflow and provides the basis for all subsequent workflow development activities.\nEach workflow must define the following four attributes:\n\nTarget Ecosystem Definition: The workflow must identify the ecosystem or ecosystem group that will be assessed.\nIntended Purpose: The workflow must clearly state the purpose of the indicator and the decision-making context in which it will be used. Examples may include: Environmental reporting, Natural capital accounting, Ecosystem risk assessment, Ecosystem recovery and integrity assessment, Conservation planning.\nDiagnostic Mechanism: The workflow must describe the ecological mechanism through which the selected indicator provides information about ecosystem status, condition or change.\nIndicator Variable Selection: The workflow must identify one or more measurable variables that can be used to quantify the selected ecosystem characteristic.\n\nAll Ecosystem Indicator Workflows will follow a common modular structure consisting of four core workflow components.\n\nEcosystem Data Preparation: This module prepares ecosystem spatial data and associated ecosystem information required for indicator calculation. Dataset selection decisions must be documented and justified.\nIndicator Data Preparation: This module prepares the data required to quantify the selected indicator variable. All processing steps must be transparent and reproducible.\nIndicator Calculation: This module implements the analytical methods required to generate the ecosystem indicator. Calculation methods should be designed to allow consistent application across assessment periods where appropriate.\nValidation and Uncertainty Assessment: This module assesses the performance, reliability and limitations of the indicator. Validation outcomes must be documented alongside indicator results.",
+    "crumbs": [
+      "Part II - User Needs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>High-Level Workflow Requirements and Constraints</span>"
+    ]
+  },
+  {
+    "objectID": "05-high-level-requirements.html#design-principles",
+    "href": "05-high-level-requirements.html#design-principles",
+    "title": "5  High-Level Workflow Requirements and Constraints",
+    "section": "5.3 Design Principles",
+    "text": "5.3 Design Principles\nThe Ecosystem Indicator Workflow program will be guided by the following principles:\n\nScientific credibility – indicators are based on sound ecological understanding and defensible methods.\nFitness for purpose – indicators are developed to address clearly defined user needs and decision contexts.\nTransparency – methods, assumptions and data sources are fully documented.\nReproducibility – workflows can be repeated and independently verified.\nInteroperability – workflows align with recognised standards and classification frameworks.\nScalability – workflows can be adapted to additional ecosystems and indicator types over time.\nAccessibility – tools and outputs are usable by a broad community of researchers, practitioners and decision makers.\nContinuous improvement – workflows can be updated as new data, methods and user requirements emerge.",
+    "crumbs": [
+      "Part II - User Needs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>High-Level Workflow Requirements and Constraints</span>"
+    ]
+  },
+  {
+    "objectID": "05-high-level-requirements.html#high-level-workflow-requirements",
+    "href": "05-high-level-requirements.html#high-level-workflow-requirements",
+    "title": "5  High-Level Workflow Requirements and Constraints",
+    "section": "5.4 High-Level Workflow Requirements",
+    "text": "5.4 High-Level Workflow Requirements\n\n5.4.1 Scope Definition Requirements\n\nScopeRequirements\n\n    Target Ecosystem Definition\n\n1.1Ecosystem definitions must align with the IUCN Global Ecosystem Typology.\n1.2The ecosystem classification level must be appropriate to the intended application of the indicator.\n1.3The ecosystem definition must be documented and traceable throughout the workflow.\nIntended Purpose\n2.1The workflow must clearly state the purpose of the indicator. \n2.2The workflow must clearly state the decision-making context in which it will be used. \n2.3The intended purpose must guide data selection, methodology and validation requirements.\nDiagnostic Mechanism\n3.1The diagnostic mechanism should document the ecological process being assessed\n3.2The diagnostic mechanism should document the relationship between the indicator and ecosystem characteristics\n3.3The diagnostic mechanism should document key assumptions underpinning indicator interpretation\nIndicator Variable Selection\n4.1Indicator variables should be scientifically defensible\n4.2Indicator variables should be measurable using available data sources.\n4.3Indicator variables should be appropriate to the intended purpose.\n4.4Indicator variables should support repeatable assessment through time.\n\n\n\n5.4.2 Workflow Structure Requirements\n\nModuleCodeRequirements\n\n    Ecosystem Data Preparation\n\n1.1Identification and acquisition of ecosystem datasets.\n1.2Documentation of ecosystem classification systems and mapping methods.\n1.3Standardisation and preprocessing of ecosystem spatial data.\n1.4Recording of all assumptions and transformations applied to source data.\n1.5aWhere available, ecosystem datasets should utilise the best available information from State and Territory jurisdictions.\n1.5bFederal spatial datasets or global datasets may be used when: (a) They provide a better fit for the intended purpose; (b) Regional or jurisdictional datasets are unavailable; and/or (c) Regional datasets lack sufficient coverage, consistency or quality.\n\n    Indicator Data Preparation\n\n2.1Identification and acquisition of indicator datasets.\n2.2Assessment of data quality and suitability.\n2.3Documentation of data provenance.\n2.4Data cleaning, transformation and standardisation.\n2.5Management of temporal and spatial alignment between ecosystem and indicator datasets.\n\n\n    Indicator Calculation\n\n3.1Documentation of all mathematical and analytical methods.\n3.2Explicit parameter definitions.\n3.3Recording of assumptions and methodological choices.\n3.4Repeatable execution using documented computational procedures.\n3.5Generation of standard outputs suitable for interpretation and reporting.\n\n\n    Validation and Uncertainty Assessment\n\n4.1Validation against independent datasets where available.\n4.2Documentation of methodological limitations.\n4.3Identification of data quality issues and potential biases.\n4.4Quantification of uncertainty where feasible.\n4.5Transparent communication of confidence and limitations associated with outputs.\n\n\n\n5.4.3 Software and Technical Requirements\nThe Ecosystem Indicator Workflow framework must be supported by software tools and computational environments that promote transparency, accessibility and reproducibility. Workflow implementation should minimise barriers to adoption and facilitate long-term maintenance.\nThis will be achieved through:\n\nUse of open-access or widely accessible software where feasible.\nUse of documented and version-controlled analytical processes.\nSupport for workflow portability across organisations and jurisdictions.\nAbility to adapt workflows for alternative ecosystems and use cases.\nTransparent documentation of software dependencies, packages and computational environments.\n\n\n\n5.4.4 FAIR and Reproducibility Requirements\nAll workflows, tools and outputs must align with FAIR principles and reproducible research practices.\n\nFindable\nWorkflow documentation, code, metadata and outputs should be discoverable through appropriate repositories and documentation systems.\n\n\nAccessible\nWorkflow components and outputs should be accessible to authorised users through documented and sustainable access mechanisms.\n\n\nInteroperable\nData, metadata and outputs should use recognised standards, formats and classification systems to support integration with other workflows, platforms and reporting systems.\n\n\nReusable\nWorkflow documentation must provide sufficient detail to enable independent application, review, adaptation and reuse by other practitioners.",
+    "crumbs": [
+      "Part II - User Needs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>High-Level Workflow Requirements and Constraints</span>"
+    ]
+  },
+  {
+    "objectID": "05-high-level-requirements.html#constraints",
+    "href": "05-high-level-requirements.html#constraints",
+    "title": "5  High-Level Workflow Requirements and Constraints",
+    "section": "5.5 Constraints",
+    "text": "5.5 Constraints\nThe development and implementation of Ecosystem Indicator Workflows will be subject to several constraints.\n\nData Availability\n\nIndicator development is dependent on the availability, quality and coverage of ecosystem and indicator datasets.\nData availability will vary across ecosystem types, jurisdictions and time periods.\nSome workflows may require the use of proxy variables where direct measurements are unavailable.\n\nData Consistency\n\nDifferences in spatial scale, classification systems, temporal coverage and collection methodologies may affect comparability across datasets.\nAdditional data harmonisation may be required to support national-scale assessments.\n\nComputational Constraints\n\nComputational methods should balance scientific rigour with practical implementation requirements.\nWorkflows should remain maintainable by future users and project teams.\n\nResource Constraints\n\nWorkflow development priorities must reflect available funding, staff capacity and stakeholder demand.\nNot all desired functionality may be delivered within the initial development period.\n\nScientific Constraints\n\nEcological processes are inherently complex and may not be fully represented by individual indicators.\nAll indicators should clearly communicate assumptions, limitations and uncertainty associated with interpretation.",
+    "crumbs": [
+      "Part II - User Needs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>High-Level Workflow Requirements and Constraints</span>"
+    ]
+  },
+  {
+    "objectID": "06-use-cases.html",
+    "href": "06-use-cases.html",
+    "title": "6  Detailed Use cases",
+    "section": "",
+    "text": "6.1 Overview\nRequirements gathering activities identified a range of user groups that will contribute to, operate, or consume Ecosystem Indicator Workflows (EIWs). The use cases below represent the most common and highest-priority applications identified through workshops, user stories, and stakeholder consultations. These use cases informed the prioritisation of workflow functionality and the staged development roadmap.",
+    "crumbs": [
+      "Part III - Use Cases",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Detailed Use cases</span>"
+    ]
+  },
+  {
+    "objectID": "06-use-cases.html#use-case-descriptions",
+    "href": "06-use-cases.html#use-case-descriptions",
+    "title": "6  Detailed Use cases",
+    "section": "6.2 Use case descriptions",
+    "text": "6.2 Use case descriptions\n\nUC01 – Adapt an existing fit-for-purpose ecosystem-specific indicator to make it reproducible\n\n\n\n\n\n\n\nAttribute\nDescription\n\n\n\n\nPrimary User\nEcologist / Conservation Scientist (UG01)\n\n\nSupporting Users\nResearch Software Engineer (UG07), Data Scientist (UG06)\n\n\nPurpose\nAdapt an ecosystem-specific indicator to make it reproducible\n\n\nTrigger\nUpdate existing ecosystem assessments, revisit research or monitoring questions.\n\n\nKey requirements\nAD01, AD02, AD05, RE01, RE02, RE04, VO01, VO02, DD02, DD03, DD04, DD06, DO04, AC01, AC03, VA02, VA03, VA04, VA05\n\n\n\n\nImplementation steps\n\nCheck existing scope of the workflow as per high-level requirements: ecosystem, purpose, diagnostic and variable selection.\nCheck structure of the workflow as per high-level requirements: data preparation, calculation and validation/uncertainty assessment.\nAssess existing gaps in implementation of FAIR principles\nEdit/modify steps to close gaps in FAIR principles\nReview outputs and document all steps as per high-level requirements.\n\n\n\nOutputs\n\nIndicator values\nMaps and visualisations\nWorkflow documentation including validation and uncertainty reports\n\n\n\nImpact\nEnable reproducibility of existing ecosystem-specific indicators, increase consistency, transparency, and reproducibility across ecosystem assessments. This use case emerged as a high-priority scenario during workshop discussions around workflow adaptability.\n\n\n\nUC02 – Develop a new fit-for-purpose ecosystem-specific indicator\n\n\n\n\n\n\n\nAttribute\nDescription\n\n\n\n\nPrimary User\nEcologist / Conservation Scientist (UG01, UG02)\n\n\nSupporting Users\nResearch Software Engineer (UG07), Data Scientist (UG06)\n\n\nPurpose\nDevelop an ecosystem indicator for a previously unassessed ecosystem type.\n\n\nTrigger\nA new ecosystem assessment, conservation program, or research project requires an indicator.\n\n\n\n\nImplementation steps\n\nDefine the scope of the workflow as per high-level requirements: ecosystem, purpose, diagnostic and variable selection.\nDevelop structure of the workflow as per high-level requirements: data preparation, calculation and validation/uncertainty assessment.\nAssess implementation of FAIR principles\nReview outputs and document all steps as per high-level requirements.\n\n\n\nOutputs\n\nIndicator values\nMaps and visualisations\nWorkflow documentation including validation and uncertainty reports\n\n\n\nImpact\nReduces the effort required to develop new indicators while increasing consistency, transparency, and reproducibility across ecosystem assessments. This use case emerged as a high-priority scenario during workshop discussions around workflow adaptability.\n\n\n\n\nUC03 – Adapt an existing reproducible fit-for-purpose indicator to a new ecosystem\n\n\n\n\n\n\n\nAttribute\nDescription\n\n\n\n\nPrimary User\nEcologist / Conservation Scientist (UG01, UG02)\n\n\nSupporting Users\nRSE (UG07), Data Scientist (UG06)\n\n\nPurpose\nReuse an existing workflow for another ecosystem type or assessment purpose.\n\n\n\n\nImplementation steps\n\nLocate a suitable workflow in the workflow catalogue.\nIdentify ecosystem-specific components.\nReplace ecosystem definitions, datasets and parameters.\nRe-run workflow using the new ecosystem context.\nValidate outputs.\n\n\n\nOutputs\n\nAdapted workflow\nUpdated metadata and documentation\nNew indicator outputs\n\n\n\nImpact\nReduces duplication of effort and accelerates ecosystem assessments. Workshop participants consistently identified workflow adaptability as one of the most important requirements for the EIW project.\n\n\n\n\nUC04 – Adapt an existing reproducible ecosystem-specific indicator to a different purpose\n\n\n\n\n\n\n\nAttribute\nDescription\n\n\n\n\nPrimary User\nEcologist / Conservation Scientist (UG01, UG02)\n\n\nSupporting Users\nRSE (UG07), Data Scientist (UG06)\n\n\nPurpose\nReuse an existing workflow for a different assessment or purpose.\n\n\n\n\nImplementation steps\n\nLocate a suitable workflow in the workflow catalogue.\nIdentify components related to purpose of the indicator\nReplace parameters and adjust calculations for the intended purpose.\nRe-run workflow using the new analytical context and interpretation.\nValidate outputs.\n\n\n\nOutputs\n\nAdapted workflow\nUpdated metadata and documentation\nNew indicator outputs\n\n\n\nImpact\nReduces duplication of effort and accelerates ecosystem assessments. Workshop participants consistently identified workflow adaptability as one of the most important requirements for the EIW project.\n\n\n\n\nUC05 – Publish and Maintain a Reproducible Workflow\n\n\n\n\n\n\n\nAttribute\nDescription\n\n\n\n\nPrimary User\nWorkflow authors (UG01, UG02, UG06, UG07)\n\n\nSupporting Users\nPlatform Administrator (UG09)\n\n\nPurpose\nPublish a workflow that can be reused and maintained over time.\n\n\n\n\nImplementation steps\n\nPackage workflow components.\nDefine software dependencies.\nConfigure reproducible environments.\nRegister metadata and identifiers.\nPublish workflow documentation.\n\n\n\nOutputs\n\nWorkflow repository\nDOI and metadata records\nDocumentation\nContainerised environment\n\n\n\nImpact\nSupports long-term maintenance and reuse while ensuring workflows remain reproducible as software and data sources evolve. Reproducibility and software versioning were identified as critical concerns during workshops.\n\n\n\n\nUC06 – Integrate multiple indicator workflows in assessments or reports\n\n\n\n\n\n\n\nAttribute\nDescription\n\n\n\n\nPrimary User\nEcologist / Technical Analyst (UG01, UG02, UG03)\n\n\nSupporting Users\nRSE (UG07), Data Scientist (UG06)\n\n\nPurpose\nReuse existing workflows and integrate them in a larger ecosystem assessment or report with a defined purpose, including one or multiple ecosystems.\n\n\n\n\nImplementation steps\n\nLocate suitable workflows in the workflow catalogue.\nVerify alignment with assessment or report purpose, adapt if necessary (see UC03, UC04)\nCombine outputs and document selection process\nUpdate report metadata including provenance information and references to input workflow (see UC05).\n\n\n\nOutputs\n\nAssessment or report with embedded workflows (documented methods and/or outputs)\nWorkflow citations\n\n\n\nImpact\nReduces duplication of effort and accelerates ecosystem assessments. Workshop participants consistently identified workflow adaptability as one of the most important requirements for the EIW project.\n\n\n\n\nUC07 – Discover and Reuse Existing Workflows\n\n\n\n\n\n\n\nAttribute\nDescription\n\n\n\n\nPrimary User\nResearchers (UG01, UG02), Technical practicioner (UG03), Policy Analyst (UG04) Consultant (UG05)\n\n\nPurpose\nFind workflows relevant to a specific ecosystem, indicator, or assessment purpose.\n\n\n\n\nImplementation steps\n\nSearch workflow catalogue.\nFilter by ecosystem type, indicator type, or assessment framework.\nReview documentation and examples.\nExecute or adapt workflow (see UC03 and UC04).\n\n\n\nOutputs\n\nReused workflows\nAdapted workflows\nReproducible assessments\n\n\n\nImpact\nReduces duplication of effort and encourages workflow standardisation across organisations and jurisdictions.\n\n\n\n\nUC08 – Training and Skills Development\n\n\n\n\n\n\n\nAttribute\nDescription\n\n\n\n\nPrimary User\nStudent / Early-Career Researcher (UG02)\n\n\nSupporting Users\nEcologists (UG01), Trainers (UG10)\n\n\nPurpose\nBuild capability in reproducible ecosystem assessment workflows.\n\n\n\n\nImplementation steps\n\nAttend workshops or training events.\nAccess worked examples.\nRun demonstration workflows.\nModify workflows for new examples.\nContribute improvements.\n\n\n\nOutputs\n\nTrained users\nNew contributors\nCommunity of practice\n\n\n\nImpact\nExpands the user base and supports long-term sustainability of the workflow ecosystem. Training and documentation were identified as high-priority requirements across all workshop participants.\n\n\n\n\nUC09 – Apply an Existing Workflow to a Specific Assessment\n\n\n\n\n\n\n\nAttribute\nDescription\n\n\n\n\nPrimary User\nEnvironmental Consultant / Assurance Practitioner (UG05)\n\n\nSupporting Users\nEnvironmental Manager / Technical Practitioner (UG03), Data Scientist (UG06)\n\n\nPurpose\nRun an existing, unmodified indicator workflow against a specific site, region, or portfolio to produce a result for an assessment, audit, ecosystem account, or nature-related disclosure.\n\n\n\n\nImplementation steps\n\nSelect a workflow matching the ecosystem and assessment framework required.\nConfirm the workflow can run within the available data access and IT constraints.\nAssemble inputs and record data gaps, limitations, and known biases.\nExecute the workflow; where empirical validation data are unavailable, apply and document expert judgement.\nPut outputs through documented review before release.\n\n\n\nOutputs\n\nIndicator result for the assessment\nDocumented limitations statement\nReview and expert-judgement record\n\n\n\nImpact\nCovers routine application of existing workflows, which is expected to be the highest-volume activity across the user community. Distinguishes applied assessment from workflow development (UC01) and adaptation (UC02, UC03), and places a larger focus on documented limitations and expert review as standard requirements. This use case also brings the consulting and assurance community (UG05) into scope, reflecting the growth of ecosystem accounting and nature-related disclosure obligations.",
+    "crumbs": [
+      "Part III - Use Cases",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Detailed Use cases</span>"
+    ]
+  },
+  {
+    "objectID": "06-use-cases.html#summary",
+    "href": "06-use-cases.html#summary",
+    "title": "6  Detailed Use cases",
+    "section": "6.3 Summary",
+    "text": "6.3 Summary\nAcross the requirements gathering process, nine recurring use cases were identified. These can be grouped into four broad categories:\n\nWorkflow development and adaptation (UC01, UC02, UC03, UC04)\nWorkflow publication, discovery and integration (UC05, UC06, UC07)\nCapacity building and adoption (UC01, UC08)\nAssessment and reporting based on existing indicators (UC06, UC07, UC09)\n\nThese use cases form the basis for prioritising functionality and defining the first and second tranches of workflow development activities described in subsequent sections.",
+    "crumbs": [
+      "Part III - Use Cases",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Detailed Use cases</span>"
+    ]
+  },
+  {
+    "objectID": "07-prioritisation-method.html",
+    "href": "07-prioritisation-method.html",
+    "title": "7  Prioritisation Approach",
+    "section": "",
+    "text": "Functionality was prioritised based on four criteria:\n\n\n\n\n\n\n\nCriterion\nDescription\n\n\n\n\nStrategic Importance\nAlignment with project outcomes\n\n\nTechnical Dependency\nRequired before later functionality\n\n\nFeasibility\nDelivery within available resources\n\n\nReusability\nApplicability across ecosystems\n\n\n\nPriority decisions were informed by workshop feedback, use cases, user stories, project deliverables and partner discussions.",
+    "crumbs": [
+      "Part III - Use Cases",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Prioritisation Approach</span>"
+    ]
+  },
+  {
+    "objectID": "08-roadmap-overview.html",
+    "href": "08-roadmap-overview.html",
+    "title": "8  Roadmap Overview",
+    "section": "",
+    "text": "Based on the user groups, requirements and use cases described in previous sections we propose a roadmap for Work Package 4 Workflow delivery:\n\n\n\n\n\n\n\n\n\n\nTheme\nUse cases\nTranche 1\nTranche 2\nDependencies\n\n\n\n\nWorkflow development\nUC01 UC02\nPriority\nEnhance\nWP3\n\n\nWorkflow adaptation\nUC03 UC04\nExplore\nPriority\nWP3\n\n\nWorkflow publication\nUC05\nExplore\nPriority\n\n\n\nIntegration in assessments\nUC06\nExplore\nExplore\n\n\n\nDiscoverability\nUC07\nInitial\nExpanded\nWP5\n\n\nTraining\nUC08\nInitial\nExpanded\nWP6\n\n\nApplications\nUC09\n\nExplore\n\n\n\nFAIR & PID\nAll\nInitial\nFull implementation\nWP2\n\n\n\nWhere the first tranche is programed from (May to Nov 2026) and the second tranche (Jan to Nov 2027). This mapping aligns directly with the project’s intended outcomes around modular workflows, FAIR workflows, interoperability, workflow catalogues and community adoption.\nThe proposed roadmap has following dependencies with other project work packages:\n\nWP2 PID and FAIR4RS implementation plans completed during Tranche 1 is required for theme FAIR & PID.\nWP3 Data and Metadata is completed or in development during Tranche 1 and completed before Tranche 2.\nWP5 Catalogue and Dashboard will be developed after completion of Tranche 1 and in parallel to Tranche 2.\nWP6 Community and Engagement Training, community building, workshops and user stories are developed in accordance with community and engagement plan.",
+    "crumbs": [
+      "Part IV - Roadmap",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Roadmap Overview</span>"
+    ]
+  },
+  {
+    "objectID": "09-tranche-1.html",
+    "href": "09-tranche-1.html",
+    "title": "9  First Tranche (May to Nov 2026)",
+    "section": "",
+    "text": "The first tranche focuses on establishing a minimum viable ecosystem workflow framework that demonstrates adaptability, reproducibility, FAIR compliance and practical applicability across multiple ecosystem indicator use cases. It delivers the foundation required for future workflow expansion while supporting the project’s first reporting milestone and initial workflow deployment activities.\nThe first objective is to use existing indicator examples as a foundation for developing FAIR reproducible indicator workflows (UC01). Second objective is to use the proposed framework to develop new workflows (UC02).\nThe modular workflow architecture will have documented swap points for ecosystem type, assessment purpose, indicator variables, and data sources allowing initial exploration of adaptation options (UC03 and UC04).\nSpecial attention will be given to initial implementation of FAIR principles and alignment with PID and FAIR4RS implementation plans whenever practicable, aiming at publication of reproducible workflows (UC05).\nIntegration of workflows into ongoing or planned assessments will be explored (UC06). It is expected that ongoing asssessments will be the main drivers and motivation for selecting specific ecosystems and purposes for UC02, UC03 and UC04.\nThis stage will require an initial exploration of options for discoverability (UC07), coupled with requirement gathering steps for Work Package 5.\nThe development of this tranche will allow initial opportunities for training (UC08) and involvement of early career researchers and students, with a focus on documentation (introductory workflow documentation), development of training material (beginner-friendly quick-start guide), example workflow notebooks and potentially one community event with published workshop outputs.",
+    "crumbs": [
+      "Part IV - Roadmap",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>First Tranche (May to Nov 2026)</span>"
+    ]
+  },
+  {
+    "objectID": "10-tranche-2.html",
+    "href": "10-tranche-2.html",
+    "title": "10  Second Tranche (Jan to Nov 2027)",
+    "section": "",
+    "text": "The second tranche expands the workflow ecosystem beyond individual workflows to support discoverability, scaling, interoperability and broader community adoption. The focus shifts from workflow creation to workflow reuse and operationalisation.\nThe main objective is to support and expand adaptation of workflows to new ecosystems and different purposes (UC03 and UC04). Development of new indicator workflows (UC02) will be enhanced and driven by ongoing research projects and assessments.\nWorkflow development in this stage should follow the FAIR4RS and PID implementation plans, including full publication of workflows (UC05).\nIntegration of workflows into ongoing or planned assessments will continue to be explored (UC06). It is expected that ongoing asssessments will be the main drivers and motivation for selecting specific ecosystems and purposes for UC02, UC03 and UC04.\nScaling up assessment will be coupled with a larger focus on discoverability (UC07) through development of Work Package 5.\nThe development of this tranche will allow multiple opportunities for training (UC08) and involvement of early career researchers and students. Particularly, the previous experience in development of reproducible indicator workflows from existing workflows (UC01) can be used for didactic purposes. Further development of tiered training materials for beginners, intermediate and advanced users will be complemented with more technical documentation for implementation and maintenance of platform functionality. At least one community event will be completed leading to publication of workshop outputs.",
+    "crumbs": [
+      "Part IV - Roadmap",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Second Tranche (Jan to Nov 2027)</span>"
+    ]
+  },
+  {
+    "objectID": "11-tranche-review.html",
+    "href": "11-tranche-review.html",
+    "title": "11  Review of Second Tranche Priorities",
+    "section": "",
+    "text": "Consistent with the project plan, second-tranche requirements will be reviewed after the end of Tranche 1 (Nov 2026) and before commencement of Tranche 2 (Jan 2027). The review will evaluate feedback from workflow users, workshop participants, ecosystem experts, and project partners to validate that Year 2 priorities continue to address the most important user needs.\nThe review will consider:\n\nUser adoption and engagement in the initial phases,\nTechnical performance of workflow reproducibility, data interoperability, expected platform performance, and FAIR compliance.\nCommunity feedback collected through workshops or interviews.\nSteering Committee recommendations\n\nAny approved changes to second-tranche priorities will be documented through the project’s governance and change-control processes and reflected in an updated delivery plan.",
+    "crumbs": [
+      "Part IV - Roadmap",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Review of Second Tranche Priorities</span>"
+    ]
+  },
+  {
+    "objectID": "12-success-measures.html",
+    "href": "12-success-measures.html",
+    "title": "12  Success Indicators",
+    "section": "",
+    "text": "12.1 Year 1 (Nov 2026)",
+    "crumbs": [
+      "Part V - Monitoring and Success",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Success Indicators</span>"
+    ]
+  },
+  {
+    "objectID": "12-success-measures.html#year-1-nov-2026",
+    "href": "12-success-measures.html#year-1-nov-2026",
+    "title": "12  Success Indicators",
+    "section": "",
+    "text": "First tranche workflows delivered.\nAt least one workflow demonstrated on EcoCommons.\nInitial training materials available.\nFAIR implementation plans completed.\nUser testing completed.",
+    "crumbs": [
+      "Part V - Monitoring and Success",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Success Indicators</span>"
+    ]
+  },
+  {
+    "objectID": "12-success-measures.html#year-2-nov-2027",
+    "href": "12-success-measures.html#year-2-nov-2027",
+    "title": "12  Success Indicators",
+    "section": "12.2 Year 2 (Nov 2027)",
+    "text": "12.2 Year 2 (Nov 2027)\n\nSecond tranche workflows delivered with expanded ecosystem coverage.\nWorkflow catalogue (MVP) operational.\nDashboard (MVP) operational.\nPID implementation completed.\nFAIR workflow publication completed.",
+    "crumbs": [
+      "Part V - Monitoring and Success",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Success Indicators</span>"
+    ]
+  },
+  {
+    "objectID": "12-success-measures.html#beyond-project",
+    "href": "12-success-measures.html#beyond-project",
+    "title": "12  Success Indicators",
+    "section": "12.3 Beyond Project",
+    "text": "12.3 Beyond Project\n\nAdditional workflows contributed by community members.\nEvidence of reuse in ecosystem reporting and management.\nAdoption by government, research and environmental management organisations.",
+    "crumbs": [
+      "Part V - Monitoring and Success",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Success Indicators</span>"
+    ]
+  },
+  {
+    "objectID": "13-sustainability.html",
+    "href": "13-sustainability.html",
+    "title": "13  Sustainability",
+    "section": "",
+    "text": "13.1 Custodians and Maintainers\nEIW’s workflows, documentation and training materials need to stay usable and accurate after project funding ends. This section sets out who looks after them, how often they are reviewed, and how responsibility is handed over when the project closes.\nEach workflow, documentation set and training resource will have:\nCustodians are named as organisations rather than individuals, so accountability isn’t lost when staff change. Where possible, each asset has two maintainers, including volunteer maintainers from the user community.\nEach asset is labelled Active, Maintenance only (fixes but no new features) or Archived (preserved but no longer updated).",
+    "crumbs": [
+      "Part V - Monitoring and Success",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Sustainability</span>"
+    ]
+  },
+  {
+    "objectID": "13-sustainability.html#custodians-and-maintainers",
+    "href": "13-sustainability.html#custodians-and-maintainers",
+    "title": "13  Sustainability",
+    "section": "",
+    "text": "an initial custodian: the organisation accountable for the asset;\nat least one maintainer: the person or team who keeps it up to date.",
+    "crumbs": [
+      "Part V - Monitoring and Success",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Sustainability</span>"
+    ]
+  },
+  {
+    "objectID": "13-sustainability.html#maintenance-cadence",
+    "href": "13-sustainability.html#maintenance-cadence",
+    "title": "13  Sustainability",
+    "section": "13.2 Maintenance Cadence",
+    "text": "13.2 Maintenance Cadence\n\nMonthly: check that links and identifiers still work, and respond to reported issues.\nQuarterly: apply software updates, and test that the example workflows still run.\nAt each release: update the documentation.\nAnnually:\n\nreview the documentation and training materials;\nconfirm each asset’s status (Active, Maintenance only or Archived);\n\nreview this plan.\nAn extra review is triggered by major software changes, platform changes, or 12 months without any maintenance activity on an asset.",
+    "crumbs": [
+      "Part V - Monitoring and Success",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Sustainability</span>"
+    ]
+  },
+  {
+    "objectID": "13-sustainability.html#governance-handover-at-project-close",
+    "href": "13-sustainability.html#governance-handover-at-project-close",
+    "title": "13  Sustainability",
+    "section": "13.3 Governance Handover at Project Close",
+    "text": "13.3 Governance Handover at Project Close\nA Transition Plan will be timely prepared before funding ends (e.g. last quarter of funding period), for approval by the governance group.\nThe Transition Plan will:\n\nconfirm a successor custodian for each asset that stays in use, by written agreement;\ntransfer platform accounts (GitHub, Zenodo, EcoCommons and similar) to institutional ownership rather than personal accounts;\narchive assets without a successor, with permanent identifiers so they can still be found and cited;\ndeposit a final record of all project identifiers and hand it over to successor organisation, if relevant.\n\nAfter the project closes, the successor organisation or community steering group carries out an annual review.",
+    "crumbs": [
+      "Part V - Monitoring and Success",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Sustainability</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/appendix-a-workshops.html",
+    "href": "appendices/appendix-a-workshops.html",
+    "title": "14  Workshop Feedbacks:",
+    "section": "",
+    "text": "14.1 Workshop 1\nThis workshop was designed as a co-design exercise to gather structured feedback from a heterogeneous, multidisciplinary community of end users. Including ecologists, data analysts, coders, and software engineers, on a demo workflow for ecosystem indicator development, as the first in a series of co-design workshops for the Ecosystem Indicators Workflows (EIW) project aimed at ensuring the workflow reflects how people actually work. The workflow follows FAIR principles and supports applications such as ecosystem risk assessment, ecosystem accounting, and the IUCN Green Status, and given the diversity of expertise, institutions, and working practices among users, the workshop set out to understand how people interact with the workflow in practice, tools, preferred data collections, where friction occurs, and what support and collaboration mechanisms are needed to improve usability and adoption.\nFamiliarity -&gt; ALA CSIRO FED | shape files tabular and RDA | rstudio GIS, GEE, quarto, Jupyter | R python Bash1",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Workshop Feedbacks:</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/appendix-a-workshops.html#workshop-2",
+    "href": "appendices/appendix-a-workshops.html#workshop-2",
+    "title": "14  Workshop Feedbacks:",
+    "section": "14.2 Workshop 2",
+    "text": "14.2 Workshop 2\nThis workshop was a second co-design exercise as a follow-up for the first one, bringing together ecologists, data analysts, coders, and software engineers to improve reproducible workflows for ecosystem indicator development. Where Workshop 1 tested and refined a workflow demo against real-world experience, Workshop 2 shifts focus to scoping and reflection: identifying priority ecosystems, biomes, and functional groups to fill urgent knowledge gaps, surfacing which ecosystems/indicators are most useful for current programs versus future scalability, and assessing how reproducible and reusable participants’ past indicator-development workflows have actually been.\nEcosystems / focus areas nominated for expanding coverage\n\nOyster Reef of Southern & Eastern Australia12%\nCumberland Plain Woodland, NSW12%\nMangroves of Moreton Bay8%\nSaltmarshes of Moreton Bay8%\nAlpine snow patch herb fields, SE Australia8%\nCoastal lowland rainforests8%\nConnected wetlands of the Lake Eyre Basin8%\nGeorgina gidgee woodlands, Central Australia\n\nPlanned future work named by participants (next ~2 years)\n\nTropical and subtropical rainforests (pending funding)\n\nYellow Box–White Box–Blakely’s Red Gum and other woodlands (pending funding)\n\nSemi-arid and freshwater ecosystems\n\nPyric savannas in northern Australia (extending existing Brazil-based indicator work)\n\nBroader RLE/GSE program: compiling existing assessments and building tools to support new ones at scale\n\nThis workshop also asked participants to reflect on a past ecosystem-indicator workflow they had personally worked on. The key findings were:\n\nFindability: most participants rated finding the needed data as “moderate” (required searching across sources) to “difficult” (scattered/poorly documented); none rated it “very easy.”\n\nAccessibility: a majority reported data was only “accessible with request/permission” or fully restricted; approx. 71% selected difficulty finding/locating sources as a factor (figure extracted from poll widget — treat as approximate).\n\nMain accessibility blockers reported: complex access procedures, data ownership issues, broken/outdated links, and low-quality metadata. Free-text comments repeatedly cited data-sharing agreements “taking months” and experts “not responding to emails.”\n\nData readiness challenges: inconsistent classification systems (ecosystem types, species names), varying data quality/resolution, temporal mismatches, and difficulty integrating expert knowledge with quantitative data were the most frequently cited.\n\nSkills required for data preparation: GIS/spatial analysis, remote sensing, and timeseries analysis were most cited, alongside general data cleaning/formatting.\n\nReproducibility of the calculation step itself: participants were split between “reproducible” and “partially/difficult to reproduce” — several noted that while code for the quantitative portion was reproducible, the expert-elicitation component (setting thresholds) generally was not documented in a reproducible way.\n\nTop priority action nominated to improve reproducibility of the existing workflow: “Strengthen documentation” (most-selected option, ahead of standardising methods, validating with independent data, and increasing technical capacity).\n\nWhat participants said is needed for the next project to be reproducible from the start: build reproducibility into project design/coding standards from day one rather than as an afterthought; train lead assessors in reproducible coding practices; ensure both accessible data and reproducible compute environments; document species/terminology decisions explicitly.\n\n\n\n\n\n\n\n\n\n\nTopic\nKey points\nConstraints / challenges\nImplications / actions\n\n\n\n\nWorkshop 2 outputs\nFocus could move beyond single ecosystems to groups of ecosystems to understand how tailored both sets of indicators and individual indicators need to be.\nNeed to balance general methods across ecosystems with ecosystem-specific adaptation.\nClarify the scale of indicator development: individual ecosystems, ecosystem groups, or cross-ecosystem methods.\n\n\nEcosystem focus areas\nTropical and subtropical rainforest, semi-arid woodlands, freshwater ecosystems, and all ecosystems through the Red List of Ecosystems.\nProgress depends on existing and pending funding. Most projects are still in early stages, including requirements gathering, indicator exploration, dataset identification, and pilot analyses.\nPrioritize projects according to funding status, readiness of datasets, indicators, and whether pilot studies have already been completed.\n\n\nGeneral constraints\nMain constraints are funding and data availability. Datasets need to be collated, cleaned, and harmonized before use in assessments.\nFinal products must be easy for end users to access, use, and reuse. There is also a tension between user consultation needs and the time required to build infrastructure.\nDevelop an implementation pathway that combines funding strategy, data preparation, user consultation, and infrastructure design.\n\n\nReproducibility of methods and indicators\nCore methodologies such as the Red List of Ecosystems are well documented, but reproducible indicators are often lacking.\nIndicator execution can remain difficult because coding and programming skills vary among end users.\nProvide clear workflows, reusable code, documentation, and user guidance to support reproducible indicator calculation.\n\n\nData findability\nData needed for indicators is often difficult to obtain, scattered, and poorly documented. Only a small proportion of participants found the search process moderately difficult.\nSearch processes vary widely, including search engines, online catalogues, and other sources.\nCreate clearer guidance on where to find relevant datasets and how to assess their suitability for indicators.\n\n\nData accessibility\nNearly half of participants (47%) reported that data was fully open to access, while 27% reported partial access requiring request or permission. The remaining participants reported restricted or inaccessible data.\nAccess barriers include complex access procedures, data-sharing agreements, difficult database navigation, data ownership issues, broken or outdated links, and low-quality metadata.\nPrioritize open and well-documented datasets, while documenting access requirements and known barriers for restricted datasets.\n\n\nHow is the data accessed?\nMost data are accessed directly from public repositories (40%) or extracted from published literature, such as supplementary data, printed tables, and figures (25%).\nSmaller proportions of participants query specialized databases or use their own data. Downloading spatial data may be complicated.\nExplore systems that reduce the need for users to download spatial data manually.\n\n\nData readiness & integration\nFrequent challenges include varying data resolution and quality, inconsistent classification systems, spatial-scale differences, temporal mismatches, limited metadata, and missing or incomplete data.\nThese issues make it difficult to align datasets and compare indicators across ecosystems or regions.\nDefine minimum data standards, harmonization procedures, and metadata requirements for indicator workflows.\n\n\nSkills required for data preparation\nGIS and spatial analysis were reported by 35% of participants as required skills, while data cleaning and formatting were reported by 29%.\nEcological survey knowledge is important to ensure that data are used correctly, including understanding whether similar variables are measuring the same thing. Knowledge of species names, synonyms, and name changes is also important.\nSupport users with training, templates, and guidance covering spatial analysis, data cleaning, ecological assumptions, and taxonomy.\n\n\nReproducibility\nIndicator calculation was considered partially reproducible by 67% of participants, while the remaining participants considered it difficult to reproduce.\nLimits include a lack of documented processes and validation points, data availability, limited time to engage with managers, difficulty integrating expert knowledge, and variable data quality.\nStrengthen documentation, validation checkpoints, data provenance, and mechanisms for incorporating expert knowledge.\n\n\nNext steps\nAll participants highlighted stronger documentation as the priority of action for improving workflow reproducibility.\nImportant methodological details can be lost when workflows are only reported in scientific papers.\nDevelop complete documentation that captures assumptions, data sources, processing steps, code, validation checks, and decision points.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Workshop Feedbacks:</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/appendix-a-workshops.html#fleurieu-swamp-fleurieu-peninsula-has-65-ecosystems---23-wetlands-and-swaps-40-woodlands-2-marine-zones",
+    "href": "appendices/appendix-a-workshops.html#fleurieu-swamp-fleurieu-peninsula-has-65-ecosystems---23-wetlands-and-swaps-40-woodlands-2-marine-zones",
+    "title": "14  Workshop Feedbacks:",
+    "section": "15.1 Fleurieu Swamp (Fleurieu peninsula has 65 ecosystems - 23 wetlands and swaps +40 woodlands +2 marine zones)",
+    "text": "15.1 Fleurieu Swamp (Fleurieu peninsula has 65 ecosystems - 23 wetlands and swaps +40 woodlands +2 marine zones)\n\n\n\n\n\n\n\n\nWorkflow stage\nWhat happens\nReported challenge level\n\n\n\n\nPrepare ecosystem distribution data\nGlobal data sources needed reprojection/reconciliation with local expert layers; DCCEEW spatial layers authoritative but differed in resolution from global sources.\nMixed\n\n\nPrepare indicator variable data\nBoM water balance data available but required preprocessing and temporal alignment with ecosystem snapshots.\nDifficult\n\n\nCalculation\nAdapting thresholds from Red List (collapse) to Green Status Integrity/recovery was conceptually and technically challenging — different baselines and output formats.\nFrustrating\n\n\nEvaluating uncertainty\nExpert review flagged as necessary but no formal protocol existed; validation data format mismatch meant manual reconciliation.\nUncertain",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Workshop Feedbacks:</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/appendix-b-user-stories.html",
+    "href": "appendices/appendix-b-user-stories.html",
+    "title": "15  User Stories × Use Cases",
+    "section": "",
+    "text": "15.1 Coverage\nCategory\nStories\nUse case links\nUse cases covered\n\n\n\n\nAdaptability\n7\n32\n8\n\n\nReproducibility and transparency\n5\n18\n8\n\n\nClassification and vocabularies\n5\n15\n6\n\n\nData discovery\n9\n22\n5\n\n\nDocumentation and training\n8\n30\n7\n\n\nAccessibility\n3\n11\n6\n\n\nValidation\n2\n8\n5",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>User Stories × Use Cases</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/appendix-b-user-stories.html#coverage",
+    "href": "appendices/appendix-b-user-stories.html#coverage",
+    "title": "15  User Stories × Use Cases",
+    "section": "",
+    "text": "WarningStatus\n\n\n\nPending review.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>User Stories × Use Cases</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/appendix-c-traceability-matrix.html",
+    "href": "appendices/appendix-c-traceability-matrix.html",
+    "title": "16  Requirements × Use Cases",
+    "section": "",
+    "text": "16.1 Coverage by category\nCategory\nRequirements\nUse case links\nUse cases covered\n\n\n\n\nAdaptability\n5\n17\n6\n\n\nReproducibility and transparency\n7\n24\n8\n\n\nClassification and vocabularies\n5\n13\n6\n\n\nData discovery\n7\n14\n5\n\n\nDocumentation and training\n7\n22\n7\n\n\nAccessibility\n7\n15\n8\n\n\nValidation\n6\n18\n5",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Requirements × Use Cases</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/appendix-c-traceability-matrix.html#coverage-by-category",
+    "href": "appendices/appendix-c-traceability-matrix.html#coverage-by-category",
+    "title": "16  Requirements × Use Cases",
+    "section": "",
+    "text": "WarningStatus\n\n\n\nPending.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Requirements × Use Cases</span>"
+    ]
+  }
+]

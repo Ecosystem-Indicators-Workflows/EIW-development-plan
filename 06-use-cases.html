@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6&nbsp; Detailed Use cases – Ecosystem Indicator Workflows Development Plan</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./07-prioritisation-method.html" rel="next">
+<link href="./05-high-level-requirements.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-c331ea236564e4415b565911d3f29016.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06-use-cases.html">Part III - Use Cases</a></li><li class="breadcrumb-item"><a href="./06-use-cases.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Detailed Use cases</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Ecosystem Indicator Workflows Development Plan</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Executive summary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I - Context</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-requirements-gathering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Requirements Gathering Activities</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II - User Needs</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-user-groups.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">User Groups</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-user-requirements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">User Requirements for Ecosystem Indicator Workflows</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-high-level-requirements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">High-Level Workflow Requirements and Constraints</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III - Use Cases</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-use-cases.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Detailed Use cases</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-prioritisation-method.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Prioritisation Approach</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV - Roadmap</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-roadmap-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Roadmap Overview</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-tranche-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">First Tranche (May to Nov 2026)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-tranche-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Second Tranche (Jan to Nov 2027)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-tranche-review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Review of Second Tranche Priorities</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part V - Monitoring and Success</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-success-measures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Success Indicators</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13-sustainability.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Sustainability</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/appendix-a-workshops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Workshop Feedbacks:</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/appendix-b-user-stories.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">User Stories × Use Cases</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/appendix-c-traceability-matrix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Requirements × Use Cases</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/logo_CES.png" class="quarto-figure quarto-figure-center figure-img" height="66"></p>
+</figure>
+</div>
+</div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">6.1</span> Overview</a></li>
+  <li><a href="#use-case-descriptions" id="toc-use-case-descriptions" class="nav-link" data-scroll-target="#use-case-descriptions"><span class="header-section-number">6.2</span> Use case descriptions</a>
+  <ul class="collapse">
+  <li><a href="#uc01-adapt-an-existing-fit-for-purpose-ecosystem-specific-indicator-to-make-it-reproducible" id="toc-uc01-adapt-an-existing-fit-for-purpose-ecosystem-specific-indicator-to-make-it-reproducible" class="nav-link" data-scroll-target="#uc01-adapt-an-existing-fit-for-purpose-ecosystem-specific-indicator-to-make-it-reproducible">UC01 – Adapt an existing fit-for-purpose ecosystem-specific indicator to make it reproducible</a></li>
+  <li><a href="#uc02-develop-a-new-fit-for-purpose-ecosystem-specific-indicator" id="toc-uc02-develop-a-new-fit-for-purpose-ecosystem-specific-indicator" class="nav-link" data-scroll-target="#uc02-develop-a-new-fit-for-purpose-ecosystem-specific-indicator">UC02 – Develop a new fit-for-purpose ecosystem-specific indicator</a></li>
+  <li><a href="#uc03-adapt-an-existing-reproducible-fit-for-purpose-indicator-to-a-new-ecosystem" id="toc-uc03-adapt-an-existing-reproducible-fit-for-purpose-indicator-to-a-new-ecosystem" class="nav-link" data-scroll-target="#uc03-adapt-an-existing-reproducible-fit-for-purpose-indicator-to-a-new-ecosystem">UC03 – Adapt an existing reproducible fit-for-purpose indicator to a new ecosystem</a></li>
+  <li><a href="#uc04-adapt-an-existing-reproducible-ecosystem-specific-indicator-to-a-different-purpose" id="toc-uc04-adapt-an-existing-reproducible-ecosystem-specific-indicator-to-a-different-purpose" class="nav-link" data-scroll-target="#uc04-adapt-an-existing-reproducible-ecosystem-specific-indicator-to-a-different-purpose">UC04 – Adapt an existing reproducible ecosystem-specific indicator to a different purpose</a></li>
+  <li><a href="#uc05-publish-and-maintain-a-reproducible-workflow" id="toc-uc05-publish-and-maintain-a-reproducible-workflow" class="nav-link" data-scroll-target="#uc05-publish-and-maintain-a-reproducible-workflow">UC05 – Publish and Maintain a Reproducible Workflow</a></li>
+  <li><a href="#uc06-integrate-multiple-indicator-workflows-in-assessments-or-reports" id="toc-uc06-integrate-multiple-indicator-workflows-in-assessments-or-reports" class="nav-link" data-scroll-target="#uc06-integrate-multiple-indicator-workflows-in-assessments-or-reports">UC06 – Integrate multiple indicator workflows in assessments or reports</a></li>
+  <li><a href="#uc07-discover-and-reuse-existing-workflows" id="toc-uc07-discover-and-reuse-existing-workflows" class="nav-link" data-scroll-target="#uc07-discover-and-reuse-existing-workflows">UC07 – Discover and Reuse Existing Workflows</a></li>
+  <li><a href="#uc08-training-and-skills-development" id="toc-uc08-training-and-skills-development" class="nav-link" data-scroll-target="#uc08-training-and-skills-development">UC08 – Training and Skills Development</a></li>
+  <li><a href="#uc09-apply-an-existing-workflow-to-a-specific-assessment" id="toc-uc09-apply-an-existing-workflow-to-a-specific-assessment" class="nav-link" data-scroll-target="#uc09-apply-an-existing-workflow-to-a-specific-assessment">UC09 – Apply an Existing Workflow to a Specific Assessment</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">6.3</span> Summary</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06-use-cases.html">Part III - Use Cases</a></li><li class="breadcrumb-item"><a href="./06-use-cases.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Detailed Use cases</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Detailed Use cases</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">6.1</span> Overview</h2>
+<p>Requirements gathering activities identified a range of user groups that will contribute to, operate, or consume Ecosystem Indicator Workflows (EIWs). The use cases below represent the most common and highest-priority applications identified through workshops, user stories, and stakeholder consultations. These use cases informed the prioritisation of workflow functionality and the staged development roadmap.</p>
+<hr>
+</section>
+<section id="use-case-descriptions" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="use-case-descriptions"><span class="header-section-number">6.2</span> Use case descriptions</h2>
+<section id="uc01-adapt-an-existing-fit-for-purpose-ecosystem-specific-indicator-to-make-it-reproducible" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="uc01-adapt-an-existing-fit-for-purpose-ecosystem-specific-indicator-to-make-it-reproducible">UC01 – Adapt an existing fit-for-purpose ecosystem-specific indicator to make it reproducible</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 85%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Primary User</td>
+<td>Ecologist / Conservation Scientist (UG01)</td>
+</tr>
+<tr class="even">
+<td>Supporting Users</td>
+<td>Research Software Engineer (UG07), Data Scientist (UG06)</td>
+</tr>
+<tr class="odd">
+<td>Purpose</td>
+<td>Adapt an ecosystem-specific indicator to make it reproducible</td>
+</tr>
+<tr class="even">
+<td>Trigger</td>
+<td>Update existing ecosystem assessments, revisit research or monitoring questions.</td>
+</tr>
+<tr class="odd">
+<td>Key requirements</td>
+<td>AD01, AD02, AD05, RE01, RE02, RE04, VO01, VO02, DD02, DD03, DD04, DD06, DO04, AC01, AC03, VA02, VA03, VA04, VA05</td>
+</tr>
+</tbody>
+</table>
+<section id="implementation-steps" class="level4">
+<h4 class="anchored" data-anchor-id="implementation-steps">Implementation steps</h4>
+<ol type="1">
+<li>Check existing scope of the workflow as per high-level requirements: ecosystem, purpose, diagnostic and variable selection.</li>
+<li>Check structure of the workflow as per high-level requirements: data preparation, calculation and validation/uncertainty assessment.</li>
+<li>Assess existing gaps in implementation of FAIR principles</li>
+<li>Edit/modify steps to close gaps in FAIR principles</li>
+<li>Review outputs and document all steps as per high-level requirements.</li>
+</ol>
+</section>
+<section id="outputs" class="level4">
+<h4 class="anchored" data-anchor-id="outputs">Outputs</h4>
+<ul>
+<li>Indicator values</li>
+<li>Maps and visualisations</li>
+<li>Workflow documentation including validation and uncertainty reports</li>
+</ul>
+</section>
+<section id="impact" class="level4">
+<h4 class="anchored" data-anchor-id="impact">Impact</h4>
+<p>Enable reproducibility of existing ecosystem-specific indicators, increase consistency, transparency, and reproducibility across ecosystem assessments. This use case emerged as a high-priority scenario during workshop discussions around workflow adaptability.</p>
+</section>
+</section>
+<section id="uc02-develop-a-new-fit-for-purpose-ecosystem-specific-indicator" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="uc02-develop-a-new-fit-for-purpose-ecosystem-specific-indicator">UC02 – Develop a new fit-for-purpose ecosystem-specific indicator</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 80%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Primary User</td>
+<td>Ecologist / Conservation Scientist (UG01, UG02)</td>
+</tr>
+<tr class="even">
+<td>Supporting Users</td>
+<td>Research Software Engineer (UG07), Data Scientist (UG06)</td>
+</tr>
+<tr class="odd">
+<td>Purpose</td>
+<td>Develop an ecosystem indicator for a previously unassessed ecosystem type.</td>
+</tr>
+<tr class="even">
+<td>Trigger</td>
+<td>A new ecosystem assessment, conservation program, or research project requires an indicator.</td>
+</tr>
+</tbody>
+</table>
+<section id="implementation-steps-1" class="level4">
+<h4 class="anchored" data-anchor-id="implementation-steps-1">Implementation steps</h4>
+<ol type="1">
+<li>Define the scope of the workflow as per high-level requirements: ecosystem, purpose, diagnostic and variable selection.</li>
+<li>Develop structure of the workflow as per high-level requirements: data preparation, calculation and validation/uncertainty assessment.</li>
+<li>Assess implementation of FAIR principles</li>
+<li>Review outputs and document all steps as per high-level requirements.</li>
+</ol>
+</section>
+<section id="outputs-1" class="level4">
+<h4 class="anchored" data-anchor-id="outputs-1">Outputs</h4>
+<ul>
+<li>Indicator values</li>
+<li>Maps and visualisations</li>
+<li>Workflow documentation including validation and uncertainty reports</li>
+</ul>
+</section>
+<section id="impact-1" class="level4">
+<h4 class="anchored" data-anchor-id="impact-1">Impact</h4>
+<p>Reduces the effort required to develop new indicators while increasing consistency, transparency, and reproducibility across ecosystem assessments. This use case emerged as a high-priority scenario during workshop discussions around workflow adaptability.</p>
+<hr>
+</section>
+</section>
+<section id="uc03-adapt-an-existing-reproducible-fit-for-purpose-indicator-to-a-new-ecosystem" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="uc03-adapt-an-existing-reproducible-fit-for-purpose-indicator-to-a-new-ecosystem">UC03 – Adapt an existing reproducible fit-for-purpose indicator to a new ecosystem</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 80%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Primary User</td>
+<td>Ecologist / Conservation Scientist (UG01, UG02)</td>
+</tr>
+<tr class="even">
+<td>Supporting Users</td>
+<td>RSE (UG07), Data Scientist (UG06)</td>
+</tr>
+<tr class="odd">
+<td>Purpose</td>
+<td>Reuse an existing workflow for another ecosystem type or assessment purpose.</td>
+</tr>
+</tbody>
+</table>
+<section id="implementation-steps-2" class="level4">
+<h4 class="anchored" data-anchor-id="implementation-steps-2">Implementation steps</h4>
+<ol type="1">
+<li>Locate a suitable workflow in the workflow catalogue.</li>
+<li>Identify ecosystem-specific components.</li>
+<li>Replace ecosystem definitions, datasets and parameters.</li>
+<li>Re-run workflow using the new ecosystem context.</li>
+<li>Validate outputs.</li>
+</ol>
+</section>
+<section id="outputs-2" class="level4">
+<h4 class="anchored" data-anchor-id="outputs-2">Outputs</h4>
+<ul>
+<li>Adapted workflow</li>
+<li>Updated metadata and documentation</li>
+<li>New indicator outputs</li>
+</ul>
+</section>
+<section id="impact-2" class="level4">
+<h4 class="anchored" data-anchor-id="impact-2">Impact</h4>
+<p>Reduces duplication of effort and accelerates ecosystem assessments. Workshop participants consistently identified workflow adaptability as one of the most important requirements for the EIW project.</p>
+<hr>
+</section>
+</section>
+<section id="uc04-adapt-an-existing-reproducible-ecosystem-specific-indicator-to-a-different-purpose" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="uc04-adapt-an-existing-reproducible-ecosystem-specific-indicator-to-a-different-purpose">UC04 – Adapt an existing reproducible ecosystem-specific indicator to a different purpose</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 79%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Primary User</td>
+<td>Ecologist / Conservation Scientist (UG01, UG02)</td>
+</tr>
+<tr class="even">
+<td>Supporting Users</td>
+<td>RSE (UG07), Data Scientist (UG06)</td>
+</tr>
+<tr class="odd">
+<td>Purpose</td>
+<td>Reuse an existing workflow for a different assessment or purpose.</td>
+</tr>
+</tbody>
+</table>
+<section id="implementation-steps-3" class="level4">
+<h4 class="anchored" data-anchor-id="implementation-steps-3">Implementation steps</h4>
+<ol type="1">
+<li>Locate a suitable workflow in the workflow catalogue.</li>
+<li>Identify components related to purpose of the indicator</li>
+<li>Replace parameters and adjust calculations for the intended purpose.</li>
+<li>Re-run workflow using the new analytical context and interpretation.</li>
+<li>Validate outputs.</li>
+</ol>
+</section>
+<section id="outputs-3" class="level4">
+<h4 class="anchored" data-anchor-id="outputs-3">Outputs</h4>
+<ul>
+<li>Adapted workflow</li>
+<li>Updated metadata and documentation</li>
+<li>New indicator outputs</li>
+</ul>
+</section>
+<section id="impact-3" class="level4">
+<h4 class="anchored" data-anchor-id="impact-3">Impact</h4>
+<p>Reduces duplication of effort and accelerates ecosystem assessments. Workshop participants consistently identified workflow adaptability as one of the most important requirements for the EIW project.</p>
+<hr>
+</section>
+</section>
+<section id="uc05-publish-and-maintain-a-reproducible-workflow" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="uc05-publish-and-maintain-a-reproducible-workflow">UC05 – Publish and Maintain a Reproducible Workflow</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 76%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Primary User</td>
+<td>Workflow authors (UG01, UG02, UG06, UG07)</td>
+</tr>
+<tr class="even">
+<td>Supporting Users</td>
+<td>Platform Administrator (UG09)</td>
+</tr>
+<tr class="odd">
+<td>Purpose</td>
+<td>Publish a workflow that can be reused and maintained over time.</td>
+</tr>
+</tbody>
+</table>
+<section id="implementation-steps-4" class="level4">
+<h4 class="anchored" data-anchor-id="implementation-steps-4">Implementation steps</h4>
+<ol type="1">
+<li>Package workflow components.</li>
+<li>Define software dependencies.</li>
+<li>Configure reproducible environments.</li>
+<li>Register metadata and identifiers.</li>
+<li>Publish workflow documentation.</li>
+</ol>
+</section>
+<section id="outputs-4" class="level4">
+<h4 class="anchored" data-anchor-id="outputs-4">Outputs</h4>
+<ul>
+<li>Workflow repository</li>
+<li>DOI and metadata records</li>
+<li>Documentation</li>
+<li>Containerised environment</li>
+</ul>
+</section>
+<section id="impact-4" class="level4">
+<h4 class="anchored" data-anchor-id="impact-4">Impact</h4>
+<p>Supports long-term maintenance and reuse while ensuring workflows remain reproducible as software and data sources evolve. Reproducibility and software versioning were identified as critical concerns during workshops.</p>
+<hr>
+</section>
+</section>
+<section id="uc06-integrate-multiple-indicator-workflows-in-assessments-or-reports" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="uc06-integrate-multiple-indicator-workflows-in-assessments-or-reports">UC06 – Integrate multiple indicator workflows in assessments or reports</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 78%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Primary User</td>
+<td>Ecologist / Technical Analyst (UG01, UG02, UG03)</td>
+</tr>
+<tr class="even">
+<td>Supporting Users</td>
+<td>RSE (UG07), Data Scientist (UG06)</td>
+</tr>
+<tr class="odd">
+<td>Purpose</td>
+<td>Reuse existing workflows and integrate them in a larger ecosystem assessment or report with a defined purpose, including one or multiple ecosystems.</td>
+</tr>
+</tbody>
+</table>
+<section id="implementation-steps-5" class="level4">
+<h4 class="anchored" data-anchor-id="implementation-steps-5">Implementation steps</h4>
+<ol type="1">
+<li>Locate suitable workflows in the workflow catalogue.</li>
+<li>Verify alignment with assessment or report purpose, adapt if necessary (see UC03, UC04)</li>
+<li>Combine outputs and document selection process</li>
+<li>Update report metadata including provenance information and references to input workflow (see UC05).</li>
+</ol>
+</section>
+<section id="outputs-5" class="level4">
+<h4 class="anchored" data-anchor-id="outputs-5">Outputs</h4>
+<ul>
+<li>Assessment or report with embedded workflows (documented methods and/or outputs)</li>
+<li>Workflow citations</li>
+</ul>
+</section>
+<section id="impact-5" class="level4">
+<h4 class="anchored" data-anchor-id="impact-5">Impact</h4>
+<p>Reduces duplication of effort and accelerates ecosystem assessments. Workshop participants consistently identified workflow adaptability as one of the most important requirements for the EIW project.</p>
+<hr>
+</section>
+</section>
+<section id="uc07-discover-and-reuse-existing-workflows" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="uc07-discover-and-reuse-existing-workflows">UC07 – Discover and Reuse Existing Workflows</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 83%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Primary User</td>
+<td>Researchers (UG01, UG02), Technical practicioner (UG03), Policy Analyst (UG04) Consultant (UG05)</td>
+</tr>
+<tr class="even">
+<td>Purpose</td>
+<td>Find workflows relevant to a specific ecosystem, indicator, or assessment purpose.</td>
+</tr>
+</tbody>
+</table>
+<section id="implementation-steps-6" class="level4">
+<h4 class="anchored" data-anchor-id="implementation-steps-6">Implementation steps</h4>
+<ol type="1">
+<li>Search workflow catalogue.</li>
+<li>Filter by ecosystem type, indicator type, or assessment framework.</li>
+<li>Review documentation and examples.</li>
+<li>Execute or adapt workflow (see UC03 and UC04).</li>
+</ol>
+</section>
+<section id="outputs-6" class="level4">
+<h4 class="anchored" data-anchor-id="outputs-6">Outputs</h4>
+<ul>
+<li>Reused workflows</li>
+<li>Adapted workflows</li>
+<li>Reproducible assessments</li>
+</ul>
+</section>
+<section id="impact-6" class="level4">
+<h4 class="anchored" data-anchor-id="impact-6">Impact</h4>
+<p>Reduces duplication of effort and encourages workflow standardisation across organisations and jurisdictions.</p>
+<hr>
+</section>
+</section>
+<section id="uc08-training-and-skills-development" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="uc08-training-and-skills-development">UC08 – Training and Skills Development</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Primary User</td>
+<td>Student / Early-Career Researcher (UG02)</td>
+</tr>
+<tr class="even">
+<td>Supporting Users</td>
+<td>Ecologists (UG01), Trainers (UG10)</td>
+</tr>
+<tr class="odd">
+<td>Purpose</td>
+<td>Build capability in reproducible ecosystem assessment workflows.</td>
+</tr>
+</tbody>
+</table>
+<section id="implementation-steps-7" class="level4">
+<h4 class="anchored" data-anchor-id="implementation-steps-7">Implementation steps</h4>
+<ol type="1">
+<li>Attend workshops or training events.</li>
+<li>Access worked examples.</li>
+<li>Run demonstration workflows.</li>
+<li>Modify workflows for new examples.</li>
+<li>Contribute improvements.</li>
+</ol>
+</section>
+<section id="outputs-7" class="level4">
+<h4 class="anchored" data-anchor-id="outputs-7">Outputs</h4>
+<ul>
+<li>Trained users</li>
+<li>New contributors</li>
+<li>Community of practice</li>
+</ul>
+</section>
+<section id="impact-7" class="level4">
+<h4 class="anchored" data-anchor-id="impact-7">Impact</h4>
+<p>Expands the user base and supports long-term sustainability of the workflow ecosystem. Training and documentation were identified as high-priority requirements across all workshop participants.</p>
+<hr>
+</section>
+</section>
+<section id="uc09-apply-an-existing-workflow-to-a-specific-assessment" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="uc09-apply-an-existing-workflow-to-a-specific-assessment">UC09 – Apply an Existing Workflow to a Specific Assessment</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Primary User</td>
+<td>Environmental Consultant / Assurance Practitioner (UG05)</td>
+</tr>
+<tr class="even">
+<td>Supporting Users</td>
+<td>Environmental Manager / Technical Practitioner (UG03), Data Scientist (UG06)</td>
+</tr>
+<tr class="odd">
+<td>Purpose</td>
+<td>Run an existing, unmodified indicator workflow against a specific site, region, or portfolio to produce a result for an assessment, audit, ecosystem account, or nature-related disclosure.</td>
+</tr>
+</tbody>
+</table>
+<section id="implementation-steps-8" class="level4">
+<h4 class="anchored" data-anchor-id="implementation-steps-8">Implementation steps</h4>
+<ol type="1">
+<li>Select a workflow matching the ecosystem and assessment framework required.</li>
+<li>Confirm the workflow can run within the available data access and IT constraints.</li>
+<li>Assemble inputs and record data gaps, limitations, and known biases.</li>
+<li>Execute the workflow; where empirical validation data are unavailable, apply and document expert judgement.</li>
+<li>Put outputs through documented review before release.</li>
+</ol>
+</section>
+<section id="outputs-8" class="level4">
+<h4 class="anchored" data-anchor-id="outputs-8">Outputs</h4>
+<ul>
+<li>Indicator result for the assessment</li>
+<li>Documented limitations statement</li>
+<li>Review and expert-judgement record</li>
+</ul>
+</section>
+<section id="impact-8" class="level4">
+<h4 class="anchored" data-anchor-id="impact-8">Impact</h4>
+<p>Covers routine application of existing workflows, which is expected to be the highest-volume activity across the user community. Distinguishes applied assessment from workflow development (UC01) and adaptation (UC02, UC03), and places a larger focus on documented limitations and expert review as standard requirements. This use case also brings the consulting and assurance community (UG05) into scope, reflecting the growth of ecosystem accounting and nature-related disclosure obligations.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="summary" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.3</span> Summary</h2>
+<p>Across the requirements gathering process, nine recurring use cases were identified. These can be grouped into four broad categories:</p>
+<ol type="1">
+<li><strong>Workflow development and adaptation</strong> (UC01, UC02, UC03, UC04)</li>
+<li><strong>Workflow publication, discovery and integration</strong> (UC05, UC06, UC07)</li>
+<li><strong>Capacity building and adoption</strong> (UC01, UC08)</li>
+<li><strong>Assessment and reporting based on existing indicators</strong> (UC06, UC07, UC09)</li>
+</ol>
+<p>These use cases form the basis for prioritising functionality and defining the first and second tranches of workflow development activities described in subsequent sections.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./05-high-level-requirements.html" class="pagination-link" aria-label="High-Level Workflow Requirements and Constraints">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">High-Level Workflow Requirements and Constraints</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./07-prioritisation-method.html" class="pagination-link" aria-label="Prioritisation Approach">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Prioritisation Approach</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>This site prepared by: <a href="https://github.com/Ecosystem-Indicators-Workflows">EIW project team</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p><img src="./assets/unsw_new_logo.png" height="20"> We acknowledge the Bedegal and Gadigal peoples who are the Traditional Owners of the lands where UNSW Sydney is located. We pay our respects to Elders past and present.</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
