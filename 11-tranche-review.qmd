@@ -1,5 +1,5 @@
 
-# 6. Review of Second Tranche Priorities
+# Review of Second Tranche Priorities
 
 Consistent with the project plan, second-tranche requirements will be reviewed after the end of Tranche 1 (Nov 2026) and before commencement of Tranche 2 (Jan 2027). The review will evaluate feedback from workflow users, workshop participants, ecosystem experts, and project partners to validate that Year 2 priorities continue to address the most important user needs. 
 
