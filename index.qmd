@@ -1,6 +1,4 @@
 # Executive summary {.unnumbered}
-
-# Executive Summary
  
 The Ecosystem Indicator Workflows (EIW) project aims to establish a sustainable framework for the development, sharing, and reuse of ecosystem-specific indicators through documented, reproducible, and modular computational workflows. The project responds to a growing need for transparent and scalable approaches to ecosystem assessment, monitoring, reporting, conservation planning, ecosystem accounting, and environmental decision-making.
  
@@ -41,5 +39,5 @@ Ultimately, the EIW project seeks to build more than a collection of workflows. 
 | 0.4 | 10 July 2026 | JR Ferrer-Paris, [AI tools: Co-pilot] | Consolidate information from multiple documents, provide document structure assisted by AI-tools, use of markdown authoring and version control tools |
 | 0.5 | 20 July 2026 | JR Ferrer-Paris | Review, improve, edit or remove AI-generated content. |
 | 0.6 | 21 Aug 2026 | JR Ferrer-Paris, Abhimanyu Raj Singh, Ada Sanchez-Mercado [AI tools: Co-pilot] | Introduction with overview and scope. Restructuring user groups, requirements and use cases after whiteboard session. Review of AI-generated content. |
-| 0.7 | 30 Sep 2026 | JR Ferrer-Paris, Paula Martinez, Elliot Gould, Yannick Assoba [AI tools: Co-pilot] | Summarise and address feedback on use cases, add sustainability section, add executive summary  |
+| 0.7 | 30 Sep 2026 | JR Ferrer-Paris, Paula Martinez, Elliot Gould, Yannick Tidou [AI tools: Co-pilot] | Summarise and address feedback on use cases, add sustainability section, add executive summary  |
 
