@@ -88,7 +88,7 @@ Reduces the effort required to develop new indicators while increasing consisten
 
 #### Impact
 
-Reduces duplication of effort and accelerates ecosystem assessments. Workshop participants consistently identified workflow adaptability as one of the most important requirements for the EIW project.
+Enables an existing indicator workflow to be transferred to a new ecosystem without rebuilding the workflow from scratch. This supports consistent application across ecosystems while making ecosystem-specific adaptations explicit and traceable.
 
 ------------------------------------------------------------------------
 
@@ -116,7 +116,7 @@ Reduces duplication of effort and accelerates ecosystem assessments. Workshop pa
 
 #### Impact
 
-Reduces duplication of effort and accelerates ecosystem assessments. Workshop participants consistently identified workflow adaptability as one of the most important requirements for the EIW project.
+Enables an existing indicator workflow to address a different assessment question or reporting need. This supports reuse of established calculations while documenting changes in parameters, interpretation, and limitations.
 
 ------------------------------------------------------------------------
 
@@ -172,7 +172,7 @@ Supports long-term maintenance and reuse while ensuring workflows remain reprodu
 
 #### Impact
 
-Reduces duplication of effort and accelerates ecosystem assessments. Workshop participants consistently identified workflow adaptability as one of the most important requirements for the EIW project.
+Enables multiple indicator workflows to be combined into a coherent assessment or report, with clear links between component outputs, methods, and provenance. This supports integrated decision-making while preserving traceability of the contributing workflows.
 
 ------------------------------------------------------------------------
 
