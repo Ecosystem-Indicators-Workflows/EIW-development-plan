@@ -11,7 +11,7 @@ The modular workflow architecture will have documented swap points for ecosystem
 
 Special attention will be given to initial implementation of FAIR principles and alignment with PID and FAIR4RS implementation plans whenever practicable, aiming at publication of reproducible workflows (UC05). 
 
-Integration of workflows into on-going or planned assessments will be explored (UC06). It is expected that on-going asssessments will be the main drivers and motivation for selecting specific ecosystems and purposes for UC02, UC03 and UC04.
+Integration of workflows into ongoing or planned assessments will be explored (UC06). It is expected that ongoing asssessments will be the main drivers and motivation for selecting specific ecosystems and purposes for UC02, UC03 and UC04.
 
 This stage will require an initial exploration of options for discoverability (UC07), coupled with requirement gathering steps for Work Package 5. 
 

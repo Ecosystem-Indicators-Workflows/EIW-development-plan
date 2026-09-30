@@ -5,11 +5,11 @@
 
 The second tranche expands the workflow ecosystem beyond individual workflows to support discoverability, scaling, interoperability and broader community adoption. The focus shifts from workflow creation to workflow reuse and operationalisation. 
 
-The main objective is to support and expand adaptation of workflows to new ecosystems and different purposes (UC03 and UC04). Development of new indicator workflows (UC02) will be enhanced and driven by on-going research projects and assessments. 
+The main objective is to support and expand adaptation of workflows to new ecosystems and different purposes (UC03 and UC04). Development of new indicator workflows (UC02) will be enhanced and driven by ongoing research projects and assessments. 
 
 Workflow development in this stage should follow the FAIR4RS and PID implementation plans, including full publication of workflows (UC05).
 
-Integration of workflows into on-going or planned assessments will continue to be explored (UC06). It is expected that on-going asssessments will be the main drivers and motivation for selecting specific ecosystems and purposes for UC02, UC03 and UC04.
+Integration of workflows into ongoing or planned assessments will continue to be explored (UC06). It is expected that ongoing asssessments will be the main drivers and motivation for selecting specific ecosystems and purposes for UC02, UC03 and UC04.
 
 Scaling up assessment will be coupled with a larger focus on discoverability (UC07) through development of Work Package 5. 
 
