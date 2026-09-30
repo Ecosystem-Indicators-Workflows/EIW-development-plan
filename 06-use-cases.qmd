@@ -88,7 +88,7 @@ Reduces the effort required to develop new indicators while increasing consisten
 
 #### Impact
 
-Reduces duplication of effort and accelerates ecosystem assessments. Workshop participants consistently identified workflow adaptability as one of the most important requirements for the EIW program.
+Reduces duplication of effort and accelerates ecosystem assessments. Workshop participants consistently identified workflow adaptability as one of the most important requirements for the EIW project.
 
 ------------------------------------------------------------------------
 
@@ -116,7 +116,7 @@ Reduces duplication of effort and accelerates ecosystem assessments. Workshop pa
 
 #### Impact
 
-Reduces duplication of effort and accelerates ecosystem assessments. Workshop participants consistently identified workflow adaptability as one of the most important requirements for the EIW program.
+Reduces duplication of effort and accelerates ecosystem assessments. Workshop participants consistently identified workflow adaptability as one of the most important requirements for the EIW project.
 
 ------------------------------------------------------------------------
 
@@ -172,7 +172,7 @@ Supports long-term maintenance and reuse while ensuring workflows remain reprodu
 
 #### Impact
 
-Reduces duplication of effort and accelerates ecosystem assessments. Workshop participants consistently identified workflow adaptability as one of the most important requirements for the EIW program.
+Reduces duplication of effort and accelerates ecosystem assessments. Workshop participants consistently identified workflow adaptability as one of the most important requirements for the EIW project.
 
 ------------------------------------------------------------------------
 

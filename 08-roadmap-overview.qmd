@@ -4,12 +4,12 @@ Based on the user groups, requirements and use cases described in previous secti
 
 | Theme                  | Use cases | Tranche 1 | Tranche 2       | Dependencies |
 | ---------------------- | --------- | ----------|--------- |--------- |
-| Workflow development   | UC1 UC2   | Priority  | Enhance  | WP3 |
-| Workflow adaptation    | UC3 UC4   | Explore   | Priority | WP3 |
-| Workflow publication   | UC5       | Explore   | Priority |     |
-| Integration in assessments | UC6   | Explore   | Explore |     |
-| Discoverability        | UC7       | Initial   | Expanded | WP5 |
-| Training               | UC8       | Initial   | Expanded | WP6 |
+| Workflow development   | UC01 UC02   | Priority  | Enhance  | WP3 |
+| Workflow adaptation    | UC03 UC04   | Explore   | Priority | WP3 |
+| Workflow publication   | UC05       | Explore   | Priority |     |
+| Integration in assessments | UC06   | Explore   | Explore |     |
+| Discoverability        | UC07       | Initial   | Expanded | WP5 |
+| Training               | UC08       | Initial   | Expanded | WP6 |
 | Applications           | UC09      |           | Explore | |
 | FAIR & PID             | All      | Initial   | Full implementation | WP2 |
 
