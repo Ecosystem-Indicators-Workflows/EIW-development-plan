@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "DRAFT: Ecosystem Indicator Workflows Development Plan"
+  title: "Ecosystem Indicator Workflows Development Plan"
   subtitle: "Requirements Gathering and Two-Year Development Roadmap"
   author:
     - "Ecosystem Indicators Workflows Project Team"
